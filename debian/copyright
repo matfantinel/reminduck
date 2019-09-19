@@ -1,0 +1,7 @@
+Format: http://dep.debian.net/deps/dep5
+Upstream-Name: hello-packaging
+Source: https://github.com/matfantinel/reminduck
+
+Files: src/* data/* cmake/* debian/*
+Copyright: 2018 Matheus Fantinel <matfantinel@gmail.com>
+License: GPL-3.0+

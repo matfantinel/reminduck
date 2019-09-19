@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Reminduck
+GenericName=Reminders
+Comment=This is just a test for now
+Categories=Utility;
+Exec=com.github.matfantinel.reminduck
+Icon=accessories-text-editor
+Terminal=false
+Type=Application
+X-GNOME-Gettext-Domain=reminduck
+Keywords=Reminduck;Personal;Assistant;Reminders

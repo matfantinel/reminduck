@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.matfantinel.reminduck package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.matfantinel.reminduck\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-19 18:59-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/MainWindow.vala:61
+msgid "Back"
+msgstr ""
+
+#: src/MainWindow.vala:73
+msgid "Hi, I'm Reminduck"
+msgstr ""
+
+#: src/MainWindow.vala:74
+msgid "What can I help you with?"
+msgstr ""
+
+#: src/MainWindow.vala:76
+msgid "New Reminder"
+msgstr ""
+
+#: src/MainWindow.vala:76
+msgid "Create a new reminder for a set date and time"
+msgstr ""
+
+#: src/MainWindow.vala:78
+msgid "View Reminders"
+msgstr ""
+
+#: src/MainWindow.vala:78
+msgid "See reminders you've created"
+msgstr ""
+
+#: src/Widgets/Views/ReminderEditor.vala:51
+msgid "Create a new reminder"
+msgstr ""
+
+#: src/Widgets/Views/ReminderEditor.vala:55
+msgid "What do you want to be reminded of?"
+msgstr ""
+
+#: src/Widgets/Views/ReminderEditor.vala:88
+msgid "Save reminder"
+msgstr ""
+
+#: src/Widgets/Views/ReminderEditor.vala:166
+msgid "Reminder created!"
+msgstr ""
+
+#: src/Widgets/Views/ReminderEditor.vala:166
+msgid "Reminder edited!"
+msgstr ""
+
+#: src/Widgets/Views/ReminderEditor.vala:169
+msgid "Oops..."
+msgstr ""
+
+#: src/Widgets/Views/ReminderEditor.vala:169
+msgid "Unfortunately, your reminder could not be saved."
+msgstr ""
+
+#: src/Widgets/Views/RemindersView.vala:44
+msgid "Your reminders"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.desktop.in:3
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:6
+msgid "Reminduck"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.desktop.in:4
+msgid "Reminders"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.desktop.in:5
+msgid "This is just a test for now"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.desktop.in:8
+msgid "face-wink"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.desktop.in:11
+msgid "Reminduck;Personal;Assistant;Reminders"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:7
+msgid "A Catchy Tagline"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:9
+msgid ""
+"A quick summary of your app's main selling points and features. Just a "
+"couple sentences per paragraph is best."
+msgstr ""

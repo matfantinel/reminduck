@@ -1,0 +1,17 @@
+//////////////////// MESON /////////////////////////////
+
+1. Set up meson (first time only)
+meson build --prefix=/usr
+
+2. Generate translateable files
+cd build && ninja com.github.matfantinel.reminduck-pot && cd ..
+cd build && ninja com.github.matfantinel.reminduck-update-po && cd ..
+
+3. Build
+cd build && sudo ninja && cd ..
+
+4. Install
+cd build && sudo ninja install && cd ..
+
+5. Build and Install
+cd build && sudo ninja && sudo ninja install && cd ..
