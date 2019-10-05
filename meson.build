@@ -1,11 +1,19 @@
 # project name and programming language
 project('com.github.matfantinel.reminduck', 'vala', 'c')
+gnome = import('gnome')
 
 # Include the translations module
 i18n = import('i18n')
 
 # Set our translation domain
 add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format (meson.project_name()), language:'c')
+
+# Include GResource
+asresources = gnome.compile_resources(
+    'as-resources', join_paths('data', 'gresource.xml'),
+    source_dir: 'data',
+    c_name: 'as'
+)
 
 # Create a new executable, list the files we want to compile, list the dependencies we need, and install
 executable(
@@ -16,6 +24,7 @@ executable(
     'src/Objects/Reminder.vala',
     'src/Widgets/Views/ReminderEditor.vala',
     'src/Widgets/Views/RemindersView.vala',
+    asresources,
     dependencies: [
         dependency('gtk+-3.0'),
         dependency('gee-0.8'),

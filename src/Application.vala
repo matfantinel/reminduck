@@ -57,6 +57,14 @@ namespace Reminduck {
 
             main_window = new MainWindow ();
             main_window.set_application (this);
+
+            var provider = new Gtk.CssProvider ();
+            provider.load_from_resource ("/com/github/matfantinel/reminduck/Application.css");
+            Gtk.StyleContext.add_provider_for_screen (
+                Gdk.Screen.get_default (),
+                provider,
+                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+            );
         }        
 
         public static int main(string[] args) {
