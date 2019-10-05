@@ -25,7 +25,7 @@ namespace Reminduck.Widgets.Views {
     public class RemindersView : Gtk.Box {
         public signal void add_request ();
         public signal void edit_request (Reminder reminder);
-        public signal void app_deleted ();
+        public signal void reminder_deleted ();
 
         Gtk.Label title;
         Gtk.ListBox reminders_list;        
@@ -70,8 +70,16 @@ namespace Reminduck.Widgets.Views {
             foreach (var reminder in ReminduckApp.reminders) {
                 var box = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 5);
                 box.margin = 5;
+
                 box.pack_start (new Gtk.Label (reminder.description), false, false, 0);
-                box.pack_end (new Gtk.Label (reminder.time.to_string()), false, false, 0);
+                
+                var deleteButton = new Gtk.Button.from_icon_name ("edit-delete");
+                deleteButton.activate.connect (() => { on_delete (reminder); } );
+                deleteButton.clicked.connect (() => { on_delete (reminder); } );
+
+                box.pack_end (deleteButton, false, false, 0);
+                
+                box.pack_end (new Gtk.Label (reminder.time.format ("%x") + " " + reminder.time.format ("%X")), false, false, 0);
 
                 var row = new Gtk.ListBoxRow ();
                 row.add (box);
@@ -81,6 +89,11 @@ namespace Reminduck.Widgets.Views {
             }
 
             this.reminders_list.show_all ();
+        }
+
+        private void on_delete (Reminder reminder) {
+            ReminduckApp.database.delete_reminder (reminder.rowid);
+            reminder_deleted ();
         }
     }
 }

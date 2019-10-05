@@ -25,6 +25,9 @@ namespace Reminduck {
         Gtk.HeaderBar headerbar;
         Gtk.Button back_button;
 
+        Granite.Widgets.Welcome welcome_widget = null;
+        int? view_reminders_action_reference = null;
+
         Widgets.Views.ReminderEditor reminder_editor;
         Widgets.Views.RemindersView reminders_view;
 
@@ -40,6 +43,7 @@ namespace Reminduck {
 
             build_headerbar();
             build_welcome ();
+            stack.add_named (this.welcome_widget, "welcome");
             build_reminder_editor ();
             build_reminders_view ();
 
@@ -56,6 +60,7 @@ namespace Reminduck {
             headerbar.show_close_button = true;
             headerbar.title = "Reminduck";
             headerbar.get_style_context().add_class ("default-decoration");
+            headerbar.get_style_context ().add_class ("reminduck-headerbar");
             set_titlebar (headerbar);
 
             back_button = new Gtk.Button.with_label (_("Back"));
@@ -69,16 +74,12 @@ namespace Reminduck {
         }
 
         private void build_welcome () {
-            var welcome = new Granite.Widgets.Welcome (
+            this.welcome_widget = new Granite.Widgets.Welcome (
                 _("QUACK! I'm Reminduck"),
                 _("The duck that reminds you")
             );
-            welcome.append ("document-new", _("New Reminder"), _("Create a new reminder for a set date and time"));
-            if (ReminduckApp.reminders.size > 0) {
-                welcome.append ("emblem-documents", _("View Reminders"), _("See reminders you've created"));
-            }
-            
-            welcome.activated.connect ((index) => {
+
+            this.welcome_widget.activated.connect ((index) => {
                 switch (index) {
                     case 0:
                         show_reminder_editor();
@@ -89,14 +90,33 @@ namespace Reminduck {
                 }
             });
 
-            stack.add_named (welcome, "welcome");
+            this.welcome_widget.append ("document-new", _("New Reminder"), _("Create a new reminder for a set date and time"));
+            if (ReminduckApp.reminders.size > 0) {
+                this.view_reminders_action_reference = this.welcome_widget.append ("emblem-documents", _("View Reminders"), _("See reminders you've created"));
+            }
+                
+            this.welcome_widget.show_all ();
+        }
+
+        private void update_view_reminders_welcome_action () {
+            if (ReminduckApp.reminders.size > 0) {
+                if (this.view_reminders_action_reference == null) {
+                    this.view_reminders_action_reference = this.welcome_widget.append ("emblem-documents", _("View Reminders"), _("See reminders you've created"));
+                    this.welcome_widget.show_all ();
+                }
+            } else {
+                if (this.view_reminders_action_reference != null) {
+                    this.welcome_widget.remove_item (this.view_reminders_action_reference);
+                }
+                this.view_reminders_action_reference = null;
+            }
         }
 
         private void build_reminder_editor () {
             reminder_editor = new Widgets.Views.ReminderEditor();
 
             reminder_editor.reminder_created.connect ((new_reminder) => {
-                ReminduckApp.reload_reminders ();
+                ReminduckApp.reload_reminders ();                
                 show_reminders_view();
             });
 
@@ -125,10 +145,12 @@ namespace Reminduck {
                 show_reminder_editor();;
             });
 
-            reminders_view.app_deleted.connect (() => {
+            reminders_view.reminder_deleted.connect (() => {
                 ReminduckApp.reload_reminders ();
                 if (ReminduckApp.reminders.size == 0) {
-                    show_welcome_view (Gtk.StackTransitionType.NONE);
+                    show_welcome_view ();
+                } else {
+                    reminders_view.build_reminders_list();
                 }
             });
 
@@ -151,6 +173,7 @@ namespace Reminduck {
         }
 
         private void show_welcome_view (Gtk.StackTransitionType slide = Gtk.StackTransitionType.SLIDE_RIGHT) {
+            update_view_reminders_welcome_action ();
             stack.set_transition_type (slide);
             stack.set_visible_child_name ("welcome");
             back_button.hide();
