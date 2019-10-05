@@ -15,6 +15,22 @@ asresources = gnome.compile_resources(
     c_name: 'as'
 )
 
+# Adds subfolders specific build system
+message('Adds subfolders specific build system')
+
+icon_sizes = ['16', '24', '32', '48', '64', '128', '256']
+
+foreach i : icon_sizes
+    install_data(
+        join_paths('data/icons', i, meson.project_name() + '.svg'),
+        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i, 'apps')
+    )
+    install_data(
+        join_paths('data/icons', i, meson.project_name() + '.svg'),
+        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i + '@2', 'apps')
+    )
+endforeach
+
 # Create a new executable, list the files we want to compile, list the dependencies we need, and install
 executable(
     meson.project_name(),
@@ -54,3 +70,5 @@ i18n.merge_file(
 )
 
 subdir('po')
+
+meson.add_install_script('meson/post_install.py')
