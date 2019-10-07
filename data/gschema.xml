@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema
+    path="/com/github/matfantinel/reminduck/state/"
+    id="com.github.matfantinel.reminduck.state"
+    gettext-domain="com.github.matfantinel.reminduck">
+    <key name="first-run" type="b">
+      <default>true</default>
+      <summary>Whether this is the first time that Reminduck has opened</summary>
+      <description>Used to determine whether or not to perform initial install steps</description>
+    </key>
+  </schema>
+</schemalist>

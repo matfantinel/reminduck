@@ -27,13 +27,14 @@ namespace Reminduck {
 
         construct {
             application_id = "com.github.matfantinel.reminduck";
-            flags = ApplicationFlags.FLAGS_NONE;
+            flags = ApplicationFlags.HANDLES_COMMAND_LINE;
             database = new Reminduck.Database();
         }
 
         static ReminduckApp _instance = null;
 
         public static ArrayList<Reminder> reminders;
+        public bool headless = false;
 
         public static ReminduckApp instance {
             get {
@@ -48,32 +49,112 @@ namespace Reminduck {
 
         protected override void activate () {
             database.verify_database ();
+
+            var settings = new GLib.Settings ("com.github.matfantinel.reminduck.state");
+
+            var first_run = settings.get_boolean ("first-run");
+
+            if (first_run) {
+                stdout.printf ("\n🎉️ First run");
+                install_autostart ();
+                settings.set_boolean ("first-run", false);
+            }
             
-            if (main_window != null) {
+            reload_reminders ();
+            if (main_window != null && !headless) {
                 main_window.present ();
                 return;
+            } else if (!headless) {                
+                main_window = new MainWindow ();
+                main_window.set_application (this);
+                
+                var provider = new Gtk.CssProvider ();
+                provider.load_from_resource ("/com/github/matfantinel/reminduck/Application.css");
+                Gtk.StyleContext.add_provider_for_screen (
+                    Gdk.Screen.get_default (),
+                    provider,
+                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+                );
             }
-            reload_reminders ();
-
-            main_window = new MainWindow ();
-            main_window.set_application (this);
-
-            var provider = new Gtk.CssProvider ();
-            provider.load_from_resource ("/com/github/matfantinel/reminduck/Application.css");
-            Gtk.StyleContext.add_provider_for_screen (
-                Gdk.Screen.get_default (),
-                provider,
-                Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-            );
-        }        
+        }  
+        
+        public override int command_line (ApplicationCommandLine command_line) {
+            stdout.printf ("\n💲️ Command line mode started");
+    
+            bool headless_mode = false;
+            OptionEntry[] options = new OptionEntry[1];
+            options[0] = {
+                "headless", 0, 0, OptionArg.NONE,
+                ref headless_mode, "Run without window", null
+            };
+    
+            // We have to make an extra copy of the array, since .parse assumes
+            // that it can remove strings from the array without freeing them.
+            string[] args = command_line.get_arguments ();
+            string[] _args = new string[args.length];
+            for (int i = 0; i < args.length; i++) {
+                _args[i] = args[i];
+            }
+    
+            try {
+                var ctx = new OptionContext ();
+                ctx.set_help_enabled (true);
+                ctx.add_main_entries (options, null);
+                unowned string[] tmp = _args;
+                ctx.parse (ref tmp);
+            } catch (OptionError e) {
+                command_line.print ("error: %s\n", e.message);
+                return 0;
+            }
+    
+            headless = headless_mode;
+    
+            hold ();
+            activate ();
+            return 0;
+        }
 
         public static int main(string[] args) {
             var app = new ReminduckApp ();
+
+            if (args.length > 1 && args[1] == "--headless") {
+                app.headless = true;
+            }
+
             return app.run (args);
         }
 
         public static void reload_reminders () {
             reminders = database.fetch_reminders ();
+        }
+
+        private void install_autostart () {
+            var desktop_file_name = application_id + ".desktop";
+            var desktop_file_path = new DesktopAppInfo (desktop_file_name).filename;
+            var desktop_file = File.new_for_path (desktop_file_path);
+            var dest_path = Path.build_path (
+                Path.DIR_SEPARATOR_S,
+                Environment.get_user_config_dir (),
+                "autostart",
+                desktop_file_name
+            );
+            var dest_file = File.new_for_path (dest_path);
+            try {
+                desktop_file.copy (dest_file, FileCopyFlags.OVERWRITE);
+                stdout.printf ("\n📃️ Copied desktop file at: %s", dest_path);
+            } catch (Error e) {
+                warning ("Error making copy of desktop file for autostart: %s", e.message);
+            }
+    
+            var keyfile = new KeyFile ();
+            try {
+                keyfile.load_from_file (dest_path, KeyFileFlags.NONE);
+                keyfile.set_boolean ("Desktop Entry", "X-GNOME-Autostart-enabled", true);
+                keyfile.set_string ("Desktop Entry", "Exec", application_id + " --headless");
+                keyfile.save_to_file (dest_path);
+            } catch (Error e) {
+                warning ("Error enabling autostart: %s", e.message);
+            }
         }
     }
 }
