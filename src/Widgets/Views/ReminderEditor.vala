@@ -60,6 +60,10 @@ namespace Reminduck.Widgets.Views {
                 this.validate();
             });
 
+            this.reminder_input.activate.connect(() => {
+                this.save_button.clicked ();
+            });
+
             this.date_picker = new Granite.Widgets.DatePicker.with_format(
                 Granite.DateTime.get_default_date_format(false, true, true)
             );
