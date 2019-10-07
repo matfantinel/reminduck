@@ -41,10 +41,22 @@ namespace Reminduck.Widgets.Views {
         public void build_ui () {
             this.margin = 15;
             
+            var box = new Gtk.Box(Gtk.Orientation.VERTICAL, 5);
+
             this.title = new Gtk.Label (_("Your reminders"));
             this.title.get_style_context().add_class("h2");
             
-            pack_start(this.title, true, false, 0);
+            box.pack_start(this.title, true, false, 0);
+
+            var add_new_button = new Gtk.Button.with_label (_ ("Create another"));
+            add_new_button.halign = Gtk.Align.CENTER;
+            add_new_button.get_style_context ().add_class ("suggested-action");
+            add_new_button.activate.connect (add_reminder);
+            add_new_button.clicked.connect (add_reminder);
+
+            box.pack_start(add_new_button, false, false, 0);
+
+            pack_start (box, true, false, 0);
 
             build_reminders_list ();
 
