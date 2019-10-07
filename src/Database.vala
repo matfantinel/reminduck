@@ -108,7 +108,7 @@ public class Reminduck.Database {
 
         var query = """SELECT rowid, description, time
                         FROM reminders
-                        ORDER BY time ASC;""";
+                        ORDER BY time DESC;""";
 
         Sqlite.Database db;
         open_database (out db);
