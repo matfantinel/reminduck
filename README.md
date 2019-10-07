@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="data/icons/128/com.github.elfenware.badger.svg" alt="Icon" />
+    <img src="data/icons/com.github.matfantinel.reminduck.png" alt="Icon" style="height: 48px;" />
 </p>
 
 # Reminduck
