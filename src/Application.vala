@@ -75,6 +75,8 @@ namespace Reminduck {
                     provider,
                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
                 );
+
+                set_reminder_interval ();
             }
         }  
         
@@ -155,6 +157,34 @@ namespace Reminduck {
             } catch (Error e) {
                 warning ("Error enabling autostart: %s", e.message);
             }
+        }
+
+        public void set_reminder_interval () {
+            Timeout.add_seconds (1 * 60, remind);
+        }
+    
+        public bool remind () {
+            reload_reminders ();
+            
+            var reminders_to_delete = new ArrayList<string> ();
+            foreach (var reminder in reminders) {
+                if (reminder.time.compare (new GLib.DateTime.now ()) <= 0) {
+                    var notification = new Notification ("QUACK!");
+                    notification.set_body (reminder.description);
+                    this.send_notification ("notify.app", notification);
+
+                    reminders_to_delete.add (reminder.rowid);
+                }
+            }
+
+            if (reminders_to_delete.size > 0) {
+                foreach (var reminder in reminders_to_delete) {
+                    database.delete_reminder (reminder);
+                }
+                reload_reminders ();
+            }
+
+            return true;
         }
     }
 }
