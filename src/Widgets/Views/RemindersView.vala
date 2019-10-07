@@ -73,7 +73,11 @@ namespace Reminduck.Widgets.Views {
                 box.margin = 2;
                 box.get_style_context ().add_class ("list-item");
 
-                box.pack_start (new Gtk.Label (reminder.description), false, false, 0);
+                var description = new Gtk.Label (reminder.description);
+                description.wrap = true;
+                description.single_line_mode = false;
+
+                box.pack_start (description, false, false, 0);
 
                 var deleteButton = new Gtk.Button.from_icon_name ("edit-delete");
                 deleteButton.activate.connect (() => { on_delete (reminder); } );

@@ -39,7 +39,7 @@ namespace Reminduck {
             stack = new Gtk.Stack();
             stack.set_transition_duration (500);
 
-            this.set_default_size (400, 400);
+            this.set_default_size (600, 400);
 
             build_headerbar();
 
