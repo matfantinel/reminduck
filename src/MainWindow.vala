@@ -150,11 +150,11 @@ namespace Reminduck {
             reminders_view = new Widgets.Views.RemindersView();
 
             reminders_view.add_request.connect (() => {
-                show_reminder_editor();
+                show_reminder_editor ();
             });
 
             reminders_view.edit_request.connect ((reminder) => {
-                show_reminder_editor();;
+                show_reminder_editor (reminder);
             });
 
             reminders_view.reminder_deleted.connect (() => {

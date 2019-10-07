@@ -48,7 +48,7 @@ namespace Reminduck.Widgets.Views {
 
             build_reminders_list ();
 
-            pack_start(this.reminders_list, true, false, 0);
+            pack_start(this.reminders_list, true, true, 0);
 
             this.show_all();
         }
@@ -60,6 +60,7 @@ namespace Reminduck.Widgets.Views {
         public void build_reminders_list () {        
             if (this.reminders_list == null) {
                 this.reminders_list = new Gtk.ListBox ();
+                this.reminders_list.get_style_context ().add_class ("reminduck-reminders-list");
             } else {
                 foreach (var child in this.reminders_list.get_children ()) {
                     this.reminders_list.remove (child);
@@ -69,15 +70,22 @@ namespace Reminduck.Widgets.Views {
             var index = 0;
             foreach (var reminder in ReminduckApp.reminders) {
                 var box = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 5);
-                box.margin = 5;
+                box.margin = 2;
+                box.get_style_context ().add_class ("list-item");
 
                 box.pack_start (new Gtk.Label (reminder.description), false, false, 0);
-                
+
                 var deleteButton = new Gtk.Button.from_icon_name ("edit-delete");
                 deleteButton.activate.connect (() => { on_delete (reminder); } );
                 deleteButton.clicked.connect (() => { on_delete (reminder); } );
 
                 box.pack_end (deleteButton, false, false, 0);
+                
+                var editButton = new Gtk.Button.from_icon_name ("edit");
+                editButton.activate.connect (() => { on_edit (reminder); } );
+                editButton.clicked.connect (() => { on_edit (reminder); } );
+
+                box.pack_end (editButton, false, false, 5);
                 
                 box.pack_end (new Gtk.Label (reminder.time.format ("%x") + " " + reminder.time.format ("%X")), false, false, 0);
 
@@ -85,8 +93,8 @@ namespace Reminduck.Widgets.Views {
                 row.add (box);
 
                 this.reminders_list.insert (row, index);
-                index++;
             }
+            index++;
 
             this.reminders_list.show_all ();
         }
@@ -94,6 +102,10 @@ namespace Reminduck.Widgets.Views {
         private void on_delete (Reminder reminder) {
             ReminduckApp.database.delete_reminder (reminder.rowid);
             reminder_deleted ();
+        }
+
+        private void on_edit (Reminder reminder) {
+            edit_request (reminder);
         }
     }
 }
