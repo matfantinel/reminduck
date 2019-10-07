@@ -2,5 +2,6 @@
 <gresources>
   <gresource prefix="/com/github/matfantinel/reminduck">
     <file alias="Application.css">Application.css</file>
+    <file alias="AppIcon.png">icons/com.github.matfantinel.reminduck.png</file>
   </gresource>
 </gresources>

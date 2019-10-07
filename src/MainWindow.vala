@@ -39,11 +39,23 @@ namespace Reminduck {
             stack = new Gtk.Stack();
             stack.set_transition_duration (500);
 
-            this.set_default_size (400, 550);
+            this.set_default_size (400, 400);
 
             build_headerbar();
+
+            var image = new Gtk.Image ();
+            image.set_from_icon_name ("com.github.matfantinel.reminduck", Gtk.IconSize.DIALOG);
+            image.set_margin_top (30);
+
             build_welcome ();
-            stack.add_named (this.welcome_widget, "welcome");
+
+            var fields_box = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
+            fields_box.get_style_context ().add_class ("reminduck-welcome-box");
+            fields_box.pack_start(image, false, false, 0);
+            fields_box.pack_start(this.welcome_widget, true, true, 0);
+
+
+            stack.add_named (fields_box, "welcome");
             build_reminder_editor ();
             build_reminders_view ();
 
