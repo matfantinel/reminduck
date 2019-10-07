@@ -34,8 +34,6 @@ namespace Reminduck.Widgets.Views {
 
         bool touched;
         
-        public signal void show_notification (string title, string body);
-
         construct {
             orientation = Gtk.Orientation.VERTICAL;
             this.reminder = new Reminder();
@@ -166,11 +164,8 @@ namespace Reminduck.Widgets.Views {
                 var result = ReminduckApp.database.upsert_reminder (this.reminder);
 
                 if (result) {
-                    var text = this.reminder.description + " - " + this.reminder.time.to_string();
-                    this.show_notification(is_new ? _("Reminder created!") : _("Reminder edited!"), text);
                     reminder_created ();
                 } else {
-                    this.show_notification(_("Oops..."), _("Unfortunately, your reminder could not be saved."));
                     reminder_edited ();
                 }
             }
