@@ -31,26 +31,19 @@ namespace Reminduck {
             database = new Reminduck.Database();
         }
 
-        static ReminduckApp _instance = null;
-
         public static ArrayList<Reminder> reminders;
         public bool headless = false;
 
-        public static ReminduckApp instance {
-            get {
-                if (_instance == null)
-                    _instance = new ReminduckApp ();
-                return _instance;
-            }
-        }
-
-        public Gtk.Window main_window { get; private set; default = null; }
+        public MainWindow main_window { get; private set; default = null; }
         public static Reminduck.Database database;
 
         protected override void activate () {
+            stdout.printf ("\n✔️ Activated");
             database.verify_database ();
+            stdout.printf ("\n✔️ Database checked");
 
             var settings = new GLib.Settings ("com.github.matfantinel.reminduck.state");
+            stdout.printf ("\n✔️ Settings loaded");
 
             var first_run = settings.get_boolean ("first-run");
 
@@ -61,10 +54,10 @@ namespace Reminduck {
             }
             
             reload_reminders ();
-            if (main_window != null && !headless) {
-                main_window.present ();
-                return;
-            } else if (!headless) {                
+            stdout.printf ("\n✔️ Reminders reloaded");
+
+            if (main_window == null) {
+                stdout.printf ("\n✔️ Main window was null");
                 main_window = new MainWindow ();
                 main_window.set_application (this);
                 
@@ -76,8 +69,20 @@ namespace Reminduck {
                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
                 );
 
-                set_reminder_interval ();
+                if (!this.headless) {
+                    stdout.printf ("\n✔️ Show all 1");
+                    main_window.present ();
+                }
             }
+            
+            if (main_window != null && !this.headless) {
+                stdout.printf ("\n✔️ Main window wasn't null");
+                stdout.printf ("\n✔️ Show all 2");
+                main_window.present ();
+                main_window.show_all ();
+            }
+
+            set_reminder_interval ();
         }  
         
         public override int command_line (ApplicationCommandLine command_line) {
@@ -109,7 +114,9 @@ namespace Reminduck {
                 return 0;
             }
     
-            headless = headless_mode;
+            this.headless = headless_mode;
+
+            stdout.printf (this.headless ? "\n✔️ Headless" : "\n️️️️ ✔️ Interface");
     
             hold ();
             activate ();

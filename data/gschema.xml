@@ -4,6 +4,26 @@
     path="/com/github/matfantinel/reminduck/state/"
     id="com.github.matfantinel.reminduck.state"
     gettext-domain="com.github.matfantinel.reminduck">
+    <key name="window-width" type="i">
+      <default>600</default>
+      <summary>The saved width of the window.</summary>
+      <description>The saved width of the window.</description>
+    </key>
+    <key name="window-height" type="i">
+      <default>400</default>
+      <summary>The saved height of the window.</summary>
+      <description>The saved height of the window.</description>
+    </key>
+    <key name="window-x" type="i">
+      <default>250</default>
+      <summary>The saved X position of the window</summary>
+      <description>The saved X position of the window</description>
+    </key>
+    <key name="window-y" type="i">
+      <default>250</default>
+      <summary>The saved Y position of the window</summary>
+      <description>The saved Y position of the window</description>
+    </key>
     <key name="first-run" type="b">
       <default>true</default>
       <summary>Whether this is the first time that Reminduck has opened</summary>

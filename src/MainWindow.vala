@@ -25,6 +25,8 @@ namespace Reminduck {
         Gtk.HeaderBar headerbar;
         Gtk.Button back_button;
 
+        private GLib.Settings settings;
+
         Granite.Widgets.Welcome welcome_widget = null;
         int? view_reminders_action_reference = null;
 
@@ -32,14 +34,17 @@ namespace Reminduck {
         Widgets.Views.RemindersView reminders_view;
 
         public MainWindow() {
+            settings = new GLib.Settings ("com.github.matfantinel.reminduck.state");
+
+            move (settings.get_int ("window-x"), settings.get_int ("window-y"));
+            resize (settings.get_int ("window-width"), settings.get_int ("window-height"));
+
             buildUI();
         }
 
         private void buildUI() {
             stack = new Gtk.Stack();
             stack.set_transition_duration (500);
-
-            this.set_default_size (600, 400);
 
             build_headerbar();
 
@@ -65,6 +70,10 @@ namespace Reminduck {
 
             show_welcome_view (Gtk.StackTransitionType.NONE);
             this.present();
+
+            delete_event.connect (e => {
+                return before_destroy ();
+            });
         }        
 
         private void build_headerbar() {
@@ -190,6 +199,21 @@ namespace Reminduck {
             stack.set_visible_child_name ("welcome");
             back_button.hide();
             reminder_editor.reset_fields();
-        }        
+        }
+
+        private bool before_destroy () {
+            int x, y, width, height;
+    
+            get_position (out x, out y);
+            get_size (out width, out height);
+    
+            settings.set_int ("window-x", x);
+            settings.set_int ("window-y", y);
+            settings.set_int ("window-width", width);
+            settings.set_int ("window-height", height);
+    
+            hide ();
+            return true;
+        }
     }
 }
