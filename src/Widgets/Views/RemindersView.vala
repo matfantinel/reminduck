@@ -42,11 +42,12 @@ namespace Reminduck.Widgets.Views {
             this.margin = 15;
             
             var box = new Gtk.Box(Gtk.Orientation.VERTICAL, 5);
+            box.margin = 10;
 
             this.title = new Gtk.Label (_("Your reminders"));
             this.title.get_style_context().add_class("h2");
             
-            box.pack_start(this.title, true, false, 0);
+            box.pack_start (this.title, true, false, 0);
 
             var add_new_button = new Gtk.Button.with_label (_ ("Create another"));
             add_new_button.halign = Gtk.Align.CENTER;
@@ -54,13 +55,15 @@ namespace Reminduck.Widgets.Views {
             add_new_button.activate.connect (add_reminder);
             add_new_button.clicked.connect (add_reminder);
 
-            box.pack_start(add_new_button, false, false, 0);
+            box.pack_start (add_new_button, false, false, 0);
 
-            pack_start (box, true, false, 0);
+            pack_start (box, false, false, 0);
 
+            var scrolledWindow = new Gtk.ScrolledWindow (null, null);
             build_reminders_list ();
+            scrolledWindow.add_with_viewport (this.reminders_list);
 
-            pack_start(this.reminders_list, true, true, 0);
+            pack_start (scrolledWindow, true, true, 0);
 
             this.show_all();
         }
