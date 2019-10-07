@@ -33,6 +33,7 @@ namespace Reminduck {
 
         public static ArrayList<Reminder> reminders;
         public bool headless = false;
+        private uint timeout_id = 0;
 
         public MainWindow main_window { get; private set; default = null; }
         public static Reminduck.Database database;
@@ -81,7 +82,9 @@ namespace Reminduck {
                 main_window.present ();
             }
 
-            set_reminder_interval ();
+            if (timeout_id == 0) {
+                set_reminder_interval ();
+            }
         }  
         
         public override int command_line (ApplicationCommandLine command_line) {
@@ -166,7 +169,12 @@ namespace Reminduck {
         }
 
         public void set_reminder_interval () {
-            Timeout.add_seconds (1 * 60, remind);
+            // Disable old timer to avoid repeated notifications
+            if (timeout_id > 0) {
+                Source.remove (timeout_id);
+            }
+
+            timeout_id = Timeout.add_seconds (1 * 60, remind);
         }
     
         public bool remind () {

@@ -146,12 +146,6 @@ namespace Reminduck {
                 show_reminders_view();
             });
 
-            reminder_editor.show_notification.connect((title, body) => {
-                var notification = new Notification (title);
-                notification.set_body (body);
-                this.get_application().send_notification ("notify.app", notification);
-            });
-
             stack.add_named (reminder_editor, "reminder_editor");
         }
 
