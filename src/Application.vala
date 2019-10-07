@@ -79,7 +79,6 @@ namespace Reminduck {
                 stdout.printf ("\n✔️ Main window wasn't null");
                 stdout.printf ("\n✔️ Show all 2");
                 main_window.present ();
-                main_window.show_all ();
             }
 
             set_reminder_interval ();
