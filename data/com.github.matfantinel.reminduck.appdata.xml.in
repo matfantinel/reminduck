@@ -4,8 +4,37 @@
   <id>com.github.matfantinel.reminduck.desktop</id>
   <metadata_license>CC0</metadata_license>
   <name>Reminduck</name>
-  <summary>A Catchy Tagline</summary>
+  <summary>Don't forget about your stuff in an adorably annoying way.</summary>
   <description>
-    <p>A quick summary of your app's main selling points and features. Just a couple sentences per paragraph is best.</p>
+    <p>Reminduck is a simple reminder app made to be quick and easy - it focuses on simple reminders with set time and date and nothing else.</p>
+
+    <p>It does not aim to provide a complete control of your reminder needs (yet), but sometimes simple is just enough.</p>
+
+    <p>And it quacks.</p>
   </description>
+  <releases>
+    <release version="1.0.0" date="2019-10-10">
+      <description>
+        <p>Initial Release 🎉️</p>
+      </description>
+    </release>
+  </releases>
+  <provides>
+    <binary>com.github.matfantinel.reminduck</binary>
+  </provides>
+  <developer_name>Matheus Fantinel</developer_name>
+  <url type="homepage">https://github.com/matfantinel/reminduck</url>
+  <url type="bugtracker">https://github.com/matfantinel/reminduck/issues</url>
+  <url type="help">https://github.com/matfantinel/reminduck/issues</url>
+  <update_contact>matfantinel@gmail.com</update_contact>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/matfantinel/reminduck/master/data/screenshots/Welcome.png</image>
+    </screenshot>
+  </screenshots>
+  <custom>
+     <value key="x-appcenter-color-primary">#fff394</value>
+     <value key="x-appcenter-color-primary-text">rgb(255, 255, 255)</value>
+     <value key="x-appcenter-suggested-price">1</value>
+  </custom>
 </component>
