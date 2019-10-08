@@ -8,4 +8,5 @@ Icon=com.github.matfantinel.reminduck
 Terminal=false
 Type=Application
 X-GNOME-Gettext-Domain=reminduck
+X-GNOME-UsesNotifications=true
 Keywords=Reminduck;Personal;Assistant;Reminders
