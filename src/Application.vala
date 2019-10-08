@@ -72,6 +72,7 @@ namespace Reminduck {
 
                 if (!this.headless) {
                     stdout.printf ("\n✔️ Show all 1");
+                    main_window.show_all ();
                     main_window.present ();
                 }
             }
@@ -79,6 +80,7 @@ namespace Reminduck {
             if (main_window != null && !this.headless) {
                 stdout.printf ("\n✔️ Main window wasn't null");
                 stdout.printf ("\n✔️ Show all 2");
+                main_window.show_all ();
                 main_window.present ();
             }
 

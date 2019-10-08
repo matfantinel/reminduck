@@ -66,10 +66,7 @@ namespace Reminduck {
 
             add (stack);            
 
-            show_all();            
-
             show_welcome_view (Gtk.StackTransitionType.NONE);
-            this.present();
 
             delete_event.connect (e => {
                 return before_destroy ();
@@ -115,8 +112,6 @@ namespace Reminduck {
             if (ReminduckApp.reminders.size > 0) {
                 this.view_reminders_action_reference = this.welcome_widget.append ("emblem-documents", _("View Reminders"), _("See reminders you've created"));
             }
-                
-            this.welcome_widget.show_all ();
         }
 
         private void update_view_reminders_welcome_action () {

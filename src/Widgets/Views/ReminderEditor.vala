@@ -97,8 +97,6 @@ namespace Reminduck.Widgets.Views {
             pack_start(title, true, false, 0);
             pack_start(fields_box, true, false, 0);
             pack_end (this.save_button, false, false, 0);
-
-            show_all();
         }
 
         public bool validate() {

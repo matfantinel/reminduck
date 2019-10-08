@@ -64,8 +64,6 @@ namespace Reminduck.Widgets.Views {
             scrolledWindow.add_with_viewport (this.reminders_list);
 
             pack_start (scrolledWindow, true, true, 0);
-
-            this.show_all();
         }
 
         public void add_reminder () {
