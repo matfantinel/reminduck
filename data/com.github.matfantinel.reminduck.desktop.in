@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Reminduck
 GenericName=Reminders
-Comment=This is just a test for now
+Comment=Don't forget about your stuff in an adorably annoying way
 Categories=Utility;
 Exec=com.github.matfantinel.reminduck %U
 Icon=com.github.matfantinel.reminduck
