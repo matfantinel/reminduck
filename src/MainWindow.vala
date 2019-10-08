@@ -182,7 +182,7 @@ namespace Reminduck {
             reminder_editor.reset_fields();
         }
 
-        private void show_welcome_view (Gtk.StackTransitionType slide = Gtk.StackTransitionType.SLIDE_RIGHT) {
+        public void show_welcome_view (Gtk.StackTransitionType slide = Gtk.StackTransitionType.SLIDE_RIGHT) {
             update_view_reminders_welcome_action ();
             stack.set_transition_type (slide);
             stack.set_visible_child_name ("welcome");

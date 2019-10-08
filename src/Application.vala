@@ -73,6 +73,7 @@ namespace Reminduck {
                 if (!this.headless) {
                     stdout.printf ("\n✔️ Show all 1");
                     main_window.show_all ();
+                    main_window.show_welcome_view (Gtk.StackTransitionType.NONE);
                     main_window.present ();
                 }
             }
@@ -81,6 +82,7 @@ namespace Reminduck {
                 stdout.printf ("\n✔️ Main window wasn't null");
                 stdout.printf ("\n✔️ Show all 2");
                 main_window.show_all ();
+                main_window.show_welcome_view (Gtk.StackTransitionType.NONE);
                 main_window.present ();
             }
 
