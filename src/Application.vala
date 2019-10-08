@@ -41,10 +41,8 @@ namespace Reminduck {
         protected override void activate () {
             stdout.printf ("\n✔️ Activated");
             database.verify_database ();
-            stdout.printf ("\n✔️ Database checked");
 
             var settings = new GLib.Settings ("com.github.matfantinel.reminduck.state");
-            stdout.printf ("\n✔️ Settings loaded");
 
             var first_run = settings.get_boolean ("first-run");
 
@@ -55,10 +53,8 @@ namespace Reminduck {
             }
             
             reload_reminders ();
-            stdout.printf ("\n✔️ Reminders reloaded");
 
             if (main_window == null) {
-                stdout.printf ("\n✔️ Main window was null");
                 main_window = new MainWindow ();
                 main_window.set_application (this);
                 
@@ -71,7 +67,6 @@ namespace Reminduck {
                 );
 
                 if (!this.headless) {
-                    stdout.printf ("\n✔️ Show all 1");
                     main_window.show_all ();
                     main_window.show_welcome_view (Gtk.StackTransitionType.NONE);
                     main_window.present ();
@@ -79,8 +74,6 @@ namespace Reminduck {
             }
             
             if (main_window != null && !this.headless) {
-                stdout.printf ("\n✔️ Main window wasn't null");
-                stdout.printf ("\n✔️ Show all 2");
                 main_window.show_all ();
                 main_window.show_welcome_view (Gtk.StackTransitionType.NONE);
                 main_window.present ();
