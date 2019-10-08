@@ -154,8 +154,6 @@ namespace Reminduck.Widgets.Views {
 
         private void on_save() {
             if (this.validate()) {
-                var is_new = this.reminder.rowid == null;
-
                 this.reminder.description = this.reminder_input.get_text();
                 this.reminder.time = this.mount_datetime(this.date_picker.date, this.time_picker.time);                
 
