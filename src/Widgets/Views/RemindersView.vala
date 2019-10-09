@@ -61,7 +61,7 @@ namespace Reminduck.Widgets.Views {
 
             var scrolled_window = new Gtk.ScrolledWindow(null, null);
             build_reminders_list();
-            scrolled_window.add_with_viewport(this.reminders_list);
+            scrolled_window.add(this.reminders_list);
 
             pack_start(scrolled_window, true, true, 0);
         }
