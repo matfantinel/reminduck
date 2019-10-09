@@ -25,6 +25,7 @@ If you want to go ahead and compile Reminduck yourself, you'll need the followin
 * libgtk-3-dev
 * meson
 * valac
+* libsqlite3-dev
 
 You can install them on elementary OS Juno with:
 
