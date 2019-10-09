@@ -50,7 +50,7 @@ namespace Reminduck {
 
         protected override void activate() {
             stdout.printf("\n✔️ Activated");
-            this.database.verify_database();
+            database.verify_database();
 
             var settings = new GLib.Settings("com.github.matfantinel.reminduck.state");
 
@@ -162,7 +162,7 @@ namespace Reminduck {
         }
 
         public static void reload_reminders() {
-            reminders = this.database.fetch_reminders();
+            reminders = database.fetch_reminders();
         }
 
         public void set_reminder_interval() {
@@ -175,7 +175,7 @@ namespace Reminduck {
         }
     
         public bool remind() {
-            this.reload_reminders();
+            reload_reminders();
             
             var reminders_to_delete = new ArrayList<string>();
             foreach(var reminder in reminders) {
@@ -190,9 +190,9 @@ namespace Reminduck {
 
             if (reminders_to_delete.size > 0) {
                 foreach(var reminder in reminders_to_delete) {
-                    this.database.delete_reminder(reminder);
+                    database.delete_reminder(reminder);
                 }
-                this.reload_reminders();
+                reload_reminders();
             }
 
             return true;

@@ -118,7 +118,7 @@ namespace Reminduck.Widgets.Views {
 
         private void on_delete(Reminder reminder) {
             ReminduckApp.database.delete_reminder(reminder.rowid);
-            thos.reminder_deleted();
+            this.reminder_deleted();
         }
 
         private void on_edit(Reminder reminder) {
