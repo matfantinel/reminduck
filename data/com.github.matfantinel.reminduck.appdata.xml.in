@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2018 Matheus Fantinel <matfantinel@gmail.com> -->
 <component type="desktop">
-  <id>com.github.matfantinel.reminduck.desktop</id>
+  <id>com.github.matfantinel.reminduck</id>
   <metadata_license>CC0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
   <name>Reminduck</name>
   <summary>Don't forget about your stuff in an adorably annoying way.</summary>
   <description>
