@@ -1,10 +1,10 @@
 /*
-* Copyright (c) 2011-2019 Matheus Fantinel
+* Copyright(c) 2011-2019 Matheus Fantinel
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
 * License as published by the Free Software Foundation; either
-* version 2 of the License, or (at your option) any later version.
+* version 2 of the License, or(at your option) any later version.
 *
 * This program is distributed in the hope that it will be useful,
 * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -21,8 +21,8 @@
 
 namespace Reminduck.Widgets.Views {
     public class ReminderEditor : Gtk.Box {
-        public signal void reminder_created ();
-        public signal void reminder_edited ();
+        public signal void reminder_created();
+        public signal void reminder_edited();
 
         Gtk.Label title;
         Gtk.Entry reminder_input;
@@ -39,15 +39,15 @@ namespace Reminduck.Widgets.Views {
             this.reminder = new Reminder();
         }
 
-        public ReminderEditor () {
+        public ReminderEditor() {
             this.build_ui();
         }
 
         private void build_ui() {
             this.margin = 15;
 
-            title = new Gtk.Label (_("Create a new reminder"));
-            title.get_style_context().add_class("h2");
+            this.title = new Gtk.Label(_("Create a new reminder"));
+            this.title.get_style_context().add_class("h2");
 
             this.reminder_input = new Gtk.Entry();
             this.reminder_input.placeholder_text = _("What do you want to be reminded of?");
@@ -59,7 +59,7 @@ namespace Reminduck.Widgets.Views {
             });
 
             this.reminder_input.activate.connect(() => {
-                this.save_button.clicked ();
+                this.save_button.clicked();
             });
 
             this.date_picker = new Granite.Widgets.DatePicker.with_format(
@@ -87,16 +87,16 @@ namespace Reminduck.Widgets.Views {
             fields_box.pack_start(this.date_picker, true, false, 0);
             fields_box.pack_start(this.time_picker, true, false, 0);
 
-            this.save_button = new Gtk.Button.with_label (_ ("Save reminder"));
+            this.save_button = new Gtk.Button.with_label(_("Save reminder"));
             this.save_button.halign = Gtk.Align.END;
-            this.save_button.get_style_context ().add_class ("suggested-action");
-            this.save_button.activate.connect (on_save);
-            this.save_button.clicked.connect (on_save);
+            this.save_button.get_style_context().add_class("suggested-action");
+            this.save_button.activate.connect(on_save);
+            this.save_button.clicked.connect(on_save);
             this.save_button.set_sensitive(false);
 
             pack_start(title, true, false, 0);
             pack_start(fields_box, true, false, 0);
-            pack_end (this.save_button, false, false, 0);
+            pack_end(this.save_button, false, false, 0);
         }
 
         public bool validate() {
@@ -133,9 +133,9 @@ namespace Reminduck.Widgets.Views {
             return result;
         }
 
-        public void edit_reminder (Reminder ? existingReminder) {
-            if (existingReminder != null) {
-                this.reminder = existingReminder;
+        public void edit_reminder(Reminder ? existing_reminder) {
+            if (existing_reminder != null) {
+                this.reminder = existing_reminder;
     
                 this.reminder_input.text = this.reminder.description;
                 this.date_picker.date = this.reminder.time;
@@ -146,7 +146,7 @@ namespace Reminduck.Widgets.Views {
             }
         }
 
-        public void reset_fields () {
+        public void reset_fields() {
             this.reminder_input.text = "";
             this.date_picker.date = new GLib.DateTime.now_local().add_minutes(15);
             this.time_picker.time = this.date_picker.date;            
@@ -157,12 +157,12 @@ namespace Reminduck.Widgets.Views {
                 this.reminder.description = this.reminder_input.get_text();
                 this.reminder.time = this.mount_datetime(this.date_picker.date, this.time_picker.time);                
 
-                var result = ReminduckApp.database.upsert_reminder (this.reminder);
+                var result = ReminduckApp.database.upsert_reminder(this.reminder);
 
                 if (result) {
-                    reminder_created ();
+                    reminder_created();
                 } else {
-                    reminder_edited ();
+                    reminder_edited();
                 }
             }
         }
