@@ -2,11 +2,14 @@ Source: com.github.matfantinel.reminduck
 Section: x11
 Priority: extra
 Maintainer: Matheus Fantinel <matfantinel@gmail.com>
-Build-Depends: debhelper (>= 10.5.1),
-               gettext,
-               libgtk-3-dev (>= 3.10),
+Build-Depends: cmake (>= 2.8),
+               debhelper (>= 9),
+               libgtk-3-dev,
+               libsqlite3-dev,
+               libgranite-dev,
+               libgee-0.8-dev,
                meson,
-               valac (>= 0.28.0)
+               valac (>= 0.40.0)
 Standards-Version: 4.1.1
 
 Package: com.github.matfantinel.reminduck
