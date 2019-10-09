@@ -23,7 +23,7 @@ using Gee;
 
 namespace Reminduck {
 
-    public class ReminduckApp : Granite.Application {
+    public class ReminduckApp : Gtk.Application {
 
         construct {
             application_id = "com.github.matfantinel.reminduck";
