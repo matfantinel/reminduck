@@ -1,5 +1,5 @@
-reminduck (0.1) precise; urgency=low
+com.github.matfantinel.reminduck (0.1ubuntu1) UNRELEASED; urgency=low
 
-  * Initial Release.
+  * Initial Release.  * 
 
- -- Matheus Fantinel <matfantinel@gmail.com>  Wed, 6 Jun 2018 19:59:39 -0300
+ -- Matheus Fantinel <matfantinel@gmail.com>  Wed, 09 Oct 2019 01:09:03 -0300
