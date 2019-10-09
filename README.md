@@ -1,7 +1,15 @@
 <p align="center">
-    <img src="data/icons/com.github.matfantinel.reminduck.png" alt="Icon" style="height: 48px;" />
+    <img src="data/screenshots/Welcome.png" alt="Screenshot" />
 </p>
 
 # Reminduck
 
-Reminduck is a duck that will remind you of your stuff... soon™. This app is still in development.
+Reminduck is a simple reminder app made to be quick and easy - it focuses on simple reminders with set time and date and nothing else.
+
+It does not aim to provide a complete control of your reminder needs (yet), but sometimes simple is just enough.
+
+_And it quacks._
+
+
+
+**Made with :heart: on elementary OS**
