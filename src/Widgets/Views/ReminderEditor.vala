@@ -53,31 +53,14 @@ namespace Reminduck.Widgets.Views {
             this.reminder_input.placeholder_text = _("What do you want to be reminded of?");
             this.reminder_input.show_emoji_icon = true;
             
-            this.reminder_input.changed.connect(() => {
-                this.touched = true;
-                this.validate();
-            });
-
-            this.reminder_input.activate.connect(() => {
-                this.save_button.clicked();
-            });
-
             this.date_picker = new Granite.Widgets.DatePicker.with_format(
                 Granite.DateTime.get_default_date_format(false, true, true)
             );
-
-            this.date_picker.date_changed.connect(() => {
-                this.validate();
-            });
 
             this.time_picker = new Granite.Widgets.TimePicker.with_format(
                 Granite.DateTime.get_default_time_format(true), 
                 Granite.DateTime.get_default_time_format(false)
             );
-
-            this.time_picker.time_changed.connect(() => {
-                this.validate();
-            });
 
             this.reset_fields();
 
@@ -97,6 +80,23 @@ namespace Reminduck.Widgets.Views {
             pack_start(title, true, false, 0);
             pack_start(fields_box, true, false, 0);
             pack_end(this.save_button, false, false, 0);
+
+            this.reminder_input.changed.connect(() => {
+                this.touched = true;
+                this.validate();
+            });
+
+            this.reminder_input.activate.connect(() => {
+                this.save_button.clicked();
+            });
+
+            this.date_picker.date_changed.connect(() => {
+                this.validate();
+            });
+
+            this.time_picker.time_changed.connect(() => {
+                this.validate();
+            });
         }
 
         public bool validate() {
