@@ -1,10 +1,10 @@
 @define-color colorPrimary @BANANA_300;
 @define-color colorAccent @BANANA_700;
-/* @define-color textColorPrimary white; */
+@define-color textColorPrimary #645C3A;
 
 .reminduck-headerbar {
     background-color: @colorPrimary;
-    /* color: @textColorPrimary; */
+    color: @textColorPrimary;
     box-shadow: none;
 }
 
