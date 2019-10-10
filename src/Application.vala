@@ -66,15 +66,25 @@ namespace Reminduck {
 
             if (this.main_window == null) {
                 this.main_window = new MainWindow();
-                this.main_window.set_application(this);
+                this.main_window.set_application(this);                
                 
-                var provider = new Gtk.CssProvider();
-                provider.load_from_resource("/com/github/matfantinel/reminduck/Application.css");
-                Gtk.StyleContext.add_provider_for_screen(
-                    Gdk.Screen.get_default(),
-                    provider,
-                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-                );
+                if (GtkSettings.get_default().prefer_dark_theme) {
+                    var provider = new Gtk.CssProvider();
+                    provider.load_from_resource("/com/github/matfantinel/reminduck/stylesheet-dark.css");
+                    Gtk.StyleContext.add_provider_for_screen(
+                        Gdk.Screen.get_default(),
+                        provider,
+                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+                    );
+                } else {
+                    var provider = new Gtk.CssProvider();
+                    provider.load_from_resource("/com/github/matfantinel/reminduck/stylesheet.css");
+                    Gtk.StyleContext.add_provider_for_screen(
+                        Gdk.Screen.get_default(),
+                        provider,
+                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+                    );
+                }
 
                 if (!this.headless) {
                     this.main_window.show_all();

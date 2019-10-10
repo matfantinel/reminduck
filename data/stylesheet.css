@@ -8,8 +8,8 @@
     box-shadow: none;
 }
 
-.reminduck-welcome-box {
-    background-color: #FFFFFF;
+.welcome {
+    background-color: inherit;
 }
 
 .reminduck-reminders-list {
