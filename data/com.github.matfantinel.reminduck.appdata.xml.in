@@ -32,6 +32,12 @@
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/matfantinel/reminduck/master/data/screenshots/Welcome.png</image>
     </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/matfantinel/reminduck/master/data/screenshots/New.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/matfantinel/reminduck/master/data/screenshots/List.png</image>
+    </screenshot>
   </screenshots>
   <custom>
      <value key="x-appcenter-color-primary">#fff394</value>
