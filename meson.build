@@ -46,7 +46,6 @@ executable(
     'src/Objects/Reminder.vala',
     'src/Widgets/Views/ReminderEditor.vala',
     'src/Widgets/Views/RemindersView.vala',
-    'src/Utils/GtkSettings.vala',
     asresources,
     dependencies: [
         dependency('gtk+-3.0'),

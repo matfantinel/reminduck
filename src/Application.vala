@@ -68,7 +68,7 @@ namespace Reminduck {
                 this.main_window = new MainWindow();
                 this.main_window.set_application(this);                
                 
-                if (GtkSettings.get_default().prefer_dark_theme) {
+                if (Gtk.Settings.get_default ().gtk_application_prefer_dark_theme == true) {
                     var provider = new Gtk.CssProvider();
                     provider.load_from_resource("/com/github/matfantinel/reminduck/stylesheet-dark.css");
                     Gtk.StyleContext.add_provider_for_screen(
