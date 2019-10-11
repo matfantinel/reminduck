@@ -16,7 +16,10 @@
   <releases>
     <release version="1.1.0" date="2019-10-11">
       <description>
-        <p>Support the unofficial "Prefer Dark Theme" setting 🌝️</p>
+        <ul>
+          <li>Support the unofficial "Prefer Dark Theme" setting 🌝️</li>
+          <li>This should also make it work with other dark GTK themes</li>
+        </ul>
       </description>
     </release>
     <release version="1.0.0" date="2019-10-09">
