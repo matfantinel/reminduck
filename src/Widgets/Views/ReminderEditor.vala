@@ -28,6 +28,9 @@ namespace Reminduck.Widgets.Views {
         Gtk.Entry reminder_input;
         Granite.Widgets.DatePicker date_picker;
         Granite.Widgets.TimePicker time_picker;
+
+        Gtk.Switch recurrency_switch;
+        Gtk.Box recurrency_container;
         Gtk.ComboBox recurrency_combobox;
         Gtk.Button save_button;
 
@@ -66,8 +69,14 @@ namespace Reminduck.Widgets.Views {
 
 
 
+            this.recurrency_switch = new Gtk.Switch();
 
+            var recurrency_switch_container = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 5);
+            recurrency_switch_container.margin = 2;
 
+            recurrency_switch_container.pack_end(this.recurrency_switch, false, false, 0);
+            recurrency_switch_container.pack_end(new Gtk.Label(_("Repeat")), false, false, 0);
+            
             string[] recurrency_options = {
                 RecurrencyType.NO_REPEAT.to_string(),
                 RecurrencyType.EVERY_X_MINUTES.to_string(),
@@ -90,15 +99,15 @@ namespace Reminduck.Widgets.Views {
 
             this.recurrency_combobox.set_attributes(cell, "text", 0);            
 
-            var recurrency_container = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 5);
-            recurrency_container.margin = 2;
-
-            recurrency_container.pack_start(new Gtk.Label(_("Repeat")), false, false, 0);
-            recurrency_container.pack_start(this.recurrency_combobox, false, false, 0);
 
 
+            this.recurrency_container = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 5);
+            this.recurrency_container.margin = 2;
 
+            this.recurrency_container.pack_end(this.recurrency_combobox, false, false, 0);
+            this.recurrency_container.pack_end(new Gtk.Label(_("Frequency")), false, false, 0);
 
+            this.recurrency_container.hide();
 
 
             this.reset_fields();
@@ -108,7 +117,8 @@ namespace Reminduck.Widgets.Views {
             fields_box.pack_start(this.reminder_input, true, false, 0);
             fields_box.pack_start(this.date_picker, true, false, 0);
             fields_box.pack_start(this.time_picker, true, false, 0);
-            fields_box.pack_start(recurrency_container, true, false, 0);
+            fields_box.pack_start(recurrency_switch_container, true, false, 0);
+            fields_box.pack_start(this.recurrency_container, true, false, 0);
 
             this.save_button = new Gtk.Button.with_label(_("Save reminder"));
             this.save_button.halign = Gtk.Align.END;
@@ -136,6 +146,14 @@ namespace Reminduck.Widgets.Views {
 
             this.time_picker.time_changed.connect(() => {
                 this.validate();
+            });
+
+            this.recurrency_switch.notify["active"].connect(() => {
+                if (this.recurrency_switch.get_active()) {
+                    this.recurrency_container.show();
+                } else {
+                    this.recurrency_container.hide();
+                }
             });
 
             this.recurrency_combobox.changed.connect(() => {
