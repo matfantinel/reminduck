@@ -28,11 +28,12 @@ namespace Reminduck.Widgets.Views {
         Gtk.Entry reminder_input;
         Granite.Widgets.DatePicker date_picker;
         Granite.Widgets.TimePicker time_picker;
+        Gtk.ComboBox recurrency_combobox;
         Gtk.Button save_button;
 
         Reminder reminder;
 
-        bool touched;
+        bool touched;        
         
         construct {
             orientation = Gtk.Orientation.VERTICAL;
@@ -62,6 +63,44 @@ namespace Reminduck.Widgets.Views {
                 Granite.DateTime.get_default_time_format(false)
             );
 
+
+
+
+
+
+            string[] recurrency_options = {
+                RecurrencyType.NO_REPEAT.to_string(),
+                RecurrencyType.EVERY_X_MINUTES.to_string(),
+                RecurrencyType.EVERY_DAY.to_string(),
+                RecurrencyType.EVERY_WEEK.to_string(),
+                RecurrencyType.EVERY_MONTH.to_string()
+            };
+            Gtk.ListStore list_store = new Gtk.ListStore (1, typeof(string));
+
+            for (int i = 0; i < recurrency_options.length; i++){
+                Gtk.TreeIter iter;
+                list_store.append (out iter);
+                list_store.set (iter, 0, recurrency_options[i]);
+            }
+    
+            this.recurrency_combobox = new Gtk.ComboBox.with_model(list_store);
+
+            Gtk.CellRendererText cell = new Gtk.CellRendererText();
+            this.recurrency_combobox.pack_start(cell, false);
+
+            this.recurrency_combobox.set_attributes(cell, "text", 0);            
+
+            var recurrency_container = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 5);
+            recurrency_container.margin = 2;
+
+            recurrency_container.pack_start(new Gtk.Label(_("Repeat")), false, false, 0);
+            recurrency_container.pack_start(this.recurrency_combobox, false, false, 0);
+
+
+
+
+
+
             this.reset_fields();
 
             var fields_box = new Gtk.Box(Gtk.Orientation.VERTICAL, 5);
@@ -69,6 +108,7 @@ namespace Reminduck.Widgets.Views {
             fields_box.pack_start(this.reminder_input, true, false, 0);
             fields_box.pack_start(this.date_picker, true, false, 0);
             fields_box.pack_start(this.time_picker, true, false, 0);
+            fields_box.pack_start(recurrency_container, true, false, 0);
 
             this.save_button = new Gtk.Button.with_label(_("Save reminder"));
             this.save_button.halign = Gtk.Align.END;
@@ -97,6 +137,13 @@ namespace Reminduck.Widgets.Views {
             this.time_picker.time_changed.connect(() => {
                 this.validate();
             });
+
+            this.recurrency_combobox.changed.connect(() => {
+                var selected_option = this.recurrency_combobox.get_active();
+
+                //TODO: ((RecurrencyType)selected_option)
+                //show or hide relevant extra UI elements depending on the option
+            });
         }
 
         public bool validate() {
@@ -124,7 +171,7 @@ namespace Reminduck.Widgets.Views {
             } else {
                 this.date_picker.get_style_context().remove_class(Gtk.STYLE_CLASS_ERROR);
                 this.time_picker.get_style_context().remove_class(Gtk.STYLE_CLASS_ERROR);
-            }
+            }            
             
             if (result) {
                 this.save_button.set_sensitive(true);
@@ -149,13 +196,15 @@ namespace Reminduck.Widgets.Views {
         public void reset_fields() {
             this.reminder_input.text = "";
             this.date_picker.date = new GLib.DateTime.now_local().add_minutes(15);
-            this.time_picker.time = this.date_picker.date;            
+            this.time_picker.time = this.date_picker.date;     
+            this.recurrency_combobox.set_active((int)RecurrencyType.NO_REPEAT);       
         }
 
         private void on_save() {
             if (this.validate()) {
                 this.reminder.description = this.reminder_input.get_text();
-                this.reminder.time = this.mount_datetime(this.date_picker.date, this.time_picker.time);                
+                this.reminder.time = this.mount_datetime(this.date_picker.date, this.time_picker.time);
+                this.reminder.recurrency_type = (RecurrencyType)this.recurrency_combobox.get_active();
 
                 var result = ReminduckApp.database.upsert_reminder(this.reminder);
 
