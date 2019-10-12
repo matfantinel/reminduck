@@ -24,9 +24,40 @@ namespace Reminduck {
         public string rowid { get; set; }
         public string description { get; set; }
         public GLib.DateTime time { get; set; }
+        public RecurrencyType recurrency_type { get; set; }
 
         public Reminder() {
             
+        }
+    }
+
+    public enum RecurrencyType {
+        NO_REPEAT,
+        EVERY_X_MINUTES,
+        EVERY_DAY,
+        EVERY_WEEK,
+        EVERY_MONTH;
+
+        public string to_string() {
+            switch (this) {
+                case NO_REPEAT:
+                    return _("Don't repeat");
+    
+                case EVERY_X_MINUTES:
+                    return _("Every X minutes");
+    
+                case EVERY_DAY:
+                    return _("Every day");
+    
+                case EVERY_WEEK:
+                    return _("Every week");
+
+                case EVERY_MONTH:
+                    return _("Every month");
+    
+                default:
+                    assert_not_reached();
+            }
         }
     }
 }
