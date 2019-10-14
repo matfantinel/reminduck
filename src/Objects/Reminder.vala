@@ -27,22 +27,22 @@ namespace Reminduck {
         public RecurrencyType recurrency_type { get; set; }
 
         public Reminder() {
-            
+            recurrency_type = RecurrencyType.NONE;
         }
     }
 
     public enum RecurrencyType {
-        NO_REPEAT,
         EVERY_X_MINUTES,
         EVERY_DAY,
         EVERY_WEEK,
-        EVERY_MONTH;
+        EVERY_MONTH,
+        NONE;
 
-        public string to_string() {
-            switch (this) {
-                case NO_REPEAT:
-                    return _("Don't repeat");
-    
+        public string to_friendly_string() {
+            switch (this) {   
+                case NONE:
+                    return _("Don't Repeat");
+                    
                 case EVERY_X_MINUTES:
                     return _("Every X minutes");
     

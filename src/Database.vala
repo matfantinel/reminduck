@@ -31,9 +31,9 @@ public class Reminduck.Database {
     }    
 
     private void open_database(out Sqlite.Database database) {
-        var connexion = Sqlite.Database.open(get_database_path(), out database);
+        var connection = Sqlite.Database.open(get_database_path(), out database);
 
-        if (connexion != Sqlite.OK) {
+        if (connection != Sqlite.OK) {
             stderr.printf("Can't open database: %d: %s\n", database.errcode(), database.errmsg());
         }
     }    
@@ -45,7 +45,8 @@ public class Reminduck.Database {
         string query = """
             CREATE TABLE `reminders`(
               `description` TEXT NOT NULL,
-              `time` TEXT NOT NULL
+              `time` TEXT NOT NULL,
+              `recurrency_type` INTEGER NULL
             );          
         """;
 
@@ -66,13 +67,29 @@ public class Reminduck.Database {
 
             assert(path.query_exists());
             var database = get_database();
-            if (! database.query_exists() ) {
+            if (!database.query_exists()) {
                 database.create(FileCreateFlags.PRIVATE);
                 assert(database.query_exists());
                 initialize_database();
+            } else {
+                this.create_new_columns();
             }
         } catch(Error e) {
              stderr.printf("Error: %s\n", e.message);
+        }
+    }
+
+    private void create_new_columns() {
+        Sqlite.Database db;
+        open_database(out db);                
+
+        //create new column (version migration)
+        var query = "SELECT recurrency_type FROM 'reminders'";
+        var exec_query = db.exec(query);
+        if (exec_query != Sqlite.OK) {
+            print("Column does not exist. Creating it... \n");
+            var alter_table_query = "ALTER TABLE `reminders` ADD `recurrency_type` INTEGER NULL";
+            db.exec(alter_table_query);
         }
     }
 
@@ -81,13 +98,15 @@ public class Reminduck.Database {
         var query = "";
 
         if (is_new) {
-            query = """INSERT INTO reminders(description, time)
+            query = """INSERT INTO reminders(description, time, recurrency_type)
                         VALUES('"""+ reminder.description +"""',
-                        '"""+ reminder.time.to_unix().to_string() +"""')""";
+                        '"""+ reminder.time.to_unix().to_string() +"""',
+                        '"""+ ((int)reminder.recurrency_type).to_string() + """')""";
         } else {
             query = """UPDATE reminders
                         SET description = '"""+ reminder.description +"""',
-                        time = '"""+ reminder.time.to_unix().to_string() +"""'
+                        time = '"""+ reminder.time.to_unix().to_string() +"""',
+                        recurrency_type = '"""+ ((int)reminder.recurrency_type).to_string() +"""',
                         WHERE rowid = """+ reminder.rowid +""";""";
         }
         
@@ -106,7 +125,7 @@ public class Reminduck.Database {
     public ArrayList<Reminder> fetch_reminders() {
         var result = new ArrayList<Reminder>();
 
-        var query = """SELECT rowid, description, time
+        var query = """SELECT rowid, description, time, recurrency_type
                         FROM reminders
                         ORDER BY time DESC;""";
 
@@ -119,7 +138,13 @@ public class Reminduck.Database {
             reminder.rowid = v[0];
             reminder.description = v[1];
             reminder.time = new GLib.DateTime.from_unix_local(int64.parse(v[2]));
-            
+
+            if (v[3] != null) {
+                try {
+                    reminder.recurrency_type = (RecurrencyType)int.parse(v[3]);
+                } catch {}
+            }
+                    
             result.add(reminder);
             return 0;
         }, out errmsg);
