@@ -106,7 +106,7 @@ public class Reminduck.Database {
             query = """UPDATE reminders
                         SET description = '"""+ reminder.description +"""',
                         time = '"""+ reminder.time.to_unix().to_string() +"""',
-                        recurrency_type = '"""+ ((int)reminder.recurrency_type).to_string() +"""',
+                        recurrency_type = '"""+ ((int)reminder.recurrency_type).to_string() +"""'
                         WHERE rowid = """+ reminder.rowid +""";""";
         }
         
