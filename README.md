@@ -16,6 +16,19 @@ While Reminduck can run in any Linux distribution, it was built with [elementary
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)][AppCenter]
 
+## Translating
+
+You can help translating this app with the following steps:
+
+* Add the language you want to translate to in the `po/LINGUAS` file (if it's already there, you can skip this step);
+* Then, make sure the translation files are updated:
+```shell
+cd build
+ninja com.github.matfantinel.reminduck-pot
+ninja com.github.matfantinel.reminduck-update-po
+```
+* Then, update your language file in `po` folder with your translations. For example, portuguese (pt) translation file is `po/pt.po`;
+* Fork this repo, commit to your repo and then open a Pull Request to this one.
 
 ## Developing and building
 
@@ -47,6 +60,7 @@ Then run it with:
 ```shell
 com.github.matfantinel.reminduck
 ```
+
 
 
 **Made with :heart: on [elementary OS]**
