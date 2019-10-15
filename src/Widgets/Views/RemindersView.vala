@@ -84,7 +84,15 @@ namespace Reminduck.Widgets.Views {
             foreach(var reminder in ReminduckApp.reminders) {
                 var box = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 5);
                 box.margin = 2;
-                box.get_style_context().add_class("list-item");                
+                box.get_style_context().add_class("list-item");   
+                
+                if (reminder.recurrency_type != RecurrencyType.NONE) {
+                    var recurrency_indicator = new Gtk.Image();
+                    recurrency_indicator.gicon = new ThemedIcon ("media-playlist-repeat");
+                    recurrency_indicator.pixel_size = 18;
+                    recurrency_indicator.tooltip_text = "This reminder repeats " + reminder.recurrency_type.to_friendly_string().down();
+                    box.pack_start(recurrency_indicator, false, false, 5);
+                }
 
                 var description = new Gtk.Label(reminder.description);
                 description.wrap = true;
@@ -102,7 +110,7 @@ namespace Reminduck.Widgets.Views {
                 edit_button.activate.connect(() => { on_edit(reminder); } );
                 edit_button.clicked.connect(() => { on_edit(reminder); } );
 
-                box.pack_end(edit_button, false, false, 5);
+                box.pack_end(edit_button, false, false, 5);                
 
                 string date_label_text = "";
                 var is_today = reminder.time.format("%x") == new GLib.DateTime.now().format("%x");
