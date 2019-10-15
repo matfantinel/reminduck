@@ -140,9 +140,7 @@ public class Reminduck.Database {
             reminder.time = new GLib.DateTime.from_unix_local(int64.parse(v[2]));
 
             if (v[3] != null) {
-                try {
-                    reminder.recurrency_type = (RecurrencyType)int.parse(v[3]);
-                } catch {}
+                reminder.recurrency_type = (RecurrencyType)int.parse(v[3]);
             }
                     
             result.add(reminder);
