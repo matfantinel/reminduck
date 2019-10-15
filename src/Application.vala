@@ -189,10 +189,50 @@ namespace Reminduck {
             
             var reminders_to_delete = new ArrayList<string>();
             foreach(var reminder in reminders) {
+                //If reminder date < current date
                 if (reminder.time.compare(new GLib.DateTime.now()) <= 0) {
                     var notification = new Notification("QUACK!");
                     notification.set_body(reminder.description);
                     this.send_notification("notify.app", notification);
+
+                    if (reminder.recurrency_type != RecurrencyType.NONE) {
+                        GLib.DateTime new_time = reminder.time;
+
+                        //In case the user hasn't used his computer for a while, recurrent reminders
+                        //May have not fired for a while. Instead of bombarding him with notifications,
+                        //Let's make sure our new date is in the future
+
+                        //Let's try it only 30 times - no need to risk an infinite loop
+                        for (var i = 0; i < 30; i++) {
+                            switch (reminder.recurrency_type) {
+                                case RecurrencyType.EVERY_X_MINUTES:
+                                    break;
+                                case RecurrencyType.EVERY_DAY:
+                                    new_time = reminder.time.add_days(1);
+                                    break;
+                                case RecurrencyType.EVERY_WEEK:
+                                    new_time = reminder.time.add_weeks(1);
+                                    break;
+                                case RecurrencyType.EVERY_MONTH:
+                                    new_time = reminder.time.add_months(1);
+                                    break;
+                                default:
+                                    break;
+                            }
+
+                            //if new_time > current time
+                            if (new_time.compare(new GLib.DateTime.now()) > 0) {
+                                var new_reminder = new Reminder();
+                                new_reminder.time = new_time;
+                                new_reminder.description = reminder.description;
+                                new_reminder.recurrency_type = reminder.recurrency_type;
+
+                                database.upsert_reminder(new_reminder);
+                                break;
+                            }
+                            //else, keep looping
+                        }
+                    }
 
                     reminders_to_delete.add(reminder.rowid);
                 }
