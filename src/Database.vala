@@ -31,9 +31,9 @@ public class Reminduck.Database {
     }    
 
     private void open_database(out Sqlite.Database database) {
-        var connexion = Sqlite.Database.open(get_database_path(), out database);
+        var connection = Sqlite.Database.open(get_database_path(), out database);
 
-        if (connexion != Sqlite.OK) {
+        if (connection != Sqlite.OK) {
             stderr.printf("Can't open database: %d: %s\n", database.errcode(), database.errmsg());
         }
     }    
@@ -45,7 +45,9 @@ public class Reminduck.Database {
         string query = """
             CREATE TABLE `reminders`(
               `description` TEXT NOT NULL,
-              `time` TEXT NOT NULL
+              `time` TEXT NOT NULL,
+              `recurrency_type` INTEGER NULL,
+              `recurrency_interval` INTEGER NULL
             );          
         """;
 
@@ -66,38 +68,89 @@ public class Reminduck.Database {
 
             assert(path.query_exists());
             var database = get_database();
-            if (! database.query_exists() ) {
+            if (!database.query_exists()) {
                 database.create(FileCreateFlags.PRIVATE);
                 assert(database.query_exists());
                 initialize_database();
+            } else {
+                this.create_new_columns();
             }
         } catch(Error e) {
              stderr.printf("Error: %s\n", e.message);
         }
     }
 
+    private void create_new_columns() {
+        Sqlite.Database db;
+        open_database(out db);                
+
+        //create new column (version migration)
+        var query = "SELECT recurrency_type FROM 'reminders'";
+        var exec_query = db.exec(query);
+        if (exec_query != Sqlite.OK) {
+            print("Column recurrency_type does not exist. Creating it... \n");
+            var alter_table_query = "ALTER TABLE `reminders` ADD `recurrency_type` INTEGER NULL";
+            db.exec(alter_table_query);
+        }
+
+
+        query = "SELECT recurrency_interval FROM 'reminders'";
+        exec_query = db.exec(query);
+        if (exec_query != Sqlite.OK) {
+            print("Column recurrency_interval does not exist. Creating it... \n");
+            var alter_table_query = "ALTER TABLE `reminders` ADD `recurrency_interval` INTEGER NULL";
+            db.exec(alter_table_query);
+        }
+    }
+
     public bool upsert_reminder(Reminder reminder) {
         var is_new = reminder.rowid == null;
-        var query = "";
-
+        string prepared_query_str = "";
+        
         if (is_new) {
-            query = """INSERT INTO reminders(description, time)
-                        VALUES('"""+ reminder.description +"""',
-                        '"""+ reminder.time.to_unix().to_string() +"""')""";
+            prepared_query_str = "INSERT INTO reminders(description, time, recurrency_type, recurrency_interval) 
+                                        VALUES($DESCRIPTION, $TIME, $RECURRENCY_TYPE, $RECURRENCY_INTERVAL)";
         } else {
-            query = """UPDATE reminders
-                        SET description = '"""+ reminder.description +"""',
-                        time = '"""+ reminder.time.to_unix().to_string() +"""'
-                        WHERE rowid = """+ reminder.rowid +""";""";
+            prepared_query_str = "UPDATE reminders 
+                SET description = $DESCRIPTION, time = $TIME, recurrency_type = $RECURRENCY_TYPE, recurrency_interval = $RECURRENCY_INTERVAL
+                WHERE rowid = $ROWID";
         }
         
         Sqlite.Database db;
         open_database(out db);
-        var exec_query = db.exec(query);
+
+        Sqlite.Statement stmt;
+
+        int exec_query = db.prepare_v2(prepared_query_str, prepared_query_str.length, out stmt);
 
         if (exec_query != Sqlite.OK) {
-            print("Error executing query:\n%s\n", query);
+            print("Error executing query:\n%s\n", prepared_query_str);
             return false;
+        }
+
+        int param_position = stmt.bind_parameter_index ("$DESCRIPTION");
+        assert (param_position > 0);
+        stmt.bind_text (param_position, reminder.description);
+
+        param_position = stmt.bind_parameter_index ("$TIME");
+        assert (param_position > 0);
+        stmt.bind_text (param_position, reminder.time.to_unix().to_string());
+
+        param_position = stmt.bind_parameter_index ("$RECURRENCY_TYPE");
+        assert (param_position > 0);
+        stmt.bind_text (param_position, ((int)reminder.recurrency_type).to_string());
+
+        param_position = stmt.bind_parameter_index ("$RECURRENCY_INTERVAL");
+        assert (param_position > 0);
+        stmt.bind_text (param_position, reminder.recurrency_interval.to_string());
+
+        param_position = stmt.bind_parameter_index ("$ROWID");
+        assert (param_position > 0);
+        stmt.bind_text (param_position, reminder.rowid);
+
+        exec_query = stmt.step();
+        if (exec_query != Sqlite.DONE) {
+            print("Error executing query:\n%s\n", db.errmsg());
         }
 
         return true;
@@ -106,7 +159,7 @@ public class Reminduck.Database {
     public ArrayList<Reminder> fetch_reminders() {
         var result = new ArrayList<Reminder>();
 
-        var query = """SELECT rowid, description, time
+        var query = """SELECT rowid, description, time, recurrency_type, recurrency_interval
                         FROM reminders
                         ORDER BY time DESC;""";
 
@@ -119,7 +172,13 @@ public class Reminduck.Database {
             reminder.rowid = v[0];
             reminder.description = v[1];
             reminder.time = new GLib.DateTime.from_unix_local(int64.parse(v[2]));
-            
+
+            if (v[3] != null) {
+                reminder.recurrency_type = (RecurrencyType)int.parse(v[3]);
+            }
+
+            reminder.recurrency_interval = int.parse(v[4]);
+                    
             result.add(reminder);
             return 0;
         }, out errmsg);
