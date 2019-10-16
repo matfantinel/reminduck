@@ -14,6 +14,17 @@
     <p>And it quacks.</p>
   </description>
   <releases>
+    <release version="1.2.0" date="2019-10-16">
+      <description>
+        <ul>
+          <li>🔁️ Recurrent reminders - you can now have reminders that show up in set periods of time: every day, week, month, or a set interval</li>
+          <li>🌟️ General UI improvements to make settings up quacks more pleasant</li>
+          <li>🌃️ Dark Mode is now prettier</li>
+          <li>🇹🇷 Turkish translation (libreajans)</li>
+          <li>🇳🇱 Dutch translation (Vistaus)</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.0" date="2019-10-11">
       <description>
         <ul>
@@ -41,15 +52,18 @@
       <image>https://raw.githubusercontent.com/matfantinel/reminduck/master/data/screenshots/Welcome.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/matfantinel/reminduck/master/data/screenshots/New.png</image>
+      <image>https://raw.githubusercontent.com/matfantinel/reminduck/master/data/screenshots/Editor.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/matfantinel/reminduck/master/data/screenshots/Editor-dark.png</image>
     </screenshot>
     <screenshot>
       <image>https://raw.githubusercontent.com/matfantinel/reminduck/master/data/screenshots/List.png</image>
     </screenshot>
   </screenshots>
   <custom>
-     <value key="x-appcenter-color-primary">#fff394</value>
-     <value key="x-appcenter-color-primary-text">rgb(0, 0, 0)</value>
+     <value key="x-appcenter-color-primary">#3D3D3D</value>
+     <value key="x-appcenter-color-primary-text">#FFF394</value>
      <value key="x-appcenter-suggested-price">0</value>
   </custom>
 </component>
