@@ -25,6 +25,7 @@ namespace Reminduck {
         public string description { get; set; }
         public GLib.DateTime time { get; set; }
         public RecurrencyType recurrency_type { get; set; }
+        public int recurrency_interval { get; set; }
 
         public Reminder() {
             recurrency_type = RecurrencyType.NONE;
@@ -38,13 +39,19 @@ namespace Reminduck {
         EVERY_MONTH,
         NONE;
 
-        public string to_friendly_string() {
+        public string to_friendly_string(int? interval = null) {
             switch (this) {   
                 case NONE:
                     return _("Don't Repeat");
                     
                 case EVERY_X_MINUTES:
-                    return _("Every X minutes");
+                    if (interval == null || interval == 0) {
+                        return _("Every X minutes");
+                    } else if (interval == 1) {
+                        return _("Every 1 minute");
+                    } else {
+                        return _("Every ") + interval.to_string() + _(" minutes");
+                    }
     
                 case EVERY_DAY:
                     return _("Every day");

@@ -206,6 +206,7 @@ namespace Reminduck {
                         for (var i = 0; i < 30; i++) {
                             switch (reminder.recurrency_type) {
                                 case RecurrencyType.EVERY_X_MINUTES:
+                                    new_time = reminder.time.add_minutes(reminder.recurrency_interval);
                                     break;
                                 case RecurrencyType.EVERY_DAY:
                                     new_time = reminder.time.add_days(1);

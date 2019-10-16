@@ -46,7 +46,8 @@ public class Reminduck.Database {
             CREATE TABLE `reminders`(
               `description` TEXT NOT NULL,
               `time` TEXT NOT NULL,
-              `recurrency_type` INTEGER NULL
+              `recurrency_type` INTEGER NULL,
+              `recurrency_interval` INTEGER NULL
             );          
         """;
 
@@ -87,8 +88,17 @@ public class Reminduck.Database {
         var query = "SELECT recurrency_type FROM 'reminders'";
         var exec_query = db.exec(query);
         if (exec_query != Sqlite.OK) {
-            print("Column does not exist. Creating it... \n");
+            print("Column recurrency_type does not exist. Creating it... \n");
             var alter_table_query = "ALTER TABLE `reminders` ADD `recurrency_type` INTEGER NULL";
+            db.exec(alter_table_query);
+        }
+
+
+        query = "SELECT recurrency_interval FROM 'reminders'";
+        exec_query = db.exec(query);
+        if (exec_query != Sqlite.OK) {
+            print("Column recurrency_interval does not exist. Creating it... \n");
+            var alter_table_query = "ALTER TABLE `reminders` ADD `recurrency_interval` INTEGER NULL";
             db.exec(alter_table_query);
         }
     }
@@ -98,15 +108,17 @@ public class Reminduck.Database {
         var query = "";
 
         if (is_new) {
-            query = """INSERT INTO reminders(description, time, recurrency_type)
+            query = """INSERT INTO reminders(description, time, recurrency_type, recurrency_interval)
                         VALUES('"""+ reminder.description +"""',
                         '"""+ reminder.time.to_unix().to_string() +"""',
-                        '"""+ ((int)reminder.recurrency_type).to_string() + """')""";
+                        '"""+ ((int)reminder.recurrency_type).to_string() + """',
+                        '"""+ reminder.recurrency_interval.to_string() + """')""";
         } else {
             query = """UPDATE reminders
                         SET description = '"""+ reminder.description +"""',
                         time = '"""+ reminder.time.to_unix().to_string() +"""',
-                        recurrency_type = '"""+ ((int)reminder.recurrency_type).to_string() +"""'
+                        recurrency_type = '"""+ ((int)reminder.recurrency_type).to_string() +"""',
+                        recurrency_interval = '"""+ reminder.recurrency_interval.to_string() +"""'
                         WHERE rowid = """+ reminder.rowid +""";""";
         }
         
@@ -125,7 +137,7 @@ public class Reminduck.Database {
     public ArrayList<Reminder> fetch_reminders() {
         var result = new ArrayList<Reminder>();
 
-        var query = """SELECT rowid, description, time, recurrency_type
+        var query = """SELECT rowid, description, time, recurrency_type, recurrency_interval
                         FROM reminders
                         ORDER BY time DESC;""";
 
@@ -142,6 +154,8 @@ public class Reminduck.Database {
             if (v[3] != null) {
                 reminder.recurrency_type = (RecurrencyType)int.parse(v[3]);
             }
+
+            reminder.recurrency_interval = int.parse(v[4]);
                     
             result.add(reminder);
             return 0;

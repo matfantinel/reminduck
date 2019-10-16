@@ -32,6 +32,7 @@ namespace Reminduck.Widgets.Views {
         Gtk.Box recurrency_switch_container;
         Gtk.Switch recurrency_switch;
         Gtk.ComboBox recurrency_combobox;
+        Gtk.SpinButton recurrency_interval;
         Gtk.Button save_button;
 
         Reminder reminder;
@@ -117,16 +118,26 @@ namespace Reminduck.Widgets.Views {
             this.recurrency_switch.notify["active"].connect(() => {
                 if (this.recurrency_switch.get_active()) {
                     this.recurrency_combobox.show();
+                    this.recurrency_combobox.changed();
                 } else {
                     this.recurrency_combobox.hide();
                 }
             });
 
             this.recurrency_combobox.changed.connect(() => {
-                //  var selected_option = this.recurrency_combobox.get_active();
+                var selected_option = this.recurrency_combobox.get_active();
 
-                //TODO: ((RecurrencyType)selected_option)
-                //show or hide relevant extra UI elements depending on the option
+                if ((RecurrencyType)selected_option == RecurrencyType.EVERY_X_MINUTES) {
+                    this.recurrency_interval.show();
+                } else {
+                    this.recurrency_interval.hide();
+                }
+            });
+
+            this.recurrency_interval.value_changed.connect(() => {
+                if (this.recurrency_interval.value == 0) {
+                    this.recurrency_interval.value = 1;
+                }
             });
         }
 
@@ -144,7 +155,7 @@ namespace Reminduck.Widgets.Views {
                 RecurrencyType.EVERY_WEEK.to_friendly_string(),
                 RecurrencyType.EVERY_MONTH.to_friendly_string()
             };
-            Gtk.ListStore list_store = new Gtk.ListStore (1, typeof(string));
+            Gtk.ListStore list_store = new Gtk.ListStore(1, typeof(string));
 
             for (int i = 0; i < recurrency_options.length; i++){
                 Gtk.TreeIter iter;
@@ -160,6 +171,11 @@ namespace Reminduck.Widgets.Views {
             this.recurrency_combobox.set_attributes(cell, "text", 0);            
 
             this.recurrency_switch_container.pack_start(this.recurrency_combobox, false, false, 0);
+
+            this.recurrency_interval = new Gtk.SpinButton.with_range(0, 1000, 1);
+            this.recurrency_interval.value = 30;
+
+            this.recurrency_switch_container.pack_start(this.recurrency_interval, false, false, 0);
         }
 
         public bool validate() {
@@ -209,6 +225,11 @@ namespace Reminduck.Widgets.Views {
                 } else {
                     this.recurrency_switch.set_active(true);
                     this.recurrency_combobox.set_active((int)this.reminder.recurrency_type);
+
+                    if (this.reminder.recurrency_type == RecurrencyType.EVERY_X_MINUTES) {
+                        this.recurrency_interval.value = (double)this.reminder.recurrency_interval;
+                        this.recurrency_interval.show();
+                    }
                 }
             } else {
                 this.reminder = new Reminder();
@@ -223,6 +244,7 @@ namespace Reminduck.Widgets.Views {
             this.recurrency_switch.set_active(false);
             this.recurrency_combobox.set_active((int)RecurrencyType.EVERY_X_MINUTES);
             this.recurrency_combobox.hide();
+            this.recurrency_interval.hide();
         }
 
         private void on_save() {
@@ -231,8 +253,15 @@ namespace Reminduck.Widgets.Views {
                 this.reminder.time = this.mount_datetime(this.date_picker.date, this.time_picker.time);
                 if (this.recurrency_switch.get_active()) {
                     this.reminder.recurrency_type = (RecurrencyType)(this.recurrency_combobox.get_active());
+
+                    if (this.reminder.recurrency_type == RecurrencyType.EVERY_X_MINUTES) {
+                        this.reminder.recurrency_interval = (int)this.recurrency_interval.value;
+                    } else {
+                        this.reminder.recurrency_interval = 0;
+                    }
                 } else {
                     this.reminder.recurrency_type = RecurrencyType.NONE;
+                    this.reminder.recurrency_interval = 0;
                 }
 
                 var result = ReminduckApp.database.upsert_reminder(this.reminder);
