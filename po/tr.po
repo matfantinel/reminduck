@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.matfantinel.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-08 19:19-0300\n"
+"POT-Creation-Date: 2019-10-16 13:27-0300\n"
 "PO-Revision-Date: 2019-10-12 16:21+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -50,13 +50,49 @@ msgstr "Hatırlatıcıları Görüntüle"
 msgid "See reminders you've created"
 msgstr "Oluşturulmuş hatırlatıcıları görüntüle"
 
-#: src/Widgets/Views/ReminderEditor.vala:49
+#: src/Objects/Reminder.vala:45
+msgid "Don't Repeat"
+msgstr ""
+
+#: src/Objects/Reminder.vala:49
+msgid "Every X minutes"
+msgstr ""
+
+#: src/Objects/Reminder.vala:51
+msgid "Every 1 minute"
+msgstr ""
+
+#: src/Objects/Reminder.vala:53
+msgid "Every "
+msgstr ""
+
+#: src/Objects/Reminder.vala:53
+msgid " minutes"
+msgstr ""
+
+#: src/Objects/Reminder.vala:57
+msgid "Every day"
+msgstr ""
+
+#: src/Objects/Reminder.vala:60
+msgid "Every week"
+msgstr ""
+
+#: src/Objects/Reminder.vala:63
+msgid "Every month"
+msgstr ""
+
+#: src/Widgets/Views/ReminderEditor.vala:54
 msgid "Create a new reminder"
 msgstr "Yeni hatırlatıcı oluştur"
 
-#: src/Widgets/Views/ReminderEditor.vala:53
+#: src/Widgets/Views/ReminderEditor.vala:58
 msgid "What do you want to be reminded of?"
 msgstr "Neyi hatırlamak istersin?"
+
+#: src/Widgets/Views/ReminderEditor.vala:85
+msgid "Repeat"
+msgstr ""
 
 #: src/Widgets/Views/ReminderEditor.vala:90
 msgid "Save reminder"
@@ -72,8 +108,12 @@ msgstr "Hatırlatıcılar"
 msgid "Create another"
 msgstr "Yeni bir hatırlatıcı oluştur"
 
+#: src/Widgets/Views/RemindersView.vala:118
+msgid "Today"
+msgstr ""
+
 #: data/com.github.matfantinel.reminduck.desktop.in:3
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:6
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:7
 msgid "Reminduck"
 msgstr "Reminduck"
 
@@ -92,16 +132,18 @@ msgid "com.github.matfantinel.reminduck"
 msgstr "com.github.matfantinel.reminduck"
 
 #: data/com.github.matfantinel.reminduck.desktop.in:12
-msgid "Reminduck;Personal;Assistant;Reminders"
+#, fuzzy
+msgid "Reminduck;Personal;Assistant;Reminders;"
 msgstr "Reminduck;Kişisel;Asistan;Yardımcı;Hatırlatıcı;Hatırlatıcılar"
 
 # Serbest çeviri yapıldı
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:7
-msgid "Don't forget about your stuff in an adorably annoying way."
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:8
+#, fuzzy
+msgid "Remember your stuff in an adorably annoying way."
 msgstr "Önemli işlerinizi sevimli ve sinir bozucu bir şekilde size hatırlatır."
 
 # Serbest çeviri yapıldı.
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:9
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:10
 msgid ""
 "Reminduck is a simple reminder app made to be quick and easy - it focuses on "
 "simple reminders with set time and date and nothing else."
@@ -111,7 +153,7 @@ msgstr ""
 "basitçe hatırlatıcılara odaklanır."
 
 # Serbest çeviri yapıldı.
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:11
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:12
 msgid ""
 "It does not aim to provide a complete control of your reminder needs (yet), "
 "but sometimes simple is just enough."
@@ -119,15 +161,46 @@ msgstr ""
 "Hatırlatıcı ihtiyaçlarınız üzerinde tam kontrol sağlamayı (şimdilik) "
 "amaçlamaz ve bazen basit zaten yeterlidir."
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:13
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:14
 msgid "And it quacks."
 msgstr "Vaklamasını da bilir."
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:18
-msgid "Initial Release 🎉️"
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:20
+msgid ""
+"🔁️ Recurrent reminders - you can now have reminders that show up in set "
+"periods of time: every day, week, month, or a set interval"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:21
+msgid "🌟️ General UI improvements to make settings up quacks more pleasant"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:22
+msgid "🌃️ Dark Mode is now prettier"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:23
+msgid "🇹🇷 Turkish translation (libreajans)"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:24
+msgid "🇳🇱 Dutch translation (Vistaus)"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:31
+msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:32
+msgid "This should also make it work with other dark GTK themes"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:38
+#, fuzzy
+msgid "Initial Release 🦆"
 msgstr "İlk Sürüm 🎉️"
 
 # Geliştirici adı, çevirmeyin.
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:25
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:45
 msgid "Matheus Fantinel"
 msgstr "Matheus Fantinel"
