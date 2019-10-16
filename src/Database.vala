@@ -105,30 +105,52 @@ public class Reminduck.Database {
 
     public bool upsert_reminder(Reminder reminder) {
         var is_new = reminder.rowid == null;
-        var query = "";
-
+        string prepared_query_str = "";
+        
         if (is_new) {
-            query = """INSERT INTO reminders(description, time, recurrency_type, recurrency_interval)
-                        VALUES('"""+ reminder.description +"""',
-                        '"""+ reminder.time.to_unix().to_string() +"""',
-                        '"""+ ((int)reminder.recurrency_type).to_string() + """',
-                        '"""+ reminder.recurrency_interval.to_string() + """')""";
+            prepared_query_str = "INSERT INTO reminders(description, time, recurrency_type, recurrency_interval) 
+                                        VALUES($DESCRIPTION, $TIME, $RECURRENCY_TYPE, $RECURRENCY_INTERVAL)";
         } else {
-            query = """UPDATE reminders
-                        SET description = '"""+ reminder.description +"""',
-                        time = '"""+ reminder.time.to_unix().to_string() +"""',
-                        recurrency_type = '"""+ ((int)reminder.recurrency_type).to_string() +"""',
-                        recurrency_interval = '"""+ reminder.recurrency_interval.to_string() +"""'
-                        WHERE rowid = """+ reminder.rowid +""";""";
+            prepared_query_str = "UPDATE reminders 
+                SET description = $DESCRIPTION, time = $TIME, recurrency_type = $RECURRENCY_TYPE, recurrency_interval = $RECURRENCY_INTERVAL
+                WHERE rowid = $ROWID";
         }
         
         Sqlite.Database db;
         open_database(out db);
-        var exec_query = db.exec(query);
+
+        Sqlite.Statement stmt;
+
+        int exec_query = db.prepare_v2(prepared_query_str, prepared_query_str.length, out stmt);
 
         if (exec_query != Sqlite.OK) {
-            print("Error executing query:\n%s\n", query);
+            print("Error executing query:\n%s\n", prepared_query_str);
             return false;
+        }
+
+        int param_position = stmt.bind_parameter_index ("$DESCRIPTION");
+        assert (param_position > 0);
+        stmt.bind_text (param_position, reminder.description);
+
+        param_position = stmt.bind_parameter_index ("$TIME");
+        assert (param_position > 0);
+        stmt.bind_text (param_position, reminder.time.to_unix().to_string());
+
+        param_position = stmt.bind_parameter_index ("$RECURRENCY_TYPE");
+        assert (param_position > 0);
+        stmt.bind_text (param_position, ((int)reminder.recurrency_type).to_string());
+
+        param_position = stmt.bind_parameter_index ("$RECURRENCY_INTERVAL");
+        assert (param_position > 0);
+        stmt.bind_text (param_position, reminder.recurrency_interval.to_string());
+
+        param_position = stmt.bind_parameter_index ("$ROWID");
+        assert (param_position > 0);
+        stmt.bind_text (param_position, reminder.rowid);
+
+        exec_query = stmt.step();
+        if (exec_query != Sqlite.DONE) {
+            print("Error executing query:\n%s\n", db.errmsg());
         }
 
         return true;
