@@ -7,9 +7,9 @@
   <name>Reminduck</name>
   <summary>Remember your stuff in an adorably annoying way.</summary>
   <description>
-    <p>Reminduck is a simple reminder app made to be quick and easy - it focuses on simple reminders with set time and date and nothing else.</p>
+    <p>Reminduck is a simple reminder app made to be quick and easy - it focuses on simple or recurrent reminders with set time and date and nothing else.</p>
 
-    <p>It does not aim to provide a complete control of your reminder needs (yet), but sometimes simple is just enough.</p>
+    <p>It's perfect if all you want are simple or daily/weekly/monthly reminders. Anything more than that is not achievable by Reminduck right now - but you can help! Open an issue or a pull request if you have any ideas or requests.</p>
 
     <p>And it quacks.</p>
   </description>
