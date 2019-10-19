@@ -144,9 +144,11 @@ public class Reminduck.Database {
         assert (param_position > 0);
         stmt.bind_text (param_position, reminder.recurrency_interval.to_string());
 
-        param_position = stmt.bind_parameter_index ("$ROWID");
-        assert (param_position > 0);
-        stmt.bind_text (param_position, reminder.rowid);
+        if (!is_new) {
+            param_position = stmt.bind_parameter_index ("$ROWID");
+            assert (param_position > 0);
+            stmt.bind_text (param_position, reminder.rowid);
+        }
 
         exec_query = stmt.step();
         if (exec_query != Sqlite.DONE) {
