@@ -90,7 +90,7 @@ namespace Reminduck.Widgets.Views {
                     var recurrency_indicator = new Gtk.Image();
                     recurrency_indicator.gicon = new ThemedIcon ("media-playlist-repeat");
                     recurrency_indicator.pixel_size = 18;
-                    recurrency_indicator.tooltip_text = "This reminder repeats " + reminder.recurrency_type.to_friendly_string(reminder.recurrency_interval).down();
+                    recurrency_indicator.tooltip_text = _("Reminded: %s").printf(reminder.recurrency_type.to_friendly_string(reminder.recurrency_interval));
                     box.pack_start(recurrency_indicator, false, false, 5);
                 }
 
