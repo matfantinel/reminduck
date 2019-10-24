@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.matfantinel.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-16 13:27-0300\n"
+"POT-Creation-Date: 2019-10-24 19:15-0300\n"
 "PO-Revision-Date: 2019-10-12 20:05+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <vistausss@outlook.com>\n"
@@ -54,26 +54,21 @@ msgid "Every X minutes"
 msgstr ""
 
 #: src/Objects/Reminder.vala:51
-msgid "Every 1 minute"
-msgstr ""
+#, c-format
+msgid "Every minute"
+msgid_plural "Every %d minutes"
+msgstr[0] ""
+msgstr[1] ""
 
-#: src/Objects/Reminder.vala:53
-msgid "Every "
-msgstr ""
-
-#: src/Objects/Reminder.vala:53
-msgid " minutes"
-msgstr ""
-
-#: src/Objects/Reminder.vala:57
+#: src/Objects/Reminder.vala:55
 msgid "Every day"
 msgstr ""
 
-#: src/Objects/Reminder.vala:60
+#: src/Objects/Reminder.vala:58
 msgid "Every week"
 msgstr ""
 
-#: src/Objects/Reminder.vala:63
+#: src/Objects/Reminder.vala:61
 msgid "Every month"
 msgstr ""
 
@@ -100,6 +95,11 @@ msgstr "Mijn herinneringen"
 #: src/Widgets/Views/RemindersView.vala:52
 msgid "Create another"
 msgstr "Nog een herinnering instellen"
+
+#: src/Widgets/Views/RemindersView.vala:93
+#, fuzzy, c-format
+msgid "Reminded: %s"
+msgstr "Herinneringen"
 
 #: src/Widgets/Views/RemindersView.vala:118
 msgid "Today"
@@ -137,9 +137,10 @@ msgstr ""
 "herinnerd."
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:10
+#, fuzzy
 msgid ""
 "Reminduck is a simple reminder app made to be quick and easy - it focuses on "
-"simple reminders with set time and date and nothing else."
+"simple or recurrent reminders with set time and date and nothing else."
 msgstr ""
 "Reminduck is een eenvoudig programma voor herinneringen. Het programma is "
 "makkelijk in het gebruik, en legt de nadruk op eenvoudige herinneringen met "
@@ -147,11 +148,10 @@ msgstr ""
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:12
 msgid ""
-"It does not aim to provide a complete control of your reminder needs (yet), "
-"but sometimes simple is just enough."
+"It's perfect if all you want are simple or daily/weekly/monthly reminders. "
+"Anything more than that is not achievable by Reminduck right now - but you "
+"can help! Open an issue or a pull request if you have any ideas or requests."
 msgstr ""
-"Het doel is (nog) niet om zo uitgebreid mogelijk te zijn - soms is eenvoud "
-"meer dan voldoende."
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:14
 msgid "And it quacks."
@@ -195,3 +195,10 @@ msgstr "Eerste uitgave 🎉️"
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:45
 msgid "Matheus Fantinel"
 msgstr "Matheus Fantinel"
+
+#~ msgid ""
+#~ "It does not aim to provide a complete control of your reminder needs "
+#~ "(yet), but sometimes simple is just enough."
+#~ msgstr ""
+#~ "Het doel is (nog) niet om zo uitgebreid mogelijk te zijn - soms is "
+#~ "eenvoud meer dan voldoende."

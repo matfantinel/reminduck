@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.matfantinel.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-16 13:27-0300\n"
+"POT-Creation-Date: 2019-10-24 19:15-0300\n"
 "PO-Revision-Date: 2019-10-12 16:21+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -59,26 +59,20 @@ msgid "Every X minutes"
 msgstr ""
 
 #: src/Objects/Reminder.vala:51
-msgid "Every 1 minute"
-msgstr ""
+#, c-format
+msgid "Every minute"
+msgid_plural "Every %d minutes"
+msgstr[0] ""
 
-#: src/Objects/Reminder.vala:53
-msgid "Every "
-msgstr ""
-
-#: src/Objects/Reminder.vala:53
-msgid " minutes"
-msgstr ""
-
-#: src/Objects/Reminder.vala:57
+#: src/Objects/Reminder.vala:55
 msgid "Every day"
 msgstr ""
 
-#: src/Objects/Reminder.vala:60
+#: src/Objects/Reminder.vala:58
 msgid "Every week"
 msgstr ""
 
-#: src/Objects/Reminder.vala:63
+#: src/Objects/Reminder.vala:61
 msgid "Every month"
 msgstr ""
 
@@ -107,6 +101,11 @@ msgstr "Hatırlatıcılar"
 #: src/Widgets/Views/RemindersView.vala:52
 msgid "Create another"
 msgstr "Yeni bir hatırlatıcı oluştur"
+
+#: src/Widgets/Views/RemindersView.vala:93
+#, fuzzy, c-format
+msgid "Reminded: %s"
+msgstr "Hatırlatıcılar"
 
 #: src/Widgets/Views/RemindersView.vala:118
 msgid "Today"
@@ -144,22 +143,21 @@ msgstr "Önemli işlerinizi sevimli ve sinir bozucu bir şekilde size hatırlat�
 
 # Serbest çeviri yapıldı.
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:10
+#, fuzzy
 msgid ""
 "Reminduck is a simple reminder app made to be quick and easy - it focuses on "
-"simple reminders with set time and date and nothing else."
+"simple or recurrent reminders with set time and date and nothing else."
 msgstr ""
 "Reminduck hızlı ve kolay olması için üretilmiş basit bir hatırlatıcı "
 "uygulamasıdır. Belirtilen tarih ve saatten ile başka hiçbir şey içermez ve "
 "basitçe hatırlatıcılara odaklanır."
 
-# Serbest çeviri yapıldı.
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:12
 msgid ""
-"It does not aim to provide a complete control of your reminder needs (yet), "
-"but sometimes simple is just enough."
+"It's perfect if all you want are simple or daily/weekly/monthly reminders. "
+"Anything more than that is not achievable by Reminduck right now - but you "
+"can help! Open an issue or a pull request if you have any ideas or requests."
 msgstr ""
-"Hatırlatıcı ihtiyaçlarınız üzerinde tam kontrol sağlamayı (şimdilik) "
-"amaçlamaz ve bazen basit zaten yeterlidir."
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:14
 msgid "And it quacks."
@@ -204,3 +202,11 @@ msgstr "İlk Sürüm 🎉️"
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:45
 msgid "Matheus Fantinel"
 msgstr "Matheus Fantinel"
+
+# Serbest çeviri yapıldı.
+#~ msgid ""
+#~ "It does not aim to provide a complete control of your reminder needs "
+#~ "(yet), but sometimes simple is just enough."
+#~ msgstr ""
+#~ "Hatırlatıcı ihtiyaçlarınız üzerinde tam kontrol sağlamayı (şimdilik) "
+#~ "amaçlamaz ve bazen basit zaten yeterlidir."
