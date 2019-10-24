@@ -24,11 +24,11 @@ namespace Reminduck {
         public string rowid { get; set; }
         public string description { get; set; }
         public GLib.DateTime time { get; set; }
-        public RecurrencyType recurrency_type { get; set; }
+        public RecurrencyType recurrency_type { get; set; default = RecurrencyType.NONE; }
         public int recurrency_interval { get; set; }
 
         public Reminder() {
-            recurrency_type = RecurrencyType.NONE;
+            
         }
     }
 
@@ -47,10 +47,8 @@ namespace Reminduck {
                 case EVERY_X_MINUTES:
                     if (interval == null || interval == 0) {
                         return _("Every X minutes");
-                    } else if (interval == 1) {
-                        return _("Every 1 minute");
                     } else {
-                        return _("Every ") + interval.to_string() + _(" minutes");
+                        return GLib.ngettext ("Every minute", "Every %d minutes", interval).printf (interval);
                     }
     
                 case EVERY_DAY:
