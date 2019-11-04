@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.matfantinel.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-24 19:15-0300\n"
+"POT-Creation-Date: 2019-11-04 14:51+0100\n"
 "PO-Revision-Date: 2018-08-02 15:09-0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -104,90 +104,3 @@ msgstr "Lembrado: %s"
 #: src/Widgets/Views/RemindersView.vala:118
 msgid "Today"
 msgstr "Hoje"
-
-#: data/com.github.matfantinel.reminduck.desktop.in:3
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:7
-msgid "Reminduck"
-msgstr "Reminduck"
-
-#: data/com.github.matfantinel.reminduck.desktop.in:4
-msgid "Reminders"
-msgstr "Lembretes"
-
-#: data/com.github.matfantinel.reminduck.desktop.in:5
-msgid "Don't forget about your stuff in an adorably annoying way"
-msgstr "Lembre-se de suas coisas de uma maneira adoravelmente irritante"
-
-#: data/com.github.matfantinel.reminduck.desktop.in:8
-msgid "com.github.matfantinel.reminduck"
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.desktop.in:12
-msgid "Reminduck;Personal;Assistant;Reminders;"
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:8
-#, fuzzy
-msgid "Remember your stuff in an adorably annoying way."
-msgstr "Lembre-se de suas coisas de uma maneira adoravelmente irritante"
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:10
-msgid ""
-"Reminduck is a simple reminder app made to be quick and easy - it focuses on "
-"simple or recurrent reminders with set time and date and nothing else."
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:12
-msgid ""
-"It's perfect if all you want are simple or daily/weekly/monthly reminders. "
-"Anything more than that is not achievable by Reminduck right now - but you "
-"can help! Open an issue or a pull request if you have any ideas or requests."
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:14
-msgid "And it quacks."
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:20
-msgid ""
-"🔁️ Recurrent reminders - you can now have reminders that show up in set "
-"periods of time: every day, week, month, or a set interval"
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:21
-msgid "🌟️ General UI improvements to make settings up quacks more pleasant"
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:22
-msgid "🌃️ Dark Mode is now prettier"
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:23
-msgid "🇹🇷 Turkish translation (libreajans)"
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:24
-msgid "🇳🇱 Dutch translation (Vistaus)"
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:31
-msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:32
-msgid "This should also make it work with other dark GTK themes"
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:38
-msgid "Initial Release 🦆"
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:45
-msgid "Matheus Fantinel"
-msgstr ""
-
-#~ msgid "Every "
-#~ msgstr "A cada "
-
-#~ msgid " minutes"
-#~ msgstr " minutos"
