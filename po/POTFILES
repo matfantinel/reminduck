@@ -3,5 +3,3 @@ src/MainWindow.vala
 src/Objects/Reminder.vala
 src/Widgets/Views/ReminderEditor.vala
 src/Widgets/Views/RemindersView.vala
-data/com.github.matfantinel.reminduck.desktop.in
-data/com.github.matfantinel.reminduck.appdata.xml.in

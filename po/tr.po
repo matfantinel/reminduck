@@ -1,15 +1,13 @@
 # Turkish translations for Reminduck package.
 # Copyright (C) 2019 Reminduck'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the Reminduck package.
-# Reminduck: com.github.matfantinel.reminduck
-#
 # Sabri Ünal <libreajans@gmail.com>, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.matfantinel.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-24 19:15-0300\n"
+"POT-Creation-Date: 2019-11-04 14:51+0100\n"
 "PO-Revision-Date: 2019-10-12 16:21+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -110,103 +108,3 @@ msgstr "Hatırlatıcılar"
 #: src/Widgets/Views/RemindersView.vala:118
 msgid "Today"
 msgstr ""
-
-#: data/com.github.matfantinel.reminduck.desktop.in:3
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:7
-msgid "Reminduck"
-msgstr "Reminduck"
-
-#: data/com.github.matfantinel.reminduck.desktop.in:4
-msgid "Reminders"
-msgstr "Hatırlatıcılar"
-
-# Serbest çeviri yapıldı
-#: data/com.github.matfantinel.reminduck.desktop.in:5
-msgid "Don't forget about your stuff in an adorably annoying way"
-msgstr "Önemli işlerinizi sevimli ve sinir bozucu bir şekilde size hatırlatır"
-
-# Uygulama kimliği, çevirmeyin
-#: data/com.github.matfantinel.reminduck.desktop.in:8
-msgid "com.github.matfantinel.reminduck"
-msgstr "com.github.matfantinel.reminduck"
-
-#: data/com.github.matfantinel.reminduck.desktop.in:12
-#, fuzzy
-msgid "Reminduck;Personal;Assistant;Reminders;"
-msgstr "Reminduck;Kişisel;Asistan;Yardımcı;Hatırlatıcı;Hatırlatıcılar"
-
-# Serbest çeviri yapıldı
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:8
-#, fuzzy
-msgid "Remember your stuff in an adorably annoying way."
-msgstr "Önemli işlerinizi sevimli ve sinir bozucu bir şekilde size hatırlatır."
-
-# Serbest çeviri yapıldı.
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:10
-#, fuzzy
-msgid ""
-"Reminduck is a simple reminder app made to be quick and easy - it focuses on "
-"simple or recurrent reminders with set time and date and nothing else."
-msgstr ""
-"Reminduck hızlı ve kolay olması için üretilmiş basit bir hatırlatıcı "
-"uygulamasıdır. Belirtilen tarih ve saatten ile başka hiçbir şey içermez ve "
-"basitçe hatırlatıcılara odaklanır."
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:12
-msgid ""
-"It's perfect if all you want are simple or daily/weekly/monthly reminders. "
-"Anything more than that is not achievable by Reminduck right now - but you "
-"can help! Open an issue or a pull request if you have any ideas or requests."
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:14
-msgid "And it quacks."
-msgstr "Vaklamasını da bilir."
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:20
-msgid ""
-"🔁️ Recurrent reminders - you can now have reminders that show up in set "
-"periods of time: every day, week, month, or a set interval"
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:21
-msgid "🌟️ General UI improvements to make settings up quacks more pleasant"
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:22
-msgid "🌃️ Dark Mode is now prettier"
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:23
-msgid "🇹🇷 Turkish translation (libreajans)"
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:24
-msgid "🇳🇱 Dutch translation (Vistaus)"
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:31
-msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:32
-msgid "This should also make it work with other dark GTK themes"
-msgstr ""
-
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:38
-#, fuzzy
-msgid "Initial Release 🦆"
-msgstr "İlk Sürüm 🎉️"
-
-# Geliştirici adı, çevirmeyin.
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:45
-msgid "Matheus Fantinel"
-msgstr "Matheus Fantinel"
-
-# Serbest çeviri yapıldı.
-#~ msgid ""
-#~ "It does not aim to provide a complete control of your reminder needs "
-#~ "(yet), but sometimes simple is just enough."
-#~ msgstr ""
-#~ "Hatırlatıcı ihtiyaçlarınız üzerinde tam kontrol sağlamayı (şimdilik) "
-#~ "amaçlamaz ve bazen basit zaten yeterlidir."
