@@ -2055,15 +2055,6 @@
        y1="282.39252"
        x2="35.079124"
        y2="228.82378" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient2795"
-       id="linearGradient2785"
-       x1="20.192244"
-       y1="246.20551"
-       x2="19.984848"
-       y2="264.25815"
-       gradientUnits="userSpaceOnUse" />
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath2799">
@@ -2097,33 +2088,6 @@
          d="m 39.103697,258.27023 c -1.437018,2.89161 9.341726,24.32864 10.073693,27.55697 -0.06191,1.97282 -3.376629,9.65342 -14.085366,10.08782 -10.70874,0.4344 -13.99028,-5.868 -14.134298,-7.59177 -0.144021,-1.72377 1.496056,-7.80541 4.39031,-14.17667 2.894253,-6.37125 7.079977,-13.83219 6.445967,-15.73126 -0.606851,-1.81771 -0.705697,-3.81689 3.490971,-3.86516 4.208515,-0.0555 4.634568,2.07841 3.818723,3.72007 z"
          style="fill:#f37329;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </clipPath>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient2861"
-       id="linearGradient2850"
-       x1="20.331917"
-       y1="278.03299"
-       x2="20.292145"
-       y2="246.64023"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient2861"
-       id="linearGradient2886"
-       gradientUnits="userSpaceOnUse"
-       x1="20.331917"
-       y1="278.03299"
-       x2="20.292145"
-       y2="246.64023" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient2795"
-       id="linearGradient2888"
-       gradientUnits="userSpaceOnUse"
-       x1="20.192244"
-       y1="246.20551"
-       x2="19.984848"
-       y2="264.25815" />
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath2188">
@@ -2145,15 +2109,6 @@
     </clipPath>
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient4806"
-       id="linearGradient2206"
-       x1="48.515877"
-       y1="253.11751"
-       x2="52.123577"
-       y2="261.01157"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
        xlink:href="#linearGradient1384"
        id="linearGradient2228"
        x1="26.702312"
@@ -2170,15 +2125,6 @@
          id="path2239"
          inkscape:connector-curvature="0" />
     </clipPath>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4806"
-       id="linearGradient2249"
-       gradientUnits="userSpaceOnUse"
-       x1="48.515877"
-       y1="253.11751"
-       x2="52.123577"
-       y2="261.01157" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -2188,8 +2134,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="5.12"
-     inkscape:cx="-49.394668"
-     inkscape:cy="35.172241"
+     inkscape:cx="-31.645336"
+     inkscape:cy="19.801351"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -2237,106 +2183,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-284.29998)">
-    <g
-       id="g2872"
-       transform="translate(-99.829345,2.1187337)">
-      <rect
-         ry="2.0000012"
-         rx="2.000001"
-         y="246.62642"
-         x="16.27387"
-         height="18.527773"
-         width="8.0490351"
-         id="rect1957"
-         style="opacity:1;fill:#fafafa;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         style="opacity:1;fill:url(#linearGradient2850);fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect2842"
-         width="8.0490351"
-         height="18.527773"
-         x="16.27387"
-         y="246.62642"
-         rx="2.000001"
-         ry="2.0000012" />
-      <rect
-         style="opacity:1;fill:#64baff;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect1963"
-         width="4.3702073"
-         height="16.058319"
-         x="18.113283"
-         y="247.86116"
-         rx="2.000001"
-         ry="2.0000012" />
-      <rect
-         ry="2.0000012"
-         rx="2.000001"
-         y="247.86116"
-         x="18.113283"
-         height="16.058319"
-         width="4.3702073"
-         id="rect2773"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#0d52bf;stroke-width:0.26458332;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         clip-path="url(#clipPath2799)"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient2785);stroke-width:0.5291667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect2777"
-         width="4.3702073"
-         height="16.058319"
-         x="18.113283"
-         y="247.86116"
-         rx="2.000001"
-         ry="2.0000012" />
-    </g>
-    <g
-       id="g2884"
-       transform="translate(-69.443603,2.1187337)">
-      <rect
-         style="opacity:1;fill:#fafafa;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect2874"
-         width="8.0490351"
-         height="18.527773"
-         x="16.27387"
-         y="246.62642"
-         rx="2.000001"
-         ry="2.0000012" />
-      <rect
-         ry="2.0000012"
-         rx="2.000001"
-         y="246.62642"
-         x="16.27387"
-         height="18.527773"
-         width="8.0490351"
-         id="rect2876"
-         style="opacity:1;fill:url(#linearGradient2886);fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         ry="2.0000012"
-         rx="2.000001"
-         y="247.86116"
-         x="18.113283"
-         height="16.058319"
-         width="4.3702073"
-         id="rect2878"
-         style="opacity:1;fill:#64baff;fill-opacity:1;stroke:none;stroke-width:0.26458332;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <rect
-         style="opacity:1;fill:none;fill-opacity:1;stroke:#0d52bf;stroke-width:0.26458332;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect2880"
-         width="4.3702073"
-         height="16.058319"
-         x="18.113283"
-         y="247.86116"
-         rx="2.000001"
-         ry="2.0000012" />
-      <rect
-         ry="2.0000012"
-         rx="2.000001"
-         y="247.86116"
-         x="18.113283"
-         height="16.058319"
-         width="4.3702073"
-         id="rect2882"
-         style="opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient2888);stroke-width:0.5291667;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         clip-path="url(#clipPath2799)" />
-    </g>
     <ellipse
        style="opacity:1;fill:#ffe16b;fill-opacity:1;stroke:none;stroke-width:0.26458335;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path1210"
@@ -2365,7 +2211,7 @@
        cy="289.45352"
        cx="9.3958826"
        id="circle1214"
-       style="opacity:1;fill:#0e141f;fill-opacity:1;stroke:none;stroke-width:0.26458335;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#ad5f00;fill-opacity:1;stroke:none;stroke-width:0.26458335;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        rx="0.80768239"
        ry="0.80662751" />
     <path
@@ -2404,14 +2250,6 @@
        d="m 11.169996,290.41196 c -0.117991,-0.002 -0.239342,0.0179 -0.358074,0.0625 l -4.9503236,1.86206 c -0.3897809,0.14662 -0.6252581,0.51222 -0.6041271,0.88575 -0.045216,0.37129 0.165954,0.75119 0.5452815,0.92273 l 4.8187862,2.17914 c 0.462312,0.20906 0.993342,0.027 1.19066,-0.40821 l 0.09,-0.19848 c 0.197317,-0.43521 -0.01596,-0.95393 -0.478264,-1.16299 l -2.6974671,-1.21974 2.7710241,-1.04238 c 0.474924,-0.17864 0.721492,-0.68238 0.552878,-1.12946 l -0.07683,-0.20386 c -0.126461,-0.33532 -0.449575,-0.54071 -0.803547,-0.54708 z"
        id="rect2157"
        inkscape:connector-curvature="0" />
-    <circle
-       style="opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient2206);stroke-width:2.27665615;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="circle2192"
-       cx="50.229492"
-       cy="257.10577"
-       r="4.3408203"
-       clip-path="url(#clipPath2196)"
-       transform="matrix(0.18606677,0,0,0.18582375,0.04984304,241.67717)" />
     <ellipse
        style="opacity:0.15;fill:#0e141f;fill-opacity:1;stroke:none;stroke-width:0.26458335;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="circle2241"
@@ -2420,20 +2258,12 @@
        rx="0.80768239"
        ry="0.80662751" />
     <ellipse
-       style="opacity:1;fill:#0e141f;fill-opacity:1;stroke:none;stroke-width:0.26458335;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#ad5f00;fill-opacity:1;stroke:none;stroke-width:0.26458335;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="circle2243"
        cx="3.7228749"
        cy="290.1257"
        rx="0.80768239"
        ry="0.80662751" />
-    <circle
-       transform="matrix(0.18606677,0,0,0.18582375,-5.6231641,242.34935)"
-       clip-path="url(#clipPath2196)"
-       r="4.3408203"
-       cy="257.10577"
-       cx="50.229492"
-       id="circle2245"
-       style="opacity:1;fill:none;fill-opacity:1;stroke:url(#linearGradient2249);stroke-width:2.27665615;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <ellipse
        cy="290.31161"
        cx="3.7228749"
