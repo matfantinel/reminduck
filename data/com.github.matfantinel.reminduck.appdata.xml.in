@@ -14,6 +14,15 @@
     <p>And it quacks.</p>
   </description>
   <releases>
+    <release version="1.3.0" date="2019-11-06">
+      <description>
+        <ul>
+          <li>🐥️ New Icon! - hopefully this one looks better than the previous one. With great help from Nararyans R.I. (@Fatih20)</li>
+          <li>💁‍ Increased compatibility with translations (Corentin Noël | @tintou)</li>
+          <li>🇨🇵️ French Translation (Nathan Bonnemains | @NathanBnm)</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.2.0" date="2019-10-16">
       <description>
         <ul>
