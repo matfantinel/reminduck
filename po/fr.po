@@ -1,0 +1,106 @@
+# French translations for com.github.matfantinel.reminduck package.
+# Copyright (C) 2019 THE com.github.matfantinel.reminduck'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.matfantinel.reminduck package.
+# Nathan Bonnemains, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.matfantinel.reminduck\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-06 07:14+0100\n"
+"PO-Revision-Date: 2019-11-04 13:53+0100\n"
+"Last-Translator: Nathan Bonnemains\n"
+"Language-Team: none\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/MainWindow.vala:84
+msgid "Back"
+msgstr "Retour"
+
+#: src/MainWindow.vala:96
+msgid "QUACK! I'm Reminduck"
+msgstr "COIN COIN ! Je suis Reminduck"
+
+#: src/MainWindow.vala:97
+msgid "The duck that reminds you"
+msgstr "Le canard qui vous fait des rappels"
+
+#: src/MainWindow.vala:111
+msgid "New Reminder"
+msgstr "Nouveau rappel"
+
+#: src/MainWindow.vala:111
+msgid "Create a new reminder for a set date and time"
+msgstr "Créer un nouveau rappel pour une date et une heure définie"
+
+#: src/MainWindow.vala:113 src/MainWindow.vala:120
+msgid "View Reminders"
+msgstr "Afficher les rappels"
+
+#: src/MainWindow.vala:113 src/MainWindow.vala:120
+msgid "See reminders you've created"
+msgstr "Visualiser les rappels que vous avez créés"
+
+#: src/Objects/Reminder.vala:45
+msgid "Don't Repeat"
+msgstr "Ne pas répéter"
+
+#: src/Objects/Reminder.vala:49
+msgid "Every X minutes"
+msgstr "Toutes les X minutes"
+
+#: src/Objects/Reminder.vala:51
+#, c-format
+msgid "Every minute"
+msgid_plural "Every %d minutes"
+msgstr[0] "Chaque minute"
+msgstr[1] "Toutes les %d minutes"
+
+#: src/Objects/Reminder.vala:55
+msgid "Every day"
+msgstr "Chaque jour"
+
+#: src/Objects/Reminder.vala:58
+msgid "Every week"
+msgstr "Chaque semaine"
+
+#: src/Objects/Reminder.vala:61
+msgid "Every month"
+msgstr "Chaque mois"
+
+#: src/Widgets/Views/ReminderEditor.vala:54
+msgid "Create a new reminder"
+msgstr "Créer un nouveau rappel"
+
+#: src/Widgets/Views/ReminderEditor.vala:58
+msgid "What do you want to be reminded of?"
+msgstr "De quoi souhaitez-vous vous souvenir ?"
+
+#: src/Widgets/Views/ReminderEditor.vala:85
+msgid "Repeat"
+msgstr "Répéter"
+
+#: src/Widgets/Views/ReminderEditor.vala:90
+msgid "Save reminder"
+msgstr "Enregistrer le rappel"
+
+#: src/Widgets/Views/RemindersView.vala:47
+msgid "Your reminders"
+msgstr "Vos rappels"
+
+#: src/Widgets/Views/RemindersView.vala:52
+msgid "Create another"
+msgstr "En créer un nouveau"
+
+#: src/Widgets/Views/RemindersView.vala:93
+#, c-format
+msgid "Reminded: %s"
+msgstr "Rappel : %s"
+
+#: src/Widgets/Views/RemindersView.vala:118
+msgid "Today"
+msgstr "Aujourd'hui"
