@@ -101,12 +101,14 @@ namespace Reminduck.Widgets.Views {
                 box.pack_start(description, false, false, 0);
 
                 var delete_button = new Gtk.Button.from_icon_name("edit-delete");
+                delete_button.tooltip_text = _("Delete");
                 delete_button.activate.connect(() => { on_delete(reminder); } );
                 delete_button.clicked.connect(() => { on_delete(reminder); } );
 
                 box.pack_end(delete_button, false, false, 0);
                 
                 var edit_button = new Gtk.Button.from_icon_name("edit");
+                edit_button.tooltip_text = _("Edit");
                 edit_button.activate.connect(() => { on_edit(reminder); } );
                 edit_button.clicked.connect(() => { on_edit(reminder); } );
 
