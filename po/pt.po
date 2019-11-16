@@ -58,7 +58,7 @@ msgstr "A cada X minutos"
 msgid "Every minute"
 msgid_plural "Every %d minutes"
 msgstr[0] "A cada 1 minuto"
-msgstr[1] "A cada 1 minuto"
+msgstr[1] "A cada %d minutos"
 
 #: src/Objects/Reminder.vala:55
 msgid "Every day"
