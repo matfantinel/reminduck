@@ -39,6 +39,7 @@ If you want to go ahead and compile Reminduck yourself, you'll need the followin
 * meson
 * valac
 * libsqlite3-dev
+* gettext
 
 You can install them on elementary OS Juno with:
 
@@ -60,10 +61,6 @@ Then run it with:
 ```shell
 com.github.matfantinel.reminduck
 ```
-
-
-
-**Made with :heart: on [elementary OS]**
 
 [elementary OS]: https://elementary.io
 [AppCenter]: https://appcenter.elementary.io/com.github.matfantinel.reminduck
