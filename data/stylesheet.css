@@ -1,10 +1,6 @@
-@define-color colorPrimary #ffe16b;
-@define-color colorAccent #f9c440;
-@define-color textColorPrimary #645C3A;
-
 .reminduck-headerbar {
-    background-color: @colorPrimary;
-    color: @textColorPrimary;
+    background-color: #ffe16b;
+    color: #645C3A;
     box-shadow: none;
 }
 
@@ -26,4 +22,25 @@
 
 .reminduck-reminders-list .list-item label {
     color: #333333;
+}
+
+
+/* Dark Styles */
+.dark .reminduck-headerbar {
+    background-color: #333333;
+    color: #fff394;
+}
+
+.dark .reminduck-welcome-box {
+    background-color: #404040;
+}
+
+.dark .reminduck-reminders-list .list-item {
+    background-color: #333333;
+    color: #fafafa;
+    border: 1px solid #000000;
+}
+
+.dark .reminduck-reminders-list .list-item label {
+    color: #fafafa;
 }
