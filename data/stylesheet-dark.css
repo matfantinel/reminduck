@@ -1,8 +1,8 @@
 @import './stylesheet.css';
 
-@define-color colorPrimary @BLACK_500;
-@define-color colorAccent @BANANA_300;
-@define-color textColorPrimary @BANANA_100;
+@define-color colorPrimary #333333;
+@define-color colorAccent #ffe16b;
+@define-color textColorPrimary #fff394;
 
 .reminduck-headerbar {
     background-color: @colorPrimary;
@@ -14,7 +14,11 @@
 }
 
 .reminduck-reminders-list .list-item {
-    background-color: @BLACK_500;
-    color: @SILVER_100;
-    border: 1px solid @BLACK_900;
+    background-color: #333333;
+    color: #fafafa;
+    border: 1px solid #000000;
+}
+
+.reminduck-reminders-list .list-item label {
+    color: #fafafa;
 }
