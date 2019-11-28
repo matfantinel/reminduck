@@ -1,4 +1,4 @@
-project('com.github.matfantinel.reminduck', 'vala', 'c', version: '1.2.1')
+project('com.github.matfantinel.reminduck', 'vala', 'c', version: '1.4.0')
 
 gnome = import('gnome')
 i18n = import('i18n')

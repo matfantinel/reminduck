@@ -14,6 +14,17 @@
     <p>And it quacks.</p>
   </description>
   <releases>
+  <release version="1.4.0" date="2019-11-28">
+      <description>
+        <ul>
+          <li>🌑 Dark-mode toggle on the header bar</li>
+          <li>🔔 Notifications now stick around until you close them, to make sure you don't miss your quacks</li>
+          <li>🌟 Support for additional GTK themes, making Reminduck distro-agnostic</li>
+          <li>🇪🇸 Spanish Translation (Alejandro Elí | @onerbs)</li>
+          <li>🇮🇹 Italian Translation (Mirko Brombin | @mirkobrombin)</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.3.0" date="2019-11-06">
       <description>
         <ul>
