@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.matfantinel.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-04 14:51+0100\n"
+"POT-Creation-Date: 2019-11-28 18:28-0300\n"
 "PO-Revision-Date: 2019-10-12 16:21+0300\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
@@ -22,29 +22,37 @@ msgstr ""
 msgid "Back"
 msgstr "Geri"
 
+#: src/MainWindow.vala:94
+msgid "Light mode"
+msgstr "ışık modu"
+
+#: src/MainWindow.vala:95
+msgid "Dark mode"
+msgstr "karanlık mod"
+
 # Reminduck kelimesi özel isim olarak kabul edilip çevrilmemiştir. Vak sesi de şimdilik çevrilmemiştir.
-#: src/MainWindow.vala:96
+#: src/MainWindow.vala:116
 msgid "QUACK! I'm Reminduck"
 msgstr "Merhaba! Ben Reminduck"
 
 # Serbest çeviri yapıldı
-#: src/MainWindow.vala:97
+#: src/MainWindow.vala:117
 msgid "The duck that reminds you"
 msgstr "Hatırlatıcı ördeğiniz"
 
-#: src/MainWindow.vala:111
+#: src/MainWindow.vala:131
 msgid "New Reminder"
 msgstr "Yeni Hatırlatıcı"
 
-#: src/MainWindow.vala:111
+#: src/MainWindow.vala:131
 msgid "Create a new reminder for a set date and time"
 msgstr "Belirtilen tarih ve saat için yeni hatırlatıcı oluştur"
 
-#: src/MainWindow.vala:113 src/MainWindow.vala:120
+#: src/MainWindow.vala:133 src/MainWindow.vala:140
 msgid "View Reminders"
 msgstr "Hatırlatıcıları Görüntüle"
 
-#: src/MainWindow.vala:113 src/MainWindow.vala:120
+#: src/MainWindow.vala:133 src/MainWindow.vala:140
 msgid "See reminders you've created"
 msgstr "Oluşturulmuş hatırlatıcıları görüntüle"
 
@@ -105,6 +113,14 @@ msgstr "Yeni bir hatırlatıcı oluştur"
 msgid "Reminded: %s"
 msgstr "Hatırlatıcılar"
 
-#: src/Widgets/Views/RemindersView.vala:118
+#: src/Widgets/Views/RemindersView.vala:104
+msgid "Delete"
+msgstr "Silmek"
+
+#: src/Widgets/Views/RemindersView.vala:111
+msgid "Edit"
+msgstr "Düzenlemek için"
+
+#: src/Widgets/Views/RemindersView.vala:120
 msgid "Today"
 msgstr ""

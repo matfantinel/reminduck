@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.matfantinel.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-06 07:14+0100\n"
+"POT-Creation-Date: 2019-11-28 18:28-0300\n"
 "PO-Revision-Date: 2019-11-04 13:53+0100\n"
 "Last-Translator: Nathan Bonnemains\n"
 "Language-Team: none\n"
@@ -21,27 +21,35 @@ msgstr ""
 msgid "Back"
 msgstr "Retour"
 
-#: src/MainWindow.vala:96
+#: src/MainWindow.vala:94
+msgid "Light mode"
+msgstr "Mode clair"
+
+#: src/MainWindow.vala:95
+msgid "Dark mode"
+msgstr "Mode sombre"
+
+#: src/MainWindow.vala:116
 msgid "QUACK! I'm Reminduck"
 msgstr "COIN COIN ! Je suis Reminduck"
 
-#: src/MainWindow.vala:97
+#: src/MainWindow.vala:117
 msgid "The duck that reminds you"
 msgstr "Le canard qui vous fait des rappels"
 
-#: src/MainWindow.vala:111
+#: src/MainWindow.vala:131
 msgid "New Reminder"
 msgstr "Nouveau rappel"
 
-#: src/MainWindow.vala:111
+#: src/MainWindow.vala:131
 msgid "Create a new reminder for a set date and time"
 msgstr "Créer un nouveau rappel pour une date et une heure définie"
 
-#: src/MainWindow.vala:113 src/MainWindow.vala:120
+#: src/MainWindow.vala:133 src/MainWindow.vala:140
 msgid "View Reminders"
 msgstr "Afficher les rappels"
 
-#: src/MainWindow.vala:113 src/MainWindow.vala:120
+#: src/MainWindow.vala:133 src/MainWindow.vala:140
 msgid "See reminders you've created"
 msgstr "Visualiser les rappels que vous avez créés"
 
@@ -101,6 +109,14 @@ msgstr "En créer un nouveau"
 msgid "Reminded: %s"
 msgstr "Rappel : %s"
 
-#: src/Widgets/Views/RemindersView.vala:118
+#: src/Widgets/Views/RemindersView.vala:104
+msgid "Delete"
+msgstr "Supprimer"
+
+#: src/Widgets/Views/RemindersView.vala:111
+msgid "Edit"
+msgstr "Éditer"
+
+#: src/Widgets/Views/RemindersView.vala:120
 msgid "Today"
 msgstr "Aujourd'hui"
