@@ -2,7 +2,6 @@
 <gresources>
   <gresource prefix="/com/github/matfantinel/reminduck">
     <file alias="stylesheet.css">stylesheet.css</file>
-    <file alias="stylesheet-dark.css">stylesheet-dark.css</file>
     <file alias="AppIcon.png">icons/com.github.matfantinel.reminduck.png</file>
   </gresource>
 </gresources>

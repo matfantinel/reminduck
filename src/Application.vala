@@ -67,24 +67,14 @@ namespace Reminduck {
             if (this.main_window == null) {
                 this.main_window = new MainWindow();
                 this.main_window.set_application(this);                
-                
-                if (Gtk.Settings.get_default ().gtk_application_prefer_dark_theme == true) {
-                    var provider = new Gtk.CssProvider();
-                    provider.load_from_resource("/com/github/matfantinel/reminduck/stylesheet-dark.css");
-                    Gtk.StyleContext.add_provider_for_screen(
-                        Gdk.Screen.get_default(),
-                        provider,
-                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-                    );
-                } else {
-                    var provider = new Gtk.CssProvider();
-                    provider.load_from_resource("/com/github/matfantinel/reminduck/stylesheet.css");
-                    Gtk.StyleContext.add_provider_for_screen(
-                        Gdk.Screen.get_default(),
-                        provider,
-                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-                    );
-                }
+                                
+                var provider = new Gtk.CssProvider();
+                provider.load_from_resource("/com/github/matfantinel/reminduck/stylesheet.css");
+                Gtk.StyleContext.add_provider_for_screen(
+                    Gdk.Screen.get_default(),
+                    provider,
+                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+                );
 
                 if (!this.headless) {
                     this.main_window.show_all();
@@ -193,6 +183,7 @@ namespace Reminduck {
                 if (reminder.time.compare(new GLib.DateTime.now()) <= 0) {
                     var notification = new Notification("QUACK!");
                     notification.set_body(reminder.description);
+                    notification.set_priority(GLib.NotificationPriority.URGENT);
                     this.send_notification("notify.app", notification);
 
                     if (reminder.recurrency_type != RecurrencyType.NONE) {

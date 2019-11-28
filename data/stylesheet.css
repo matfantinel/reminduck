@@ -1,13 +1,3 @@
-@define-color colorPrimary @BANANA_300;
-@define-color colorAccent @BANANA_500;
-@define-color textColorPrimary #645C3A;
-
-.reminduck-headerbar {
-    background-color: @colorPrimary;
-    color: @textColorPrimary;
-    box-shadow: none;
-}
-
 .welcome {
     background-color: inherit;
 }
@@ -17,9 +7,7 @@
 }
 
 .reminduck-reminders-list .list-item {
-    background-color: @SILVER_100;
-    color: @BLACK_500;
     padding: 5px 10px;
     border-radius: 5px;
-    border: 1px solid @SILVER_300;
+    border: 1px solid #d4d4d4;
 }

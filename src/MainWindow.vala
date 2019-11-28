@@ -84,11 +84,31 @@ namespace Reminduck {
             this.back_button = new Gtk.Button.with_label(_("Back"));
             this.back_button.get_style_context().add_class("back-button");
             this.back_button.valign = Gtk.Align.CENTER;
-            this.headerbar.pack_start(back_button);
+            this.headerbar.pack_start(this.back_button);
             
             this.back_button.clicked.connect(() => {
                 this.show_welcome_view();                
+            });            
+
+            var mode_switch = new Granite.ModeSwitch.from_icon_name ("display-brightness-symbolic", "weather-clear-night-symbolic");
+            mode_switch.primary_icon_tooltip_text = _("Light mode");
+            mode_switch.secondary_icon_tooltip_text = _("Dark mode");
+            mode_switch.valign = Gtk.Align.CENTER;
+
+            this.headerbar.pack_end(mode_switch);
+
+            var context = get_style_context ();
+            mode_switch.notify["active"].connect (() => {
+                if (mode_switch.active) {
+                    context.add_class ("dark");
+                } else {
+                    context.remove_class ("dark");
+                }
             });
+
+            this.settings.bind ("use-dark-theme", mode_switch, "active", GLib.SettingsBindFlags.DEFAULT);
+            var gtk_settings = Gtk.Settings.get_default ();
+            mode_switch.bind_property ("active", gtk_settings, "gtk_application_prefer_dark_theme");
         }
 
         private void build_welcome() {
@@ -110,14 +130,14 @@ namespace Reminduck {
 
             this.welcome_widget.append("document-new", _("New Reminder"), _("Create a new reminder for a set date and time"));
             if (ReminduckApp.reminders.size > 0) {
-                this.view_reminders_action_reference = this.welcome_widget.append("emblem-documents", _("View Reminders"), _("See reminders you've created"));
+                this.view_reminders_action_reference = this.welcome_widget.append("document-open", _("View Reminders"), _("See reminders you've created"));
             }
         }
 
         private void update_view_reminders_welcome_action() {
             if (ReminduckApp.reminders.size > 0) {
                 if (this.view_reminders_action_reference == null) {
-                    this.view_reminders_action_reference = this.welcome_widget.append("emblem-documents", _("View Reminders"), _("See reminders you've created"));
+                    this.view_reminders_action_reference = this.welcome_widget.append("document-open", _("View Reminders"), _("See reminders you've created"));
                     this.welcome_widget.show_all();
                 }
             } else {
