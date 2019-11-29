@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04 14:51+0100\n"
-"PO-Revision-Date: 2019-11-04 14:49+0100\n"
+"PO-Revision-Date: 2019-11-29 18:21+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <vistausss@outlook.com>\n"
 "Language: nl\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2.4\n"
 
 #: data/com.github.matfantinel.reminduck.desktop.in:3
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:7
@@ -37,26 +38,23 @@ msgid "com.github.matfantinel.reminduck"
 msgstr "com.github.matfantinel.reminduck"
 
 #: data/com.github.matfantinel.reminduck.desktop.in:12
-#, fuzzy
 msgid "Reminduck;Personal;Assistant;Reminders;"
-msgstr "Reminduck;Persoonlijk;Assistent;Herinneringen"
+msgstr "Reminduck;Persoonlijk;Assistent;Herinneringen;"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:8
-#, fuzzy
 msgid "Remember your stuff in an adorably annoying way."
 msgstr ""
-"Vergeet nooit meer een taak, en wordt op schattige doch irritante manier "
+"Vergeet nooit meer iets, en wordt op schattige doch irritante manier "
 "herinnerd."
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:10
-#, fuzzy
 msgid ""
 "Reminduck is a simple reminder app made to be quick and easy - it focuses on "
 "simple or recurrent reminders with set time and date and nothing else."
 msgstr ""
-"Reminduck is een eenvoudig programma voor herinneringen. Het programma is "
-"makkelijk in het gebruik, en legt de nadruk op eenvoudige herinneringen met "
-"een ingestelde datum en tijd. Niks meer, niks minder."
+"Reminduck herinnert je. Het programma is makkelijk in het gebruik en legt de "
+"nadruk op eenvoudige herinneringen met een ingestelde datum en tijd. Niks "
+"meer, niks minder."
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:12
 msgid ""
@@ -64,6 +62,10 @@ msgid ""
 "Anything more than that is not achievable by Reminduck right now - but you "
 "can help! Open an issue or a pull request if you have any ideas or requests."
 msgstr ""
+"Het is perfect voor eenvoudige herinneringen, al dan niet terugkerend "
+"(dagelijks/wekelijks/maandelijks). Meer is er momenteel niet mogelijk, maar "
+"je kunt meehelpen: open een 'issue' of 'pull request' op GitHub als ideeën "
+"of verzoekjes hebt."
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:14
 msgid "And it quacks."
@@ -74,33 +76,38 @@ msgid ""
 "🔁️ Recurrent reminders - you can now have reminders that show up in set "
 "periods of time: every day, week, month, or a set interval"
 msgstr ""
+"🔁️ Herhalingen - je kunt herinneringen nu herhalen: elke dag, week, maand of "
+"elke x minuten"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:21
 msgid "🌟️ General UI improvements to make settings up quacks more pleasant"
 msgstr ""
+"🌟️ Algemene uiterlijke verbeteringen om het instellen van kwaakjes aangenamer "
+"te maken"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:22
 msgid "🌃️ Dark Mode is now prettier"
-msgstr ""
+msgstr "🌃️ Mooier donker thema"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:23
 msgid "🇹🇷 Turkish translation (libreajans)"
-msgstr ""
+msgstr "🇹🇷 Turkse vertaling (met dank aan libreajans)"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:24
 msgid "🇳🇱 Dutch translation (Vistaus)"
-msgstr ""
+msgstr "🇹🇷 Nederlandse vertaling (met dank aan Vistaus)"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:31
 msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
-msgstr ""
+msgstr "Ondersteuning voor het onofficiële donkere thema"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:32
 msgid "This should also make it work with other dark GTK themes"
 msgstr ""
+"Hierdoor zou Reminduck ook beter moeten werken onder andere donkere GTK-"
+"thema's"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:38
-#, fuzzy
 msgid "Initial Release 🦆"
 msgstr "Eerste uitgave 🎉️"
 
