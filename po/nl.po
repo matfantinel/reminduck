@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: com.github.matfantinel.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-28 18:28-0300\n"
-"PO-Revision-Date: 2019-10-12 20:05+0200\n"
+"PO-Revision-Date: 2019-11-29 18:14+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <vistausss@outlook.com>\n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 19.08.2\n"
+"X-Generator: Poedit 2.2.4\n"
 
 #: src/MainWindow.vala:84
 msgid "Back"
@@ -23,11 +23,11 @@ msgstr "Terug"
 
 #: src/MainWindow.vala:94
 msgid "Light mode"
-msgstr "Lichte modus"
+msgstr "Licht thema"
 
 #: src/MainWindow.vala:95
 msgid "Dark mode"
-msgstr "Donkere modus"
+msgstr "Donker thema"
 
 #: src/MainWindow.vala:116
 msgid "QUACK! I'm Reminduck"
@@ -55,30 +55,30 @@ msgstr "Bekijk eerder ingestelde herinneringen"
 
 #: src/Objects/Reminder.vala:45
 msgid "Don't Repeat"
-msgstr ""
+msgstr "Niet herhalen"
 
 #: src/Objects/Reminder.vala:49
 msgid "Every X minutes"
-msgstr ""
+msgstr "Elke x minuten"
 
 #: src/Objects/Reminder.vala:51
 #, c-format
 msgid "Every minute"
 msgid_plural "Every %d minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Elke minuut"
+msgstr[1] "Elke %d minuten"
 
 #: src/Objects/Reminder.vala:55
 msgid "Every day"
-msgstr ""
+msgstr "Elke dag"
 
 #: src/Objects/Reminder.vala:58
 msgid "Every week"
-msgstr ""
+msgstr "Elke week"
 
 #: src/Objects/Reminder.vala:61
 msgid "Every month"
-msgstr ""
+msgstr "Elke maand"
 
 #: src/Widgets/Views/ReminderEditor.vala:54
 msgid "Create a new reminder"
@@ -90,7 +90,7 @@ msgstr "Waar wil je aan herinnerd worden?"
 
 #: src/Widgets/Views/ReminderEditor.vala:85
 msgid "Repeat"
-msgstr ""
+msgstr "Herhalen"
 
 #: src/Widgets/Views/ReminderEditor.vala:90
 msgid "Save reminder"
@@ -105,9 +105,9 @@ msgid "Create another"
 msgstr "Nog een herinnering instellen"
 
 #: src/Widgets/Views/RemindersView.vala:93
-#, fuzzy, c-format
+#, c-format
 msgid "Reminded: %s"
-msgstr "Herinneringen"
+msgstr "Herinnerd aan: %s"
 
 #: src/Widgets/Views/RemindersView.vala:104
 msgid "Delete"
@@ -119,4 +119,4 @@ msgstr "Aanpassen"
 
 #: src/Widgets/Views/RemindersView.vala:120
 msgid "Today"
-msgstr ""
+msgstr "Vandaag"
