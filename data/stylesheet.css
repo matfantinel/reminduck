@@ -1,3 +1,13 @@
+.reminduck-headerbar {
+    background-color: @BANANA_300;
+    box-shadow: none;
+}
+
+.dark .reminduck-headerbar {
+    background-color: @BLACK_500;
+    color: @BANANA_100;
+}
+
 .welcome {
     background-color: inherit;
 }
