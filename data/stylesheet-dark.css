@@ -1,0 +1,5 @@
+@import './stylesheet.css';
+
+@define-color colorPrimary @BLACK_500;
+@define-color colorAccent @BANANA_300;
+@define-color textColorPrimary @BANANA_100;

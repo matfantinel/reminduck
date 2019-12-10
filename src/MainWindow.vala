@@ -101,8 +101,25 @@ namespace Reminduck {
             mode_switch.notify["active"].connect (() => {
                 if (mode_switch.active) {
                     context.add_class ("dark");
+
+                    var provider = new Gtk.CssProvider();
+                    provider.load_from_resource("/com/github/matfantinel/reminduck/stylesheet-dark.css");
+                    Gtk.StyleContext.add_provider_for_screen(
+                        Gdk.Screen.get_default(),
+                        provider,
+                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+                    );
+
                 } else {
                     context.remove_class ("dark");
+
+                    var provider = new Gtk.CssProvider();
+                    provider.load_from_resource("/com/github/matfantinel/reminduck/stylesheet.css");
+                    Gtk.StyleContext.add_provider_for_screen(
+                        Gdk.Screen.get_default(),
+                        provider,
+                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+                    );
                 }
             });
 
@@ -130,14 +147,14 @@ namespace Reminduck {
 
             this.welcome_widget.append("document-new", _("New Reminder"), _("Create a new reminder for a set date and time"));
             if (ReminduckApp.reminders.size > 0) {
-                this.view_reminders_action_reference = this.welcome_widget.append("document-open", _("View Reminders"), _("See reminders you've created"));
+                this.view_reminders_action_reference = this.welcome_widget.append("emblem-documents", _("View Reminders"), _("See reminders you've created"));
             }
         }
 
         private void update_view_reminders_welcome_action() {
             if (ReminduckApp.reminders.size > 0) {
                 if (this.view_reminders_action_reference == null) {
-                    this.view_reminders_action_reference = this.welcome_widget.append("document-open", _("View Reminders"), _("See reminders you've created"));
+                    this.view_reminders_action_reference = this.welcome_widget.append("emblem-documents", _("View Reminders"), _("See reminders you've created"));
                     this.welcome_widget.show_all();
                 }
             } else {

@@ -35,6 +35,8 @@ namespace Reminduck {
         public bool headless = false;
         private uint timeout_id = 0;
 
+        private GLib.Settings settings;
+
         public MainWindow main_window { get; private set; default = null; }
         public static Reminduck.Database database;
 
@@ -52,14 +54,14 @@ namespace Reminduck {
             stdout.printf("\n✔️ Activated");
             database.verify_database();
 
-            var settings = new GLib.Settings("com.github.matfantinel.reminduck.state");
+            this.settings = new GLib.Settings("com.github.matfantinel.reminduck.state");
 
-            var first_run = settings.get_boolean("first-run");
+            var first_run = this.settings.get_boolean("first-run");
 
             if (first_run) {
                 stdout.printf("\n🎉️ First run");
                 install_autostart();
-                settings.set_boolean("first-run", false);
+                this.settings.set_boolean("first-run", false);
             }
             
             reload_reminders();
@@ -75,6 +77,18 @@ namespace Reminduck {
                     provider,
                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
                 );
+
+                if (this.settings.get_boolean("use-dark-theme")) {
+                    provider.load_from_resource("/com/github/matfantinel/reminduck/stylesheet-dark.css");
+                    Gtk.StyleContext.add_provider_for_screen(
+                        Gdk.Screen.get_default(),
+                        provider,
+                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+                    );  
+
+                    var gtk_settings = Gtk.Settings.get_default ();
+                    gtk_settings.gtk_application_prefer_dark_theme = true;
+                }
 
                 if (!this.headless) {
                     this.main_window.show_all();
