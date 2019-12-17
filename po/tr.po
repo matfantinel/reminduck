@@ -24,11 +24,11 @@ msgstr "Geri"
 
 #: src/MainWindow.vala:94
 msgid "Light mode"
-msgstr "ışık modu"
+msgstr "Açık tema"
 
 #: src/MainWindow.vala:95
 msgid "Dark mode"
-msgstr "karanlık mod"
+msgstr "Koyu tema"
 
 # Reminduck kelimesi özel isim olarak kabul edilip çevrilmemiştir. Vak sesi de şimdilik çevrilmemiştir.
 #: src/MainWindow.vala:116
@@ -58,29 +58,29 @@ msgstr "Oluşturulmuş hatırlatıcıları görüntüle"
 
 #: src/Objects/Reminder.vala:45
 msgid "Don't Repeat"
-msgstr ""
+msgstr "Tekrar Etme"
 
 #: src/Objects/Reminder.vala:49
 msgid "Every X minutes"
-msgstr ""
+msgstr "Her X dakikada bir"
 
 #: src/Objects/Reminder.vala:51
 #, c-format
 msgid "Every minute"
 msgid_plural "Every %d minutes"
-msgstr[0] ""
+msgstr[0] "Her %d dakikada bir"
 
 #: src/Objects/Reminder.vala:55
 msgid "Every day"
-msgstr ""
+msgstr "Her gün"
 
 #: src/Objects/Reminder.vala:58
 msgid "Every week"
-msgstr ""
+msgstr "Her hafta"
 
 #: src/Objects/Reminder.vala:61
 msgid "Every month"
-msgstr ""
+msgstr "Her ay"
 
 #: src/Widgets/Views/ReminderEditor.vala:54
 msgid "Create a new reminder"
@@ -92,7 +92,7 @@ msgstr "Neyi hatırlamak istersin?"
 
 #: src/Widgets/Views/ReminderEditor.vala:85
 msgid "Repeat"
-msgstr ""
+msgstr "Tekrarla"
 
 #: src/Widgets/Views/ReminderEditor.vala:90
 msgid "Save reminder"
@@ -109,18 +109,18 @@ msgid "Create another"
 msgstr "Yeni bir hatırlatıcı oluştur"
 
 #: src/Widgets/Views/RemindersView.vala:93
-#, fuzzy, c-format
+#, c-format
 msgid "Reminded: %s"
-msgstr "Hatırlatıcılar"
+msgstr "Hatırlatıcı: %s"
 
 #: src/Widgets/Views/RemindersView.vala:104
 msgid "Delete"
-msgstr "Silmek"
+msgstr "Sil"
 
 #: src/Widgets/Views/RemindersView.vala:111
 msgid "Edit"
-msgstr "Düzenlemek için"
+msgstr "Düzenle"
 
 #: src/Widgets/Views/RemindersView.vala:120
 msgid "Today"
-msgstr ""
+msgstr "Bugün"
