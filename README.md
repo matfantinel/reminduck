@@ -64,13 +64,25 @@ com.github.matfantinel.reminduck
 
 ## Flatpak
 
+Reminduck is also available as a Flatpak. To build/install it locally, first you have to install the necessary runtimes:
+
 ```shell
 sudo apt install flatpak-builder
 flatpak install flathub org.gnome.Sdk/x86_64/3.34
 flatpak install flathub org.gnome.Platform/x86_64/3.34
 flatpak install flathub io.elementary.BaseApp/x86_64/juno-19.08
+```
 
-cd build && sudo ninja install && cd .. && cd build-aux/flatpak && flatpak-builder --install repo com.github.matfantinel.reminduck.json --force-clean --user
+Then, from the project root:
+
+```shell
+cd build-aux/flatpak
+flatpak-builder --install repo com.github.matfantinel.reminduck.json --force-clean --user
+```
+
+The app should be displayed on your apps list, or you can run it with:
+```shell
+com.github.matfantinel.reminduck
 ```
 
 [elementary OS]: https://elementary.io
