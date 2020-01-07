@@ -62,5 +62,16 @@ Then run it with:
 com.github.matfantinel.reminduck
 ```
 
+## Flatpak
+
+```shell
+sudo apt install flatpak-builder
+flatpak install flathub org.gnome.Sdk/x86_64/3.34
+flatpak install flathub org.gnome.Platform/x86_64/3.34
+flatpak install flathub io.elementary.BaseApp/x86_64/juno-19.08
+
+cd build && sudo ninja install && cd .. && cd build-aux/flatpak && flatpak-builder --install repo com.github.matfantinel.reminduck.json --force-clean --user
+```
+
 [elementary OS]: https://elementary.io
 [AppCenter]: https://appcenter.elementary.io/com.github.matfantinel.reminduck
