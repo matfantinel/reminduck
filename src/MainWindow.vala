@@ -147,14 +147,14 @@ namespace Reminduck {
 
             this.welcome_widget.append("document-new", _("New Reminder"), _("Create a new reminder for a set date and time"));
             if (ReminduckApp.reminders.size > 0) {
-                this.view_reminders_action_reference = this.welcome_widget.append("emblem-documents", _("View Reminders"), _("See reminders you've created"));
+                this.view_reminders_action_reference = this.welcome_widget.append("accessories-text-editor", _("View Reminders"), _("See reminders you've created"));
             }
         }
 
         private void update_view_reminders_welcome_action() {
             if (ReminduckApp.reminders.size > 0) {
                 if (this.view_reminders_action_reference == null) {
-                    this.view_reminders_action_reference = this.welcome_widget.append("emblem-documents", _("View Reminders"), _("See reminders you've created"));
+                    this.view_reminders_action_reference = this.welcome_widget.append("accessories-text-editor", _("View Reminders"), _("See reminders you've created"));
                     this.welcome_widget.show_all();
                 }
             } else {
