@@ -8,6 +8,7 @@ Build-Depends: cmake (>= 2.8),
                libsqlite3-dev,
                libgranite-dev,
                libgee-0.8-dev,
+               libgio2.0-cil-dev,
                meson,
                valac (>= 0.40.0)
 Standards-Version: 4.1.1

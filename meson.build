@@ -26,6 +26,7 @@ executable(
         dependency('gee-0.8'),
         dependency('sqlite3'),
         dependency('granite'),
+        dependency('gio-2.0')
     ],
     install: true
 )
