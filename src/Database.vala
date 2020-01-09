@@ -26,10 +26,6 @@ public class Reminduck.Database {
         return Environment.get_home_dir() + "/.local/share/com.github.matfantinel.reminduck/database.db";
     }    
 
-    private File get_database() {
-        return File.new_for_path(get_database_path());
-    } 
-
     private void open_database(out Sqlite.Database database) {
         var connection = Sqlite.Database.open(get_database_path(), out database);
 
@@ -62,21 +58,8 @@ public class Reminduck.Database {
             if (tmp.query_file_type (0) != FileType.DIRECTORY) {
                 GLib.DirUtils.create_with_parents (path, 0775);
             }
-            //  var path = File.new_build_filename(Environment.get_home_dir() + "/.local/share/com.github.matfantinel.reminduck");
-            //  if (! path.query_exists() ) {
-            //      path.make_directory_with_parents();
-            //  }
 
-            //  assert(path.query_exists());
-            //  var database = get_database();
-            //  if (!database.query_exists()) {
-            //      database.create(FileCreateFlags.PRIVATE);
-            //      assert(database.query_exists());
-                initialize_database();
-            //  } 
-            //  else {
-            //      this.create_new_columns();
-            //  }
+            initialize_database();
         } catch(Error e) {
              stderr.printf("Error: %s\n", e.message);
         }
