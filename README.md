@@ -44,7 +44,13 @@ If you want to go ahead and compile Reminduck yourself, you'll need the followin
 You can install them on elementary OS Juno with:
 
 ```shell
-sudo apt install elementary-sdk
+sudo apt install elementary-sdk libsqlite3-dev
+```
+
+And on other Ubuntu-based distributions with:
+
+```shell
+sudo apt install libgranite-dev libgtk-3-dev meson valac libsqlite3-dev gettext
 ```
 
 Run `meson build` to configure the build environment and run `ninja install`

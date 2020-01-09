@@ -23,14 +23,19 @@ using Gee;
 
 public class Reminduck.Database {
     private string get_database_path() {
-        return Environment.get_home_dir () + "/.local/share/reminduck/reminduck.db";
+        return Environment.get_home_dir() + "/.local/share/com.github.matfantinel.reminduck/database.db";
     }    
+
+    private File get_database() {
+        return File.new_for_path(get_database_path());
+    } 
 
     private void open_database(out Sqlite.Database database) {
         var connection = Sqlite.Database.open(get_database_path(), out database);
 
         if (connection != Sqlite.OK) {
             stderr.printf("Can't open database: %d: %s\n", database.errcode(), database.errmsg());
+            Gtk.main_quit();
         }
     }    
 
@@ -52,7 +57,21 @@ public class Reminduck.Database {
 
     public void verify_database() {
         try {
-            initialize_database();
+            var path = File.new_build_filename(Environment.get_home_dir() + "/.local/share/com.github.matfantinel.reminduck");
+            if (! path.query_exists() ) {
+                path.make_directory_with_parents();
+            }
+
+            assert(path.query_exists());
+            var database = get_database();
+            if (!database.query_exists()) {
+                database.create(FileCreateFlags.PRIVATE);
+                assert(database.query_exists());
+                initialize_database();
+            } 
+            //  else {
+            //      this.create_new_columns();
+            //  }
         } catch(Error e) {
              stderr.printf("Error: %s\n", e.message);
         }

@@ -2,3 +2,4 @@ build
 Application
 build-aux/flatpak/.flatpak-builder
 build-aux/flatpak/repo
+_build
