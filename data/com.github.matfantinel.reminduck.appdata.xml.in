@@ -14,7 +14,14 @@
     <p>And it quacks.</p>
   </description>
   <releases>
-  <release version="1.4.0" date="2019-11-28">
+    <release version="1.5.0" date="2020-01-10">
+      <description>
+        <ul>
+          <li>🗃️ Flatpak Support!</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.4.0" date="2019-11-28">
       <description>
         <ul>
           <li>🌑 Dark-mode toggle on the header bar</li>
