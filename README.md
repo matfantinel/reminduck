@@ -82,7 +82,6 @@ flatpak install flathub io.elementary.BaseApp/x86_64/juno-19.08
 Then, from the project root:
 
 ```shell
-cd build-aux/flatpak
 flatpak-builder --install repo com.github.matfantinel.reminduck.json --force-clean --user
 ```
 
