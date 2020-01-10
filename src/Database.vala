@@ -22,12 +22,8 @@
 using Gee;
 
 public class Reminduck.Database {
-    private File get_database() {
-        return File.new_for_path(get_database_path());
-    }
-
     private string get_database_path() {
-        return Path.build_filename(Environment.get_user_data_dir(), "reminduck", "reminduck.db");
+        return Environment.get_home_dir() + "/.local/share/com.github.matfantinel.reminduck/database.db";
     }    
 
     private void open_database(out Sqlite.Database database) {
@@ -35,6 +31,7 @@ public class Reminduck.Database {
 
         if (connection != Sqlite.OK) {
             stderr.printf("Can't open database: %d: %s\n", database.errcode(), database.errmsg());
+            Gtk.main_quit();
         }
     }    
 
@@ -51,57 +48,45 @@ public class Reminduck.Database {
             );          
         """;
 
-        var exec_query = db.exec(query);
-
-        if (exec_query != Sqlite.OK) {
-            print("Couldn't initialize database...\n");
-            return;
-        }
+        db.exec(query);
     }
 
     public void verify_database() {
         try {
-            var path = File.new_build_filename(Environment.get_user_data_dir(), "reminduck");
-            if (! path.query_exists() ) {
-                path.make_directory_with_parents();
+            string path = Environment.get_home_dir() + "/.local/share/com.github.matfantinel.reminduck";
+            File tmp = File.new_for_path (path);
+            if (tmp.query_file_type (0) != FileType.DIRECTORY) {
+                GLib.DirUtils.create_with_parents (path, 0775);
             }
 
-            assert(path.query_exists());
-            var database = get_database();
-            if (!database.query_exists()) {
-                database.create(FileCreateFlags.PRIVATE);
-                assert(database.query_exists());
-                initialize_database();
-            } else {
-                this.create_new_columns();
-            }
+            initialize_database();
         } catch(Error e) {
              stderr.printf("Error: %s\n", e.message);
         }
     }
 
-    private void create_new_columns() {
-        Sqlite.Database db;
-        open_database(out db);                
+    //  private void create_new_columns() {
+    //      Sqlite.Database db;
+    //      open_database(out db);                
 
-        //create new column (version migration)
-        var query = "SELECT recurrency_type FROM 'reminders'";
-        var exec_query = db.exec(query);
-        if (exec_query != Sqlite.OK) {
-            print("Column recurrency_type does not exist. Creating it... \n");
-            var alter_table_query = "ALTER TABLE `reminders` ADD `recurrency_type` INTEGER NULL";
-            db.exec(alter_table_query);
-        }
+    //      //create new column (version migration)
+    //      var query = "SELECT recurrency_type FROM 'reminders'";
+    //      var exec_query = db.exec(query);
+    //      if (exec_query != Sqlite.OK) {
+    //          print("Column recurrency_type does not exist. Creating it... \n");
+    //          var alter_table_query = "ALTER TABLE `reminders` ADD `recurrency_type` INTEGER NULL";
+    //          db.exec(alter_table_query);
+    //      }
 
 
-        query = "SELECT recurrency_interval FROM 'reminders'";
-        exec_query = db.exec(query);
-        if (exec_query != Sqlite.OK) {
-            print("Column recurrency_interval does not exist. Creating it... \n");
-            var alter_table_query = "ALTER TABLE `reminders` ADD `recurrency_interval` INTEGER NULL";
-            db.exec(alter_table_query);
-        }
-    }
+    //      query = "SELECT recurrency_interval FROM 'reminders'";
+    //      exec_query = db.exec(query);
+    //      if (exec_query != Sqlite.OK) {
+    //          print("Column recurrency_interval does not exist. Creating it... \n");
+    //          var alter_table_query = "ALTER TABLE `reminders` ADD `recurrency_interval` INTEGER NULL";
+    //          db.exec(alter_table_query);
+    //      }
+    //  }
 
     public bool upsert_reminder(Reminder reminder) {
         var is_new = reminder.rowid == null;

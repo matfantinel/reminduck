@@ -44,7 +44,13 @@ If you want to go ahead and compile Reminduck yourself, you'll need the followin
 You can install them on elementary OS Juno with:
 
 ```shell
-sudo apt install elementary-sdk
+sudo apt install elementary-sdk libsqlite3-dev
+```
+
+And on other Ubuntu-based distributions with:
+
+```shell
+sudo apt install libgranite-dev libgtk-3-dev meson valac libsqlite3-dev gettext
 ```
 
 Run `meson build` to configure the build environment and run `ninja install`
@@ -58,6 +64,29 @@ sudo ninja install
 
 Then run it with:
 
+```shell
+com.github.matfantinel.reminduck
+```
+
+## Flatpak
+
+Reminduck is also available as a Flatpak. To build/install it locally, first you have to install the necessary runtimes:
+
+```shell
+sudo apt install flatpak-builder
+flatpak install flathub org.gnome.Sdk/x86_64/3.34
+flatpak install flathub org.gnome.Platform/x86_64/3.34
+flatpak install flathub io.elementary.BaseApp/x86_64/juno-19.08
+```
+
+Then, from the project root:
+
+```shell
+cd build-aux/flatpak
+flatpak-builder --install repo com.github.matfantinel.reminduck.json --force-clean --user
+```
+
+The app should be displayed on your apps list, or you can run it with:
 ```shell
 com.github.matfantinel.reminduck
 ```

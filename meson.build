@@ -25,7 +25,7 @@ executable(
         dependency('gtk+-3.0'),
         dependency('gee-0.8'),
         dependency('sqlite3'),
-        dependency('granite'),
+        dependency('granite')
     ],
     install: true
 )

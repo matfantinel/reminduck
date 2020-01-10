@@ -1,2 +1,5 @@
 build
 Application
+.flatpak-builder
+repo
+_build
