@@ -61,7 +61,9 @@
           "sources": [
               {
                   "type": "git",
-                  "url": "https://github.com/matfantinel/reminduck.git"
+                  "url": "https://github.com/matfantinel/reminduck.git",
+                  "tag": "v1.5.0",
+                  "commit": "5801b24d355bec37817673570ff8b65dbabc2359"
               }
           ]
         }
