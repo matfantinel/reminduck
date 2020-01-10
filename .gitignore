@@ -1,5 +1,5 @@
 build
 Application
-build-aux/flatpak/.flatpak-builder
-build-aux/flatpak/repo
+.flatpak-builder
+repo
 _build
