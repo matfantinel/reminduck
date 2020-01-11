@@ -1,8 +1,21 @@
+# Reminduck
+
+<p align="center">
+    <a href="https://appcenter.elementary.io/com.github.matfantinel.reminduck" target="_blank">
+        <img src="https://appcenter.elementary.io/badge.svg">
+    </a>
+    <a href='https://flathub.org/apps/details/com.github.matfantinel.reminduck' target="_blank"><img width='150' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-en.png'/></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/matfantinel/reminduck/blob/master/COPYING">
+    <img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg">
+  </a>
+</p>
+
 <p align="center">
     <img src="data/screenshots/Main.png" alt="Screenshot" />
 </p>
-
-# Reminduck
 
 Reminduck is a simple reminder app made to be quick and easy - it focuses on simple or recurrent reminders with set time and date and nothing else.
 
@@ -12,9 +25,7 @@ _And it quacks._
 
 ## Built for elementary OS
 
-While Reminduck can run in any Linux distribution, it was built with [elementary OS] in mind. I appreciate any help packaging it for more distributions, though!
-
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)][AppCenter]
+While Reminduck can run in any Linux distribution, it was built with [elementary OS] in mind. It runs perfectly on other distributions like Ubuntu, Fedora, etc. though. Download it on Flathub if you want to use Reminduck everywhere!
 
 ## Translating
 
@@ -91,4 +102,3 @@ com.github.matfantinel.reminduck
 ```
 
 [elementary OS]: https://elementary.io
-[AppCenter]: https://appcenter.elementary.io/com.github.matfantinel.reminduck
