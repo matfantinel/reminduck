@@ -1,18 +1,15 @@
 {
     "app-id": "com.github.matfantinel.reminduck",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "3.34",
-    "sdk": "org.gnome.Sdk",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "19.08",
+    "sdk": "org.freedesktop.Sdk",
     "base": "io.elementary.BaseApp",
     "base-version": "juno-19.08",
     "command": "com.github.matfantinel.reminduck",
     "finish-args": [
        "--share=ipc",
-       "--share=network",
        "--socket=fallback-x11",
-       "--socket=wayland",
-       "--talk-name=org.gtk.vfs.*",
-       "--filesystem=home"
+       "--socket=wayland"
     ],
     "cleanup": [
        "/include",
