@@ -121,6 +121,7 @@ namespace Reminduck.Widgets.Views {
                     this.recurrency_combobox.changed();
                 } else {
                     this.recurrency_combobox.hide();
+                    this.recurrency_interval.hide();
                 }
             });
 
