@@ -11,6 +11,9 @@
   <a href="https://github.com/matfantinel/reminduck/blob/master/COPYING">
     <img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg">
   </a>
+  <a href="https://travis-ci.org/calo001/fondo">
+    <img src="https://travis-ci.org/matfantinel/reminduck.svg?branch=master">
+  </a>
 </p>
 
 <p align="center">
