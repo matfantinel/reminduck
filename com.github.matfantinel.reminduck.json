@@ -74,8 +74,8 @@
             {
                 "type": "git",
                 "url": "https://github.com/matfantinel/reminduck.git",
-                "tag": "v1.5.3",
-                "commit": "8cc456b0ed4f67ad6b78dfcb9f69965b5e27fa63"
+                "tag": "v1.5.4",
+                "commit": "db2b6b43dbf553134006fa39c0458760ded11d31"
             },
             {
               "type" : "patch",
