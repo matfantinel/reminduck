@@ -74,8 +74,8 @@ Reminduck is also available as a Flatpak. To build/install it locally, first you
 
 ```shell
 sudo apt install flatpak-builder
-flatpak install flathub org.gnome.Sdk/x86_64/3.34
-flatpak install flathub org.gnome.Platform/x86_64/3.34
+flatpak install flathub org.freedesktop.Sdk/x86_64/19.08
+flatpak install flathub org.freedesktop.Platform/x86_64/19.08
 flatpak install flathub io.elementary.BaseApp/x86_64/juno-19.08
 ```
 
