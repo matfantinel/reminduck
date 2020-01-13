@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-06 07:15+0100\n"
+"POT-Creation-Date: 2020-01-13 16:36+0100\n"
 "PO-Revision-Date: 2019-11-06 07:13+0100\n"
 "Last-Translator: Nathan Bonnemains\n"
 "Language-Team: none\n"
@@ -67,6 +67,47 @@ msgid "And it quacks."
 msgstr "Et il fait coin coin."
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:20
+msgid "🗃️ Flatpak Support!"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:27
+msgid "🌑 Dark-mode toggle on the header bar"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:28
+msgid ""
+"🔔 Notifications now stick around until you close them, to make sure you "
+"don't miss your quacks"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:29
+msgid "🌟 Support for additional GTK themes, making Reminduck distro-agnostic"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:30
+#, fuzzy
+msgid "🇪🇸 Spanish Translation (Alejandro Elí | @onerbs)"
+msgstr "🇹🇷 Traduction en turque (libreajans)"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:31
+msgid "🇮🇹 Italian Translation (Mirko Brombin | @mirkobrombin)"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:38
+msgid ""
+"🐥️ New Icon! - hopefully this one looks better than the previous one. With "
+"great help from Nararyans R.I. (@Fatih20)"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:39
+msgid "💁‍ Increased compatibility with translations (Corentin Noël | @tintou)"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:40
+msgid "🇨🇵️ French Translation (Nathan Bonnemains | @NathanBnm)"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:47
 msgid ""
 "🔁️ Recurrent reminders - you can now have reminders that show up in set "
 "periods of time: every day, week, month, or a set interval"
@@ -75,37 +116,37 @@ msgstr ""
 "périodes de temps définies : chaque jour, semaine, mois, ou un intervalle "
 "personnalisé"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:21
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:48
 msgid "🌟️ General UI improvements to make settings up quacks more pleasant"
 msgstr ""
 "🌟️ Améliorations générales de l'interface pour rendre la configuration des "
 "rappels plus agréable"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:22
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:49
 msgid "🌃️ Dark Mode is now prettier"
 msgstr "🌃️ Le thème sombre est maintenant plus joli"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:23
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:50
 msgid "🇹🇷 Turkish translation (libreajans)"
 msgstr "🇹🇷 Traduction en turque (libreajans)"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:24
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:51
 msgid "🇳🇱 Dutch translation (Vistaus)"
 msgstr "🇳🇱 Traduction en néerlandais (Vistaus)"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:31
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:58
 msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
 msgstr ""
 "Prise en charge de l'option non-officielle « Préférer le thème sombre » 🌝️"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:32
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:59
 msgid "This should also make it work with other dark GTK themes"
 msgstr "Cela devrait également fonctionner avec d'autres thèmes sombres GTK"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:38
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:65
 msgid "Initial Release 🦆"
 msgstr "Version initiale 🦆"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:45
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:101
 msgid "Matheus Fantinel"
 msgstr "Matheus Fantinel"

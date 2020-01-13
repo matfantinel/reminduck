@@ -1,17 +1,17 @@
-# Portuguese translations for com.github.matfantinel.reminduck package.
-# Copyright (C) 2018 THE com.github.matfantinel.reminduck'S COPYRIGHT HOLDER
+# German translations for com.github.matfantinel.reminduck package.
+# Copyright (C) 2020 THE com.github.matfantinel.reminduck'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.matfantinel.reminduck package.
-# Automatically generated, 2018.
+# Automatically generated, then modified to need, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.matfantinel.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-13 16:35+0100\n"
-"PO-Revision-Date: 2018-08-02 15:09-0300\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2020-01-13 15:11+0100\n"
+"Last-Translator: Alexander Schneider <kokoskern@gmail.com>\n"
 "Language-Team: none\n"
-"Language: pt\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,104 +19,104 @@ msgstr ""
 
 #: src/MainWindow.vala:84
 msgid "Back"
-msgstr "Voltar"
+msgstr "Zurück"
 
 #: src/MainWindow.vala:94
 msgid "Light mode"
-msgstr "Modo claro"
+msgstr "Heller Modus"
 
 #: src/MainWindow.vala:95
 msgid "Dark mode"
-msgstr "Modo escuro"
+msgstr "Dunkler Modus"
 
 #: src/MainWindow.vala:133
 msgid "QUACK! I'm Reminduck"
-msgstr "QUAC! Eu sou o Reminduck"
+msgstr "QUAK! Ich bin Reminduck"
 
 #: src/MainWindow.vala:134
 msgid "The duck that reminds you"
-msgstr "O pato que lembra você"
+msgstr "Die Ente die dich erinnert"
 
 #: src/MainWindow.vala:148
 msgid "New Reminder"
-msgstr "Novo Lembrete"
+msgstr "Neue Erinnerung"
 
 #: src/MainWindow.vala:148
 msgid "Create a new reminder for a set date and time"
-msgstr "Criar um novo lembrete"
+msgstr "Erstelle neue Erinnerung für bestimmte Zeit und Datum"
 
 #: src/MainWindow.vala:150 src/MainWindow.vala:157
 msgid "View Reminders"
-msgstr "Ver Lembretes"
+msgstr "Zeige Erinnerungen an"
 
 #: src/MainWindow.vala:150 src/MainWindow.vala:157
 msgid "See reminders you've created"
-msgstr "Ver lembretes que você criou"
+msgstr "Zeige bisher erstellte Erinnerungen an"
 
 #: src/Objects/Reminder.vala:45
 msgid "Don't Repeat"
-msgstr "Não repetir"
+msgstr "Nicht wiederholen"
 
 #: src/Objects/Reminder.vala:49
 msgid "Every X minutes"
-msgstr "A cada X minutos"
+msgstr "Alle X Minuten"
 
 #: src/Objects/Reminder.vala:51
-#, fuzzy, c-format
+#, c-format
 msgid "Every minute"
 msgid_plural "Every %d minutes"
-msgstr[0] "A cada 1 minuto"
-msgstr[1] "A cada %d minutos"
+msgstr[0] "Jede Minute"
+msgstr[1] "Alle %d Minuten"
 
 #: src/Objects/Reminder.vala:55
 msgid "Every day"
-msgstr "Diariamente"
+msgstr "Jeden Tag"
 
 #: src/Objects/Reminder.vala:58
 msgid "Every week"
-msgstr "Semanalmente"
+msgstr "Jede Woche"
 
 #: src/Objects/Reminder.vala:61
 msgid "Every month"
-msgstr "Mensalmente"
+msgstr "Jeden Monat"
 
 #: src/Widgets/Views/ReminderEditor.vala:54
 msgid "Create a new reminder"
-msgstr "Criar um novo lembrete"
+msgstr "Erstelle eine neue Erinnerung"
 
 #: src/Widgets/Views/ReminderEditor.vala:58
 msgid "What do you want to be reminded of?"
-msgstr "Do que você quer se lembrar?"
+msgstr "An was möchtest Du erinnert werden?"
 
 #: src/Widgets/Views/ReminderEditor.vala:85
 msgid "Repeat"
-msgstr "Repetir"
+msgstr "Wiederhole"
 
 #: src/Widgets/Views/ReminderEditor.vala:90
 msgid "Save reminder"
-msgstr "Salvar lembrete"
+msgstr "Speichere Erinnerung"
 
 #: src/Widgets/Views/RemindersView.vala:47
 msgid "Your reminders"
-msgstr "Seus lembretes"
+msgstr "Deine Erinnerungen"
 
 #: src/Widgets/Views/RemindersView.vala:52
 msgid "Create another"
-msgstr "Criar novo"
+msgstr "Weitere Erinnerung erstellen"
 
 #: src/Widgets/Views/RemindersView.vala:93
-#, fuzzy, c-format
+#, c-format
 msgid "Reminded: %s"
-msgstr "Lembrado: %s"
+msgstr "Erinnerung an: %s"
 
 #: src/Widgets/Views/RemindersView.vala:104
 msgid "Delete"
-msgstr "Excluir"
+msgstr "Löschen"
 
 #: src/Widgets/Views/RemindersView.vala:111
 msgid "Edit"
-msgstr "Editar"
+msgstr "Bearbeiten"
 
 #: src/Widgets/Views/RemindersView.vala:120
 msgid "Today"
-msgstr "Hoje"
+msgstr "Heute"

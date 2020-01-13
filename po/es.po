@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.matfantinel.reminduck\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-28 18:28-0300\n"
+"POT-Creation-Date: 2020-01-13 16:35+0100\n"
 "PO-Revision-Date: DATEME\n"
 "Last-Translator: Alejandro Elí\n"
 "Language-Team: none\n"
@@ -29,27 +29,27 @@ msgstr "Modo claro"
 msgid "Dark mode"
 msgstr "Modo oscuro"
 
-#: src/MainWindow.vala:116
+#: src/MainWindow.vala:133
 msgid "QUACK! I'm Reminduck"
 msgstr "CUA CUA! Soy Reminduck"
 
-#: src/MainWindow.vala:117
+#: src/MainWindow.vala:134
 msgid "The duck that reminds you"
 msgstr "El pato que te recuerda cosas"
 
-#: src/MainWindow.vala:131
+#: src/MainWindow.vala:148
 msgid "New Reminder"
 msgstr "Nuevo"
 
-#: src/MainWindow.vala:131
+#: src/MainWindow.vala:148
 msgid "Create a new reminder for a set date and time"
 msgstr "Cree un nuevo recordatorio"
 
-#: src/MainWindow.vala:133 src/MainWindow.vala:140
+#: src/MainWindow.vala:150 src/MainWindow.vala:157
 msgid "View Reminders"
 msgstr "Pendientes"
 
-#: src/MainWindow.vala:133 src/MainWindow.vala:140
+#: src/MainWindow.vala:150 src/MainWindow.vala:157
 msgid "See reminders you've created"
 msgstr "Vea todos sus recordatorios"
 
