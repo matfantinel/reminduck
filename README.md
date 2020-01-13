@@ -36,12 +36,21 @@ You can help translating this app with the following steps:
 
 * Add the language you want to translate to in the `po/LINGUAS` file (if it's already there, you can skip this step);
 * Then, make sure the translation files are updated:
-```shell
-cd build
-ninja com.github.matfantinel.reminduck-pot
-ninja com.github.matfantinel.reminduck-update-po
-```
+  
+  ```shell
+  cd build
+  ninja com.github.matfantinel.reminduck-pot
+  ninja com.github.matfantinel.reminduck-update-po
+  ```
 * Then, update your language file in `po` folder with your translations. For example, portuguese (pt) translation file is `po/pt.po`;
+* Some additional translation files can be found in `po/extra/` (stuff for the xml and .desktop files)
+* You might want to update these files as well:
+  
+  ```shell
+  # we're still in ./build
+  ninja extra-pot
+  ninja extra-update-po
+  ```
 * Fork this repo, commit to your repo and then open a Pull Request to this one.
 
 ## Developing and building
@@ -100,6 +109,7 @@ flatpak-builder --install repo com.github.matfantinel.reminduck.json --force-cle
 ```
 
 The app should be displayed on your apps list, or you can run it with:
+
 ```shell
 com.github.matfantinel.reminduck
 ```
