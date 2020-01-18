@@ -40,7 +40,7 @@ msgstr "Reminduck;Persinale;Assistente;Promemoria;"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:8
 msgid "Remember your stuff in an adorably annoying way."
-msgstr ""Ricordati dei tuoi promemoria in un modo adorabile."
+msgstr "Ricordati dei tuoi promemoria in un modo adorabile."
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:10
 msgid ""
