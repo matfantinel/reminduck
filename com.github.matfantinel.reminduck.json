@@ -31,7 +31,7 @@
             {
                 "type": "git",
                 "url": "https://github.com/matfantinel/reminduck.git",
-                "branch": "flatpak-translations"
+                "branch": "master"
             },
             {
               "type" : "patch",
