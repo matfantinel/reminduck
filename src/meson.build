@@ -5,4 +5,5 @@ sources = files(
     'Objects/Reminder.vala',
     'Widgets/Views/ReminderEditor.vala',
     'Widgets/Views/RemindersView.vala'
+    
 )
