@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-19 18:54+0100\n"
+"POT-Creation-Date: 2020-01-31 11:49-0300\n"
 "PO-Revision-Date: 2020-01-13 16:03+0100\n"
 "Last-Translator: Alexander Schneider <kokoskern@gmail.com>\n"
 "Language-Team: none\n"
@@ -67,14 +67,18 @@ msgid "And it quacks."
 msgstr "Und es quakt."
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:20
+msgid "🐞 Enable translations on Flatpak"
+msgstr ""
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:27
 msgid "🗃️ Flatpak Support!"
 msgstr "🗃️ Flatpak Support!"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:27
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:34
 msgid "🌑 Dark-mode toggle on the header bar"
 msgstr "🌑 Dunkler Modus kann in der Kopfleiste umgeschaltet werden"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:28
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:35
 msgid ""
 "🔔 Notifications now stick around until you close them, to make sure you "
 "don't miss your quacks"
@@ -82,19 +86,19 @@ msgstr ""
 "🔔 Erinnerungen werden nun so lange angezeigt bis Du sie schließt um "
 "sicherzustellen, dass du kein Gequake verpasst"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:29
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:36
 msgid "🌟 Support for additional GTK themes, making Reminduck distro-agnostic"
 msgstr "🌟 Unterstützt zusätzliche GTK Themes, ist also Distro-agnostic"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:30
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:37
 msgid "🇪🇸 Spanish Translation (Alejandro Elí | @onerbs)"
 msgstr "🇪🇸 Spanische Übersetzung (Alejandro Elí | @onerbs)"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:31
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:38
 msgid "🇮🇹 Italian Translation (Mirko Brombin | @mirkobrombin)"
 msgstr "🇮🇹 Italienische Übersetzung (Mirko Brombin | @mirkobrombin)"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:38
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:45
 msgid ""
 "🐥️ New Icon! - hopefully this one looks better than the previous one. With "
 "great help from Nararyans R.I. (@Fatih20)"
@@ -102,15 +106,15 @@ msgstr ""
 "🐥️ Neues Icon! - hoffentlich sieht das schöner aus als das vorherige. Dank "
 "großartiger Hilfe von Nararyans R.I. (@Fatih20)"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:39
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:46
 msgid "💁‍ Increased compatibility with translations (Corentin Noël | @tintou)"
 msgstr "💁‍ Übersetzungssystem wurde vereinfacht (Corentin Noël | @tintou)"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:40
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:47
 msgid "🇨🇵️ French Translation (Nathan Bonnemains | @NathanBnm)"
 msgstr "🇨🇵️ Französische Übersetzung (Nathan Bonnemains | @NathanBnm)"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:47
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:54
 msgid ""
 "🔁️ Recurrent reminders - you can now have reminders that show up in set "
 "periods of time: every day, week, month, or a set interval"
@@ -119,34 +123,34 @@ msgstr ""
 "Zeitintervallen wiederholt werden: Täglich, wöchentlich, monatlich, oder "
 "nach einer beliebigen Dauer."
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:48
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:55
 msgid "🌟️ General UI improvements to make settings up quacks more pleasant"
 msgstr "🌟️ Allg. Verbesserung der Oberfläche um das Erstellen zu vereinfachen"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:49
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:56
 msgid "🌃️ Dark Mode is now prettier"
 msgstr "🌃️ Der Dunkle Modus sieht jetzt besser aus"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:50
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:57
 msgid "🇹🇷 Turkish translation (libreajans)"
 msgstr "🇹🇷 Türkische Übersetzung (libreajans)"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:51
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:58
 msgid "🇳🇱 Dutch translation (Vistaus)"
 msgstr "🇳🇱 Niederländische Übersetzung (Vistaus)"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:58
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:65
 msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
 msgstr "Unterstützung für das inoffizielle \"Dunkler Modus\" Setting 🌝️"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:59
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:66
 msgid "This should also make it work with other dark GTK themes"
 msgstr "Jetzt sollte es auch mit anderen dunklen GTK Themen funktionieren"
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:65
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:72
 msgid "Initial Release 🦆"
 msgstr ""
 
-#: data/com.github.matfantinel.reminduck.appdata.xml.in:101
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:108
 msgid "Matheus Fantinel"
 msgstr ""
