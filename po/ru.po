@@ -1,0 +1,123 @@
+# Russian translation for Reminduck.
+# Copyright (C) 2020 Andrey Sudarikov
+# This file is distributed under the same license as the com.github.matfantinel.reminduck package.
+# Andrey Sudarikov <andrewsudarikov@gmail.com>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.matfantinel.reminduck\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-31 11:48-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Andrey Sudarikov <andrewsudarikov@gmail.com>\n"
+"Language-Team: None\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: src/MainWindow.vala:84
+msgid "Back"
+msgstr "Назад"
+
+#: src/MainWindow.vala:94
+msgid "Light mode"
+msgstr "Светлая тема"
+
+#: src/MainWindow.vala:95
+msgid "Dark mode"
+msgstr "Темная тема"
+
+#: src/MainWindow.vala:133
+msgid "QUACK! I'm Reminduck"
+msgstr "КРЯ! Меня зовут Reminduck"
+
+#: src/MainWindow.vala:134
+msgid "The duck that reminds you"
+msgstr "Утка, которая напоминает"
+
+#: src/MainWindow.vala:148
+msgid "New Reminder"
+msgstr "Новое напоминание"
+
+#: src/MainWindow.vala:148
+msgid "Create a new reminder for a set date and time"
+msgstr "Создайте напоминание на конкретную дату и время"
+
+#: src/MainWindow.vala:150 src/MainWindow.vala:157
+msgid "View Reminders"
+msgstr "Смотреть напоминания"
+
+#: src/MainWindow.vala:150 src/MainWindow.vala:157
+msgid "See reminders you've created"
+msgstr "Просмотрите созданные вами напоминания"
+
+#: src/Objects/Reminder.vala:45
+msgid "Don't Repeat"
+msgstr "Не повторять"
+
+#: src/Objects/Reminder.vala:49
+msgid "Every X minutes"
+msgstr "Каждые Х минут"
+
+#: src/Objects/Reminder.vala:51
+#, c-format
+msgid "Every minute"
+msgid_plural "Every %d minutes"
+msgstr[0] "Каждую минуту"
+msgstr[1] "Каждые %d минут(ы)"
+
+#: src/Objects/Reminder.vala:55
+msgid "Every day"
+msgstr "Каждый день"
+
+#: src/Objects/Reminder.vala:58
+msgid "Every week"
+msgstr "Каждую неделю"
+
+#: src/Objects/Reminder.vala:61
+msgid "Every month"
+msgstr "Каждый месяц"
+
+#: src/Widgets/Views/ReminderEditor.vala:54
+msgid "Create a new reminder"
+msgstr "Создать напоминание"
+
+#: src/Widgets/Views/ReminderEditor.vala:58
+msgid "What do you want to be reminded of?"
+msgstr "О чем вам напоминть?"
+
+#: src/Widgets/Views/ReminderEditor.vala:85
+msgid "Repeat"
+msgstr "Повторить"
+
+#: src/Widgets/Views/ReminderEditor.vala:90
+msgid "Save reminder"
+msgstr "Сохранить напоминание"
+
+#: src/Widgets/Views/RemindersView.vala:47
+msgid "Your reminders"
+msgstr "Ваши напоминания"
+
+#: src/Widgets/Views/RemindersView.vala:52
+msgid "Create another"
+msgstr "Создать ещё"
+
+#: src/Widgets/Views/RemindersView.vala:93
+#, c-format
+msgid "Reminded: %s"
+msgstr "Уже напомнил: %s"
+
+#: src/Widgets/Views/RemindersView.vala:104
+msgid "Delete"
+msgstr "Удалить"
+
+#: src/Widgets/Views/RemindersView.vala:111
+msgid "Edit"
+msgstr "Править"
+
+#: src/Widgets/Views/RemindersView.vala:120
+msgid "Today"
+msgstr "Сегодня"
