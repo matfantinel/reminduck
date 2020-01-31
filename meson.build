@@ -1,4 +1,4 @@
-project('com.github.matfantinel.reminduck', 'vala', 'c', version: '1.5.5')
+project('com.github.matfantinel.reminduck', 'vala', 'c', version: '1.5.6')
 
 add_project_arguments([
         '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name())
