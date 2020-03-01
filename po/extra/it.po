@@ -2,14 +2,15 @@
 # Copyright (C) 2019 THE extra'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
 # Mirko Brombin, 2019.
+# Albano Battistella,2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-31 11:49-0300\n"
-"PO-Revision-Date: 2020-1-12 16:13+0100\n"
-"Last-Translator: Mirko Brombin\n"
+"PO-Revision-Date: 2020-01-03 15:13+0100\n"
+"Last-Translator: Albano Battistella\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -67,48 +68,53 @@ msgstr "E quack."
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:20
 msgid "🐞 Enable translations on Flatpak"
-msgstr ""
+msgstr "🐞 Abilita le traduzioni su Flatpak"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:27
 msgid "🗃️ Flatpak Support!"
-msgstr ""
+msgstr ""🗃️ Supporto per Flatpak!"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:34
 msgid "🌑 Dark-mode toggle on the header bar"
-msgstr ""
+msgstr "🌑 Attiva/disattiva modalità scura sulla barra dell'intestazione"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:35
 msgid ""
 "🔔 Notifications now stick around until you close them, to make sure you "
 "don't miss your quacks"
 msgstr ""
+"🔔 Le notifiche ora restano in attesa fino a quando non le chiudi, per assicurarti di"
+"non perdere i tuoi quacks"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:36
 msgid "🌟 Support for additional GTK themes, making Reminduck distro-agnostic"
-msgstr ""
+msgstr "🌟 Supporto per temi GTK aggiuntivi, rendendo Reminduck distro-agnostico"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:37
 #, fuzzy
 msgid "🇪🇸 Spanish Translation (Alejandro Elí | @onerbs)"
-msgstr "🇹🇷 Tradotto in Turco(libreajans)"
+msgstr "🇪🇸 Traduzione Spagnola (Alejandro Elí | @onerbs)"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:38
 msgid "🇮🇹 Italian Translation (Mirko Brombin | @mirkobrombin)"
-msgstr ""
+msgstr "🇮🇹 Traduzione Italiana (Mirko Brombin | @mirkobrombin e Albano Battistella)"
+
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:45
 msgid ""
 "🐥️ New Icon! - hopefully this one looks better than the previous one. With "
 "great help from Nararyans R.I. (@Fatih20)"
 msgstr ""
+"🐥️ Nuova icona! - si spera che questa sia migliore della precedente. Con"
+"grande aiuto di Nararyans R.I. (@ Fatih20)
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:46
 msgid "💁‍ Increased compatibility with translations (Corentin Noël | @tintou)"
-msgstr ""
+msgstr "💁‍ Maggiore compatibilità con le traduzioni (Corentin Noël | @tintou)"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:47
 msgid "🇨🇵️ French Translation (Nathan Bonnemains | @NathanBnm)"
-msgstr ""
+msgstr "🇨🇵️ Traduzione francese (Nathan Bonnemains | @NathanBnm)"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:54
 msgid ""
@@ -125,15 +131,15 @@ msgstr "🌟️ Miglioramenti alla UI per migliorare il quak migliore"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:56
 msgid "🌃️ Dark Mode is now prettier"
-msgstr "🌃️ La modalità Dark è ora più carina"
+msgstr "🌃️ La modalità scura è ora più carina"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:57
 msgid "🇹🇷 Turkish translation (libreajans)"
-msgstr "🇹🇷 Tradotto in Turco(libreajans)"
+msgstr "🇹🇷 Traduzione in Turco(libreajans)"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:58
 msgid "🇳🇱 Dutch translation (Vistaus)"
-msgstr "🇳🇱 Tradotto in Tedesco (Vistaus)"
+msgstr "🇳🇱 Traduzione in Tedesco (Vistaus)"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:65
 msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
