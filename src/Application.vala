@@ -77,25 +77,28 @@ namespace Reminduck {
                 this.main_window = new MainWindow();
                 this.main_window.set_application(this);                
                                 
-                var provider = new Gtk.CssProvider();
-                provider.load_from_resource("/com/github/matfantinel/reminduck/stylesheet.css");
+                var provider = new Gtk.CssProvider();                
                 Gtk.StyleContext.add_provider_for_screen(
                     Gdk.Screen.get_default(),
                     provider,
                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
                 );
 
-                if (this.settings.get_boolean("use-dark-theme")) {
-                    provider.load_from_resource("/com/github/matfantinel/reminduck/stylesheet-dark.css");
-                    Gtk.StyleContext.add_provider_for_screen(
-                        Gdk.Screen.get_default(),
-                        provider,
-                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
-                    );  
+                // First we get the default instances for Granite.Settings and Gtk.Settings
+                var granite_settings = Granite.Settings.get_default ();
+                var gtk_settings = Gtk.Settings.get_default ();
 
-                    var gtk_settings = Gtk.Settings.get_default ();
-                    gtk_settings.gtk_application_prefer_dark_theme = true;
-                }
+                // Then, we check if the user's preference is for the dark style and set it if it is
+                gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
+
+                // Finally, we listen to changes in Granite.Settings and update our app if the user changes their preference
+                granite_settings.notify["prefers-color-scheme"].connect (() => {
+                    gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
+
+                    load_stylesheet(gtk_settings, provider);
+                });
+
+                load_stylesheet(gtk_settings, provider);
 
                 if (!this.headless) {
                     this.main_window.show_all();
@@ -113,7 +116,15 @@ namespace Reminduck {
             if (timeout_id == 0) {
                 set_reminder_interval();
             }
-        }  
+        }
+
+        private void load_stylesheet(Gtk.Settings gtk_settings, Gtk.CssProvider provider) {
+          if (gtk_settings.gtk_application_prefer_dark_theme) {
+            provider.load_from_resource("/com/github/matfantinel/reminduck/stylesheet-dark.css");
+          } else {
+            provider.load_from_resource("/com/github/matfantinel/reminduck/stylesheet.css");
+          }
+        }
         
         public override int command_line(ApplicationCommandLine command_line) {
             stdout.printf("\n💲️ Command line mode started");

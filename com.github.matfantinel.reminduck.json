@@ -1,27 +1,14 @@
 {
   "app-id": "com.github.matfantinel.reminduck",
-  "runtime": "org.freedesktop.Platform",
-  "runtime-version": "19.08",
-  "sdk": "org.freedesktop.Sdk",
-  "base": "io.elementary.BaseApp",
-  "base-version": "juno-19.08",
+  "runtime": "io.elementary.Platform",
+  "runtime-version": "6",
+  "sdk": "io.elementary.Sdk",
   "command": "com.github.matfantinel.reminduck",
   "finish-args": [
      "--share=ipc",
      "--socket=fallback-x11",
-     "--socket=wayland"
-  ],
-  "cleanup": [
-     "/include",
-     "/lib/pkgconfig",
-     "/man",
-     "/share/doc",
-     "/share/gtk-doc",
-     "/share/man",
-     "/share/pkgconfig",
-     "/share/vala",
-     "*.la",
-     "*.a"
+     "--socket=wayland",
+     "--system-talk-name=org.freedesktop.Accounts"
   ],
   "modules": [
      {
@@ -29,14 +16,9 @@
         "buildsystem": "meson",
         "sources": [
             {
-                "type": "git",
-                "url": "https://github.com/matfantinel/reminduck.git",
-                "branch": "master"
-            },
-            {
-              "type" : "patch",
-              "path" : "elementary-theme.patch"
-          }
+                "type": "dir",
+                "path": "."
+            }
         ]
       }
   ]
