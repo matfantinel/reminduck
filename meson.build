@@ -1,11 +1,5 @@
 project('com.github.matfantinel.reminduck', 'vala', 'c', version: '1.5.6')
 
-add_project_arguments([
-        '-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name())
-    ],
-    language: 'c',
-)
-
 gnome = import('gnome')
 i18n = import('i18n')
 
