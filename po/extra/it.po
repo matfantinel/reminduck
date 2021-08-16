@@ -1,17 +1,17 @@
-# French translations for extra package.
+# Italian translations for extra package.
 # Copyright (C) 2019 THE extra'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
 # Mirko Brombin, 2019.
-# Albano Battistella,2020.
+# Albano Battistella,2020,2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-31 11:49-0300\n"
-"PO-Revision-Date: 2020-01-03 15:13+0100\n"
+"PO-Revision-Date: 2021-08-16 23:13+0200\n"
 "Last-Translator: Albano Battistella\n"
-"Language-Team: none\n"
+"Language-Team: italian\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -72,7 +72,7 @@ msgstr "🐞 Abilita le traduzioni su Flatpak"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:27
 msgid "🗃️ Flatpak Support!"
-msgstr ""🗃️ Supporto per Flatpak!"
+msgstr "🗃️ Supporto per Flatpak!"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:34
 msgid "🌑 Dark-mode toggle on the header bar"
@@ -83,7 +83,7 @@ msgid ""
 "🔔 Notifications now stick around until you close them, to make sure you "
 "don't miss your quacks"
 msgstr ""
-"🔔 Le notifiche ora restano in attesa fino a quando non le chiudi, per assicurarti di"
+"🔔 Le notifiche ora restano in attesa fino a quando non le chiudi, per assicurarti di "
 "non perdere i tuoi quacks"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:36
@@ -91,7 +91,6 @@ msgid "🌟 Support for additional GTK themes, making Reminduck distro-agnostic"
 msgstr "🌟 Supporto per temi GTK aggiuntivi, rendendo Reminduck distro-agnostico"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:37
-#, fuzzy
 msgid "🇪🇸 Spanish Translation (Alejandro Elí | @onerbs)"
 msgstr "🇪🇸 Traduzione Spagnola (Alejandro Elí | @onerbs)"
 
@@ -99,14 +98,13 @@ msgstr "🇪🇸 Traduzione Spagnola (Alejandro Elí | @onerbs)"
 msgid "🇮🇹 Italian Translation (Mirko Brombin | @mirkobrombin)"
 msgstr "🇮🇹 Traduzione Italiana (Mirko Brombin | @mirkobrombin e Albano Battistella)"
 
-
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:45
 msgid ""
 "🐥️ New Icon! - hopefully this one looks better than the previous one. With "
 "great help from Nararyans R.I. (@Fatih20)"
 msgstr ""
-"🐥️ Nuova icona! - si spera che questa sia migliore della precedente. Con"
-"grande aiuto di Nararyans R.I. (@ Fatih20)
+"🐥️ Nuova icona! - si spera che questa sia migliore della precedente. Con "
+"grande aiuto di Nararyans R.I. (@ Fatih20)"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:46
 msgid "💁‍ Increased compatibility with translations (Corentin Noël | @tintou)"
@@ -122,7 +120,7 @@ msgid ""
 "periods of time: every day, week, month, or a set interval"
 msgstr ""
 "🔁️ Promemoria ricorrenti: ora supporta promemoria che vengono visualizzati "
-"nei periodi di tempo: ogni giorno, settimana, mese o ad intervallo "
+"nei periodi di tempo: ogni giorno, settimana, mese o ad intervallo"
 "prestabilito"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:55
@@ -143,7 +141,7 @@ msgstr "🇳🇱 Traduzione in Tedesco (Vistaus)"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:65
 msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
-msgstr "Supporto alla impostazione non ufficiale « Preferisci il tema dark » 🌝️"
+msgstr "Supporto alla impostazione non ufficiale \"Preferisci il tema dark\" 🌝️"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:66
 msgid "This should also make it work with other dark GTK themes"
@@ -151,7 +149,7 @@ msgstr "Dovrebbe supportare anche ad altri temi GTK scuri."
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:72
 msgid "Initial Release 🦆"
-msgstr "Release iniziale 🦆"
+msgstr "Rilascio iniziale 🦆"
 
 #: data/com.github.matfantinel.reminduck.appdata.xml.in:108
 msgid "Matheus Fantinel"
