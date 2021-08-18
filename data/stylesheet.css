@@ -1,4 +1,5 @@
 @define-color accent_color @BANANA_500;
+@define-color color_primary @BANANA_300;
 
 .welcome {
     background-color: inherit;

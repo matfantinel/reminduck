@@ -23,7 +23,7 @@ using Gee;
 
 public class Reminduck.Database {
     private string get_database_path() {
-        return Environment.get_home_dir() + "/.local/share/com.github.matfantinel.reminduck/database.db";
+        return Environment.get_user_data_dir() + "/.local/share/com.github.matfantinel.reminduck/database.db";
     }    
 
     private void open_database(out Sqlite.Database database) {
@@ -53,7 +53,7 @@ public class Reminduck.Database {
 
     public void verify_database() {
         try {
-            string path = Environment.get_home_dir() + "/.local/share/com.github.matfantinel.reminduck";
+            string path = Environment.get_user_data_dir() + "/.local/share/com.github.matfantinel.reminduck";
             File tmp = File.new_for_path (path);
             if (tmp.query_file_type (0) != FileType.DIRECTORY) {
                 GLib.DirUtils.create_with_parents (path, 0775);
