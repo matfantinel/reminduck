@@ -2,7 +2,7 @@
 Name=Reminduck
 GenericName=Reminders
 Comment=Don't forget about your stuff in an adorably annoying way
-Categories=Utility;
+Categories=Office;Utility;
 Exec=com.github.matfantinel.reminduck %U
 Icon=com.github.matfantinel.reminduck
 Terminal=false
