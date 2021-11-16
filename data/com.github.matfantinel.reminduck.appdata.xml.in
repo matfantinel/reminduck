@@ -14,6 +14,11 @@
     <p>And it quacks.</p>
   </description>
   <releases>
+    <release version="1.6.2" date="2021-11-16">
+      <description>
+        <p>Add "Office" category to launcher</p>
+      </description>
+    </release>
     <release version="1.6.1" date="2021-08-18">
       <description>
         <ul>
