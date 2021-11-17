@@ -1,0 +1,153 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# ONDO-ALVELLË, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-31 11:49-0300\n"
+"PO-Revision-Date: 2021-11-17 17:14+0100\n"
+"Last-Translator: Ondo Alvellë\n"
+"Language-Team: none\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/com.github.matfantinel.reminduck.desktop.in:3
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:7
+msgid "Reminduck"
+msgstr "Reminduck"
+
+#: data/com.github.matfantinel.reminduck.desktop.in:4
+msgid "Reminders"
+msgstr "Recordatoris"
+
+#: data/com.github.matfantinel.reminduck.desktop.in:5
+msgid "Don't forget about your stuff in an adorably annoying way"
+msgstr "Recorda-ho tot d'una manera adorablement molesta"
+
+#: data/com.github.matfantinel.reminduck.desktop.in:8
+msgid "com.github.matfantinel.reminduck"
+msgstr "com.github.matfantinel.reminduck"
+
+#: data/com.github.matfantinel.reminduck.desktop.in:12
+msgid "Reminduck;Personal;Assistant;Reminders;"
+msgstr "Reminduck;Personal;Assistant;Reminders"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:8
+msgid "Remember your stuff in an adorably annoying way."
+msgstr "Recorda-ho tot d'una manera adorablement molesta."
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:10
+msgid ""
+"Reminduck is a simple reminder app made to be quick and easy - it focuses on "
+"simple or recurrent reminders with set time and date and nothing else."
+msgstr ""
+"Reminduck és una aplicació simple de recordatoris feta per ser ràpida i fàcil. Es basa en "
+"recordatoris simples o recurrents amb una data i hora específica i res més."
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:12
+msgid ""
+"It's perfect if all you want are simple or daily/weekly/monthly reminders. "
+"Anything more than that is not achievable by Reminduck right now - but you "
+"can help! Open an issue or a pull request if you have any ideas or requests."
+msgstr ""
+"És perfecte si el que necessites són recordatoris simples o diaris/setmanals/mensuals. "
+"Reminduck no pot fer res més ara mateix; però pots ajudar! "
+"Obre un 'issue' o una 'pull request' si tens idees o sol·licituds."
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:14
+msgid "And it quacks."
+msgstr "I nyequeja."
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:20
+msgid "🐞 Enable translations on Flatpak"
+msgstr "🐞 Activa transicions a Flatpak"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:27
+msgid "🗃️ Flatpak Support!"
+msgstr "🗃️ Suport per Flatpak!"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:34
+msgid "🌑 Dark-mode toggle on the header bar"
+msgstr "🌑 Commutador de modes fosc i clar a la barra d'encapçalament."
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:35
+msgid ""
+"🔔 Notifications now stick around until you close them, to make sure you "
+"don't miss your quacks"
+msgstr ""
+"🔔 Les notificacions ara persisteixen fins que les tanques, per assegurar-se "
+"que no et perds els nyecs"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:36
+msgid "🌟 Support for additional GTK themes, making Reminduck distro-agnostic"
+msgstr "🌟 Suport per temes GTK addicionals, cosa que fa que Reminduck es pugui utilitzar en qualsevol distribució"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:37
+msgid "🇪🇸 Spanish Translation (Alejandro Elí | @onerbs)"
+msgstr "🇪🇸 Traducció al castellà (Alejandro Eli | @onerbs)"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:38
+msgid "🇮🇹 Italian Translation (Mirko Brombin | @mirkobrombin)"
+msgstr "🇮🇹 Traducció a l'italià (Mirko Brombin | @mirkobrombin)"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:45
+msgid ""
+"🐥️ New Icon! - hopefully this one looks better than the previous one. With "
+"great help from Nararyans R.I. (@Fatih20)"
+msgstr ""
+"🐥️ Icona nova! Espero que aquest tingui un aspecte millor que l'anterior. Amb "
+"la fantàstica ajuda de Nararyans R.I. (@Fatih20)"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:46
+msgid "💁‍ Increased compatibility with translations (Corentin Noël | @tintou)"
+msgstr "💁‍ S'ha augmentat la compatibilitat amb les traduccions (Corentin Noël | @tintou)"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:47
+msgid "🇨🇵️ French Translation (Nathan Bonnemains | @NathanBnm)"
+msgstr "🇨🇵️ Traducció al francès (Nathan Bonnemains | @NathanBnm)"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:54
+msgid ""
+"🔁️ Recurrent reminders - you can now have reminders that show up in set "
+"periods of time: every day, week, month, or a set interval"
+msgstr ""
+"🔁️ Recordatoris recurrents: ara pots tenir recordatoris que apareixen "
+"en intervals de temps determinats: cada dia, setmana, mes o altres"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:55
+msgid "🌟️ General UI improvements to make settings up quacks more pleasant"
+msgstr "🌟️ Millores d'interfície en general per tal que configurar els recordatoris sigui més bonic"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:56
+msgid "🌃️ Dark Mode is now prettier"
+msgstr "🌃️ El mode fosc és més bonic"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:57
+msgid "🇹🇷 Turkish translation (libreajans)"
+msgstr "🇹🇷 Traducció al turc (libreajans)"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:58
+msgid "🇳🇱 Dutch translation (Vistaus)"
+msgstr "🇳🇱 Traducció a l'holandès (Vistaus)"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:65
+msgid "Support the unofficial \"Prefer Dark Theme\" setting 🌝️"
+msgstr "Suport per la configuració no oficial \"Prefereix el tema fosc\" 🌝️"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:66
+msgid "This should also make it work with other dark GTK themes"
+msgstr "En principi també hauria de funcionar amb altres temes GTK foscos"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:72
+msgid "Initial Release 🦆"
+msgstr "🦆 Versió inicial"
+
+#: data/com.github.matfantinel.reminduck.appdata.xml.in:108
+msgid "Matheus Fantinel"
+msgstr "Matheus Fantinel"
