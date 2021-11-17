@@ -87,7 +87,7 @@ msgstr "Crea un recordatori nou"
 
 #: src/Widgets/Views/ReminderEditor.vala:58
 msgid "What do you want to be reminded of?"
-msgstr "Què voleu que us recordi?"
+msgstr "Què vols que et recordi?"
 
 #: src/Widgets/Views/ReminderEditor.vala:85
 msgid "Repeat"
@@ -99,7 +99,7 @@ msgstr "Desa el recordatori"
 
 #: src/Widgets/Views/RemindersView.vala:47
 msgid "Your reminders"
-msgstr "Els vostres recordatoris"
+msgstr "Els teus recordatoris"
 
 #: src/Widgets/Views/RemindersView.vala:52
 msgid "Create another"
