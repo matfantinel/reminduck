@@ -1,3 +1,9 @@
+# No Longer Maintained
+
+Unfortunately, I am not able to work on Moneta anymore. It was a fun side project but I no longer use Linux and don't have the time to make sure it keeps working correctly.
+
+If you or someone you know wants to keep the project going, feel free to fork and/or let me know so I can move the ownership of this repo to you (if that's possible). I can also check with the elementary AppCenter/FlatHub if it's possible to change ownership of an existing app.
+
 # Reminduck
 
 <p align="center">
